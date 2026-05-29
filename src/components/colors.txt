@@ -1,0 +1,27 @@
+· Azure #2c5f86
+
+· Gray Azure #7bb1bf
+
+· Gray Yellow #d0da4b
+
+· Crimson #e25275
+
+· Vivid Orange #ed774a
+
+const NAV_LINKS = [
+  { label: "Home",    to: "/" },
+  { label: "About",   to: "/about" },
+  { label: "Contact", to: "/contact", isButton: true },
+];
+
+// Then in the desktop links map:
+<NavLink
+  to={to}
+  className={({ isActive }) =>
+    isButton
+      ? `navbar__link navbar__link--btn${isActive ? " navbar__link--btn-active" : ""}`
+      : `navbar__link${isActive ? " navbar__link--active" : ""}`
+  }
+>
+  {label}
+</NavLink>
