@@ -4,14 +4,14 @@ const boardOfDirectors = [
   {
     name: "Erin Hubbard",
     role: "Co-founder and Board Chair",
-    img: null,
-    bio: "Bio coming soon.",
+    img: "/Erin.png",
+    bio: "Erin Hubbard is the Co-Founder and Board Chair of the Children's Rare Disease Alliance. She is a wife and mother of five, including her youngest daughter, Skylar, who lives with Beta-mannosidosis, an ultra-rare lysosomal storage disorder. Erin also co-founded The Lost Enzyme Project and is passionate about accelerating treatment development and supporting families affected by rare diseases.",
   },
   {
     name: "Nathan Hubbard",
     role: "Co-founder and Treasurer",
-    img: null,
-    bio: "Bio coming soon.",
+    img: "/Nathan.jpg",
+    bio: "Nathan is a seasoned tax executive with over 15 years of experience leading global transfer pricing functions in high-tech multinational environments. He specializes in developing and executing comprehensive transfer pricing strategies that align with functional/IP operating models, support business expansion, and mitigate risks amid evolving international tax landscapes. He's also passionate about rare diseases and excited to lend his financial and tax expertise to CRDA.",
   },
   {
     name: "Emma Luptak",
@@ -43,8 +43,8 @@ const marketingTeam = [
   {
     name: "Charlie Hubbard",
     role: "Marketing and Fundraising Specialist",
-    img: null,
-    bio: "Bio coming soon.",
+    img: "/charlie.jpg",
+    bio: "Charlie is an honor student gearing up for his senior year of high school, where his sharp intellect and relentless work ethic have earned him many awards already. He's the kind of leader who balances rigorous academics with genuine enthusiasm for school life.",
   },
 ];
 

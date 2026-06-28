@@ -34,12 +34,12 @@ const CARDS = [
 export default function Stats() {
   return (
     <section
-      className="py-20 px-6 md:px-16"
+      className="py-10 px-6 md:px-16"
       style={{ backgroundColor: "#2c5f86" }}
     >
       <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col items-center text-center mb-12 gap-2">
-          <img src="/heart_icon.png" alt="heart" className="w-10 h-10 mb-1" />
+        <div className="flex flex-col items-center text-center mb-6 gap-1">
+          <img src="/heart_icon.png" alt="heart" className="w-8 h-8 mb-1" />
           <h2 className="text-white font-bold text-2xl md:text-3xl">
             Our Focus
           </h2>
@@ -50,15 +50,16 @@ export default function Stats() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {CARDS.map(({ emoji, title, desc, label, to }) => (
             <div
               key={title}
-              className="bg-white flex flex-col gap-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ borderRadius: "1.25rem", padding: "1.75rem" }}
+              className="bg-white flex flex-col gap-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              style={{ borderRadius: "1rem", padding: "1.1rem 1.25rem" }}
             >
-              <span className="text-3xl">{emoji}</span>
-              <h3 className="font-bold text-gray-900 text-sm">{title}</h3>
+              <h3 className="font-bold text-gray-900 text-base">
+                {emoji} {title}
+              </h3>
               <p className="text-gray-500 text-sm leading-relaxed flex-1">{desc}</p>
               <Link
                 to={to}
