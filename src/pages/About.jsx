@@ -297,12 +297,12 @@ export default function About() {
           onSelect={setSelected}
         />
 
-        <TeamSection
+        {/* <TeamSection
           title="Community Action Committee"
           description="Committee members can lead initiatives including Hospital Family Support, Community Fundraising, Volunteer Events, Festival of Trees, and Corporate Service Projects."
           members={communityCommittee}
           onSelect={setSelected}
-        />
+        /> */}
 
         <TeamSection
           title="Technology & Operations"
