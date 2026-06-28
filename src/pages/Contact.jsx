@@ -19,7 +19,7 @@ export default function Contact() {
       {/* Contact Info */}
       <section className="py-16 max-w-5xl mx-auto px-6 md:px-16">
         <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest mb-2">We'd love to hear from you</p>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's talk</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Talk</h2>
         <p className="text-gray-500 text-sm leading-relaxed mb-12 max-w-xl">
           Whether you have a question about our programs, want to get involved, or simply want to share
           your story, our team is here and ready to help.
