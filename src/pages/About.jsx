@@ -192,19 +192,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-10 px-6 md:px-16" style={{ backgroundColor: "#2c5f86" }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-orange-300 font-semibold text-xs uppercase tracking-widest mb-3">
-            Our Mission
-          </p>
-          <p className="text-white text-lg md:text-2xl font-semibold leading-relaxed max-w-3xl mx-auto">
-            Accelerating treatment development for children with rare diseases
-            through community partnerships, fundraising, and advocacy.
-          </p>
-        </div>
-      </section>
-
       {/* Our Story */}
       <section className="py-12 max-w-5xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10">
         <div className="flex-1 min-w-0">

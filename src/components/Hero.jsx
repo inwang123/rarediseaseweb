@@ -33,8 +33,8 @@ export default function Hero() {
           className="text-base max-w-xs leading-relaxed"
           style={{ color: "rgba(255,255,255,0.88)" }}
         >
-          Every dollar raised at checkout helps fund research and treatments for
-          children with rare diseases.
+          Accelerating treatment development for children with rare diseases
+          through community partnerships, fundraising, and advocacy.
         </p>
 
         <div className="flex gap-3 flex-wrap mt-1">
