@@ -21,7 +21,7 @@ export default function Mission() {
         {/* ── Mission content ── */}
         <section className="py-16 px-6 md:px-16 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
           {/* Image with warm rounded style */}
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 order-2 md:order-1">
             <img
               src="/pippin.jpeg"
               alt="Pippin"
@@ -43,7 +43,7 @@ export default function Mission() {
           </div>
 
           {/* Text */}
-          <div className="flex flex-col gap-4 flex-1">
+          <div className="flex flex-col gap-4 flex-1 items-center text-center md:items-start md:text-left order-1 md:order-2">
             <p
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "#2c5f86" }}
@@ -65,7 +65,7 @@ export default function Mission() {
             </p>
             <Link
               to="/about"
-              className="self-start mt-2 inline-block px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+              className="self-center md:self-start mt-2 inline-block px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
               style={{
                 backgroundColor: "#2c5f86",
                 color: "white",

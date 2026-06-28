@@ -17,7 +17,7 @@ export default function Story() {
 
       <section className="relative z-10 py-20 px-6 md:px-16 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
         {/* Text */}
-        <div className="flex-1 flex flex-col gap-4">
+        <div className="flex-1 flex flex-col gap-4 items-center text-center md:items-start md:text-left">
           <p
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "#2c5f86" }}

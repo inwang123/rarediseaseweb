@@ -57,7 +57,7 @@ export default function Donate() {
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             {/* Donation Form - first in DOM so it appears first on mobile */}
-            <div className="md:order-last">
+            <div className="md:order-last max-w-sm mx-auto w-full md:max-w-none">
               {/* Mobile-only tip disclaimer */}
               <div className="md:hidden bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
                 <p className="text-sm font-semibold text-yellow-800 mb-1">
