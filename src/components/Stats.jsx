@@ -43,7 +43,6 @@ export default function Stats() {
               className="bg-white flex flex-col items-center text-center gap-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               style={{ borderRadius: "1.25rem", padding: "1.75rem" }}
             >
-              {/* Soft colored icon circle */}
               <div
                 className="w-14 h-14 flex items-center justify-center flex-shrink-0"
                 style={{ backgroundColor: accent, borderRadius: "50%" }}

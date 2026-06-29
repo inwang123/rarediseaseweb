@@ -1,23 +1,86 @@
 import { useState } from "react";
 
-const team = [
+const boardOfDirectors = [
   {
-    name: "Nathan & Erin Hubbard",
-    role: "Founders",
-    img: "/erin_nate.jpeg",
-    bio: "Nathan and Erin Hubbard are co-founders of Children's Rare Disease Alliance. As parents of five children, one of whom is affected by Beta-Mannosidosis, they are passionate about raising awareness and advancing research for rare diseases.",
+    name: "Erin Hubbard",
+    role: "Co-founder and Board Chair",
+    img: "/Erin.png",
+    bio: "Erin Hubbard is the Co-Founder and Board Chair of the Children's Rare Disease Alliance. She is a wife and mother of five, including her youngest daughter, Skylar, who lives with Beta-mannosidosis, an ultra-rare lysosomal storage disorder. Erin also co-founded The Lost Enzyme Project and is passionate about accelerating treatment development and supporting families affected by rare diseases.",
   },
   {
-    name: "Emma",
-    role: "Community Outreach Director",
+    name: "Nathan Hubbard",
+    role: "Co-founder and Treasurer",
+    img: "/Nathan.jpg",
+    bio: "Nathan is a seasoned tax executive with over 15 years of experience leading global transfer pricing functions in high-tech multinational environments. He specializes in developing and executing comprehensive transfer pricing strategies that align with functional/IP operating models, support business expansion, and mitigate risks amid evolving international tax landscapes. He's also passionate about rare diseases and excited to lend his financial and tax expertise to CRDA.",
+  },
+  {
+    name: "Emma Luptak",
+    role: "Executive Director, Board Member",
     img: "/Emma.png",
-    bio: "Emma Luptak is the Community Outreach Director for The Children's Rare Disease Alliance, where she builds partnerships that transform everyday generosity into critical funding for rare disease research. She also serves as the Program Manager and Patient Advocacy Specialist for the Lost Enzyme Project, a nonprofit dedicated to raising awareness and advancing the development of treatment for Beta‑mannosidosis, an ultra-rare lysosomal storage disorder. Emma graduated from the University of Wisconsin–Madison in 2025 and is currently pursuing her Master of Public Health in Health Policy and Administration at the University of Illinois Chicago. She is driven by a deep commitment to ensuring families have the guidance, resources, and advocacy they need to navigate their rare disease journey and to help accelerate the path toward effective treatments.",
+    bio: "Emma Luptak is the Executive Director and Board Member of the Children's Rare Disease Alliance, where she builds partnerships that transform everyday generosity into critical funding for rare disease research. She also serves as the Program Manager and Patient Advocacy Specialist for the Lost Enzyme Project, a nonprofit dedicated to raising awareness and advancing the development of treatment for Beta‑mannosidosis, an ultra-rare lysosomal storage disorder. Emma graduated from the University of Wisconsin–Madison in 2025 and is currently pursuing her Master of Public Health in Health Policy and Administration at the University of Illinois Chicago. She is driven by a deep commitment to ensuring families have the guidance, resources, and advocacy they need to navigate their rare disease journey and to help accelerate the path toward effective treatments.",
   },
   {
-    name: "Ivy",
+    name: "Samantha Behunin",
+    role: "Board Member",
+    img: "/Samantha.png",
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Emily Tingey",
+    role: "Board Member",
+    img: null,
+    bio: "Bio coming soon.",
+  },
+];
+
+const marketingTeam = [
+  {
+    name: "Ivy Lee",
+    role: "Marketing and Fundraising Specialist",
+    img: null,
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Charlie Hubbard",
+    role: "Marketing and Fundraising Specialist",
+    img: "/charlie.jpg",
+    bio: "Charlie is an honor student gearing up for his senior year of high school, where his sharp intellect and relentless work ethic have earned him many awards already. He's the kind of leader who balances rigorous academics with genuine enthusiasm for school life.",
+  },
+];
+
+const communityCommittee = [
+  {
+    name: "Whisper Gale",
+    role: "Community Action Committee",
+    img: null,
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Cassie Fakatoumafi",
+    role: "Community Action Committee",
+    img: null,
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Emily Tingey",
+    role: "Community Action Committee",
+    img: null,
+    bio: "Bio coming soon.",
+  },
+];
+
+const otherTeam = [
+  {
+    name: "Ivy Wang",
     role: "Website Designer & Developer",
     img: "/ivy.jpg",
     bio: "Ivy is the designer and developer behind the Children's Rare Disease Alliance website, bringing the organization's mission to life through thoughtful design and development.",
+  },
+  {
+    name: "Trevor Hubbard",
+    role: "Chief Information Security Officer",
+    img: "/trevor.jpeg",
+    bio: "Bio coming soon.",
   },
 ];
 
@@ -47,6 +110,64 @@ const values = [
     desc: "We work to ensure that support and resources are available to every family regardless of location or background.",
   },
 ];
+
+function TeamCard({ member, onClick }) {
+  const initials = member.name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2);
+
+  return (
+    <div
+      className="flex flex-col items-center text-center bg-gray-50 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer w-full max-w-xs sm:max-w-none mx-auto"
+      onClick={() => onClick(member)}
+    >
+      <div className="w-full h-56 overflow-hidden">
+        {member.img ? (
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+            <span className="text-3xl font-bold text-gray-400">{initials}</span>
+          </div>
+        )}
+      </div>
+      <div className="p-4 flex flex-col items-center gap-1">
+        <h3 className="text-gray-900 font-bold text-sm">{member.name}</h3>
+        <p className="text-gray-500 text-sm">{member.role}</p>
+        <span className="mt-2 text-xs text-[#2c5f86] font-medium underline underline-offset-2">
+          Read bio →
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function TeamSection({ title, description, members, onSelect }) {
+  return (
+    <div className="mb-12">
+      <div className="mb-6 pb-2 border-b border-gray-200">
+        <h3 className="text-lg font-bold text-gray-800">{title}</h3>
+        {description && (
+          <p className="text-gray-500 text-sm mt-1">{description}</p>
+        )}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 place-items-center sm:place-items-stretch">
+        {members.map((member) => (
+          <TeamCard
+            key={member.name + member.role}
+            member={member}
+            onClick={onSelect}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function About() {
   const [selected, setSelected] = useState(null);
@@ -160,38 +281,34 @@ export default function About() {
         <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">
           The People Behind Our Work
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
           Meet Our Team
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 place-items-center sm:place-items-stretch">
-          {team.map((member) => (
-            <div
-              key={member.name}
-              className="flex flex-col items-center text-center bg-gray-50 rounded-2xl overflow-hidden shadow-sm
-                transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer
-                w-full max-w-xs sm:max-w-none mx-auto"
-              onClick={() => setSelected(member)}
-            >
-              <div className="w-full h-56 overflow-hidden">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-4 flex flex-col items-center gap-1">
-                <h3 className="text-gray-900 font-bold text-sm">
-                  {member.name}
-                </h3>
-                <p className="text-base">{member.role}</p>
-                <span className="mt-2 text-xs text-[#2c5f86] font-medium underline underline-offset-2">
-                  Read bio →
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TeamSection
+          title="Board of Directors"
+          members={boardOfDirectors}
+          onSelect={setSelected}
+        />
+
+        <TeamSection
+          title="Marketing & Fundraising Specialists"
+          members={marketingTeam}
+          onSelect={setSelected}
+        />
+
+        {/* <TeamSection
+          title="Community Action Committee"
+          description="Committee members can lead initiatives including Hospital Family Support, Community Fundraising, Volunteer Events, Festival of Trees, and Corporate Service Projects."
+          members={communityCommittee}
+          onSelect={setSelected}
+        /> */}
+
+        <TeamSection
+          title="Technology & Operations"
+          members={otherTeam}
+          onSelect={setSelected}
+        />
       </section>
 
       {/* Bio Modal */}
@@ -204,7 +321,6 @@ export default function About() {
             className="bg-white rounded-2xl shadow-xl max-w-md w-full overflow-y-auto max-h-[70vh] relative"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={() => setSelected(null)}
               className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-white shadow-sm transition-all"
@@ -213,11 +329,19 @@ export default function About() {
             </button>
 
             <div className="h-80 w-full overflow-hidden rounded-t-2xl flex-shrink-0">
-              <img
-                src={selected.img}
-                alt={selected.name}
-                className="w-full h-full object-cover object-top"
-              />
+              {selected.img ? (
+                <img
+                  src={selected.img}
+                  alt={selected.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                  <span className="text-6xl font-bold text-gray-400">
+                    {selected.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                  </span>
+                </div>
+              )}
             </div>
             <div className="p-6 flex flex-col gap-2">
               <h3 className="text-gray-900 font-bold text-lg">
@@ -233,6 +357,7 @@ export default function About() {
           </div>
         </div>
       )}
+
       {/* Fund Usage */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 md:px-16">

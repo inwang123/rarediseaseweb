@@ -54,14 +54,8 @@ export default function Mission() {
               What are we here to do?
             </h2>
             <p className="text-base leading-relaxed text-gray-500">
-              The Children's Rare Disease Alliance turns small acts of
-              generosity at checkout into life-changing treatments for children
-              living with rare diseases.
-            </p>
-            <p className="text-base leading-relaxed text-gray-500">
-              We partner with local businesses so everyday moments — a grocery
-              run, a cup of coffee — become opportunities to fund research and
-              bring hope to families who need it most.
+              Accelerating treatment development for children with rare diseases
+              through community partnerships, fundraising, and advocacy.
             </p>
             <Link
               to="/about"
