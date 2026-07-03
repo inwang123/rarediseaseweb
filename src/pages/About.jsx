@@ -69,6 +69,15 @@ const communityCommittee = [
   },
 ];
 
+const outreachCommittee = [
+  {
+    name: "Whisper Gale",
+    role: "Outreach and Service Committee Member",
+    img: "/Whisper.png",
+    bio: "Whisper Gale is a Mom of six, devoted to raising her wonderful children alongside her husband, Austin, whom she met in 2015 and married in 2018. Together, they are enjoying their journey filled with birds and animals. After welcoming three children in 2021, a temporary kiddo in 2023, a daughter in 2024, and her great nephew in kinship care, she is now embracing life to the fullest as a stay-at-home mom, with a heart full of gratitude for her family and her daughter's cancer remission.",
+  },
+];
+
 const otherTeam = [
   {
     name: "Ivy Wang",
@@ -80,7 +89,7 @@ const otherTeam = [
     name: "Trevor Hubbard",
     role: "Chief Information Security Officer",
     img: "/trevor.jpeg",
-    bio: "Bio coming soon.",
+    bio: "Trevor is a Chief Information Security Officer with over two decades of professional IT and cybersecurity experience across civilian, government, and military environments. His career has focused on strengthening security programs, managing risk, and protecting critical systems in high-stakes operational settings. He holds a Bachelor of Science in Finance and a Master of Science in Cybersecurity, combining deep technical expertise with strong business and governance perspectives. He is committed to advancing the secure and mission-driven use of technology in service of The Lost Enzyme Project.",
   },
 ];
 
@@ -307,6 +316,12 @@ export default function About() {
         <TeamSection
           title="Technology & Operations"
           members={otherTeam}
+          onSelect={setSelected}
+        />
+
+        <TeamSection
+          title="Outreach and Service Committee"
+          members={outreachCommittee}
           onSelect={setSelected}
         />
       </section>
