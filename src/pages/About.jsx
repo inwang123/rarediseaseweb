@@ -76,6 +76,12 @@ const outreachCommittee = [
     img: "/Whisper.png",
     bio: "Whisper Gale is a Mom of six, devoted to raising her wonderful children alongside her husband, Austin, whom she met in 2015 and married in 2018. Together, they are enjoying their journey filled with birds and animals. After welcoming three children in 2021, a temporary kiddo in 2023, a daughter in 2024, and her great nephew in kinship care, she is now embracing life to the fullest as a stay-at-home mom, with a heart full of gratitude for her family and her daughter's cancer remission.",
   },
+  {
+    name: "Rachael Lyon",
+    role: "Outreach and Service Committee Member",
+    img: "/Rachael_Lyon.png",
+    bio: "Rachael Lyon is a devoted mother of four and a passionate advocate within the cancer community. Her perspective is deeply personal—shaped by supporting her second child through a diagnosis of a rare form of leukemia. This journey has instilled in her a profound commitment to compassion, resilience, and hope for families facing similar challenges. With 14 years of experience in the biotechnology and pharmaceutical industry, Rachael combines professional expertise with heartfelt purpose. She is dedicated to advancing innovations in healthcare while championing the needs of patients and caregivers. Her story reflects a powerful balance of scientific insight and lived experience, driving her commitment to making a meaningful difference in the fight against cancer.",
+  },
 ];
 
 const otherTeam = [
