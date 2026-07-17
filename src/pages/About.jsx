@@ -25,12 +25,6 @@ const boardOfDirectors = [
     img: "/Samantha.png",
     bio: "Bio coming soon.",
   },
-  {
-    name: "Emily Tingey",
-    role: "Board Member",
-    img: null,
-    bio: "Bio coming soon.",
-  },
 ];
 
 const marketingTeam = [
@@ -81,6 +75,12 @@ const outreachCommittee = [
     role: "Outreach and Service Committee Member",
     img: "/Rachael_Lyon.png",
     bio: "Rachael Lyon is a devoted mother of four and a passionate advocate within the cancer community. Her perspective is deeply personal—shaped by supporting her second child through a diagnosis of a rare form of leukemia. This journey has instilled in her a profound commitment to compassion, resilience, and hope for families facing similar challenges. With 14 years of experience in the biotechnology and pharmaceutical industry, Rachael combines professional expertise with heartfelt purpose. She is dedicated to advancing innovations in healthcare while championing the needs of patients and caregivers. Her story reflects a powerful balance of scientific insight and lived experience, driving her commitment to making a meaningful difference in the fight against cancer.",
+  },
+  {
+    name: "Emily Tingey",
+    role: "Outreach and Service Committee Member",
+    img: null,
+    bio: "Bio coming soon.",
   },
 ];
 
