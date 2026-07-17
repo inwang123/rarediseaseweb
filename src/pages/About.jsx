@@ -4,7 +4,7 @@ const boardOfDirectors = [
   {
     name: "Erin Hubbard",
     role: "Co-founder and Board Chair",
-    img: "/Erin.png",
+    img: "/Erin.jpg",
     bio: "Erin Hubbard is the Co-Founder and Board Chair of the Children's Rare Disease Alliance. She is a wife and mother of five, including her youngest daughter, Skylar, who lives with Beta-mannosidosis, an ultra-rare lysosomal storage disorder. Erin also co-founded The Lost Enzyme Project and is passionate about accelerating treatment development and supporting families affected by rare diseases.",
   },
   {
