@@ -149,7 +149,7 @@ function TeamCard({ member, onClick }) {
           <img
             src={member.img}
             alt={member.name}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
         ) : (
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">
