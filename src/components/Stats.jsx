@@ -2,22 +2,29 @@ const MESSAGES = [
   {
     icon: "/box.png",
     alt: "Donation box",
-    title: "Small Acts, Big Hearts",
-    body: "Even the smallest donation can bring comfort, care, and hope to children facing rare diseases. Together, those small acts add up to something truly meaningful.",
+    title: "Checkout Charity",
+    body: "Small change. Life-changing impact. Partner with CRDA by giving customers the option to round up their purchase at checkout. Every dollar raised at checkout helps fund research and treatments for children with rare diseases.",
     accent: "#fff3cd",
   },
   {
     icon: "/star.png",
     alt: "Star",
-    title: "Every Child Deserves a Chance",
-    body: "Behind every diagnosis is a child with dreams, a family with hope, and a future worth fighting for. Your support helps move us closer to better treatments and brighter days.",
+    title: "Corporate Matching Programs",
+    body: "Double your impact. Many companies match employee donations, volunteer hours, and payroll contributions. Learn how corporate matching programs can help maximize your support for children with rare diseases.",
     accent: "#d9eeff",
   },
   {
     icon: "/reading.png",
     alt: "Children",
-    title: "You're Part of Their Story",
-    body: "By giving at checkout, you become part of something bigger — helping children and families feel seen, supported, and never alone.",
+    title: "Community Fundraising",
+    body: "Turn your passion into progress. Host or join community events that raise awareness and funding for children with rare diseases.",
+    accent: "#e8f5e9",
+  },
+  {
+    icon: "/phone-call.png",
+    alt: "Children",
+    title: "Family & Community Service",
+    body: "Supporting families beyond research. Volunteer to provide meals, care packages, hospital support, and community service projects that make a meaningful difference for rare disease families.",
     accent: "#e8f5e9",
   },
 ];
@@ -32,7 +39,7 @@ export default function Stats() {
         <div className="flex flex-col items-center text-center mb-12 gap-2">
           <img src="/heart_icon.png" alt="heart" className="w-10 h-10 mb-1" />
           <h2 className="text-white font-bold text-2xl md:text-3xl">
-            Why your support matters
+            Our Focus
           </h2>
         </div>
 

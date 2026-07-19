@@ -55,7 +55,7 @@ export default function Mission() {
             </h2>
             <p className="text-base leading-relaxed text-gray-500">
               Accelerating treatment development for children with rare diseases
-              through community partnerships, fundraising, and advocacy.
+              through community partnerships, fundraising, and advocacy. Through our Checkout Charity Program, Corporate Matching Programs, Community Fundraising, and Family & Community Service initiatives, we empower individuals, businesses, and communities to make a lasting impact and help bring life-changing treatments closer to children with rare diseases.
             </p>
             <Link
               to="/about"
