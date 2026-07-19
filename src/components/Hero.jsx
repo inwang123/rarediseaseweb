@@ -29,14 +29,6 @@ export default function Hero() {
           Into Life-Changing Treatments
         </h1>
 
-        <p
-          className="text-base max-w-xs leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.88)" }}
-        >
-          Every dollar raised at checkout helps fund research and treatments for
-          children with rare diseases.
-        </p>
-
         <div className="flex gap-3 flex-wrap mt-1">
           <Link
             to="/donate"
