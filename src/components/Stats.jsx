@@ -38,12 +38,12 @@ export default function Stats() {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center text-center mb-12 gap-2">
           <img src="/heart_icon.png" alt="heart" className="w-10 h-10 mb-1" />
-          <h2 className="text-white font-bold text-2xl md:text-3xl">
+          <h2 className="text-white font-bold text-4xl md:text-5xl">
             Our Focus
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {MESSAGES.map(({ icon, alt, title, body, accent }) => (
             <div
               key={title}
