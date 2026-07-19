@@ -56,8 +56,8 @@ export default function Stats() {
               >
                 <img src={icon} alt={alt} className="w-8 h-8 object-contain" />
               </div>
-              <h3 className="font-bold text-gray-900 text-sm">{title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1">
+              <h3 className="font-bold text-gray-900 text-base">{title}</h3>
+              <p className="text-gray-500 text-base leading-relaxed flex-1">
                 {body}
               </p>
             </div>
