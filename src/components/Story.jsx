@@ -58,7 +58,7 @@ export default function Story() {
                 />
               </div>
               <div className="p-4 flex flex-col items-center gap-1">
-                <h3 className="font-bold text-gray-900 text-sm">{p.name}</h3>
+                <h3 className="font-bold text-gray-900 text-xl">{p.name}</h3>
                 <p className="text-gray-400 text-sm">...</p>
                 <button
                   onClick={() => setSelected(p)}
