@@ -39,7 +39,7 @@ export default function Story() {
             Our Story
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
-            Learn our story
+            Meet Our Rare Heroes
           </h2>
         </div>
 
