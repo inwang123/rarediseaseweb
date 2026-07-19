@@ -82,6 +82,12 @@ const outreachCommittee = [
     img: null,
     bio: "Bio coming soon.",
   },
+  {
+    name: "Cassie Fakatoumafi",
+    role: "Outreach and Service Committee Member",
+    img: null,
+    bio: "Bio coming soon.",
+  },
 ];
 
 const otherTeam = [
