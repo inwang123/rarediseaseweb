@@ -55,7 +55,7 @@ export default function Mission() {
             </h2>
             <p className="text-base leading-relaxed text-gray-500">
               Accelerating treatment development for children with rare diseases
-              through community partnerships, fundraising, and advocacy.
+              through community partnerships, fundraising, and advocacy. Through business partnerships, workplace giving, community fundraising, and family service initiatives, we empower people to make a lasting impact and help bring life-changing treatments closer to the children who need them.
             </p>
             <Link
               to="/about"
