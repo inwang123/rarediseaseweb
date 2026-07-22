@@ -266,7 +266,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/*
+      { Our Values }
       <section className="py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 md:px-16">
           <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">
@@ -295,7 +296,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Team */}
       <section className="py-12 max-w-5xl mx-auto px-6 md:px-16">
