@@ -20,19 +20,19 @@ export default function Climb4Rare() {
       <section className="py-16 max-w-5xl mx-auto px-6 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest mb-2">Our Story</p>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why We Climb</h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-4">
+            <p className="eyebrow">Our Story</p>
+            <h2 className="h2-std">Why We Climb</h2>
+            <p className="body-std mb-4">
               Earlier this year, while our daughter Skylar was fighting life-threatening complications
               following a bone marrow transplant for Beta-Mannosidosis, we were told to prepare for the
               worst. Standing beside her hospital bed, we didn't know if she would make it through the night.
             </p>
-            <p className="text-gray-500 text-sm leading-relaxed mb-4">
+            <p className="body-std mb-4">
               But Skylar kept fighting. That experience strengthened our commitment to advancing a treatment
               for Beta-Mannosidosis. Through Climb4Rare, our goal is to raise <span className="font-semibold text-gray-900">$100,000</span> to
               help support treatment development and bring hope to families facing a disease with no approved therapies.
             </p>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="body-std">
               For us, this climb is about more than reaching a summit — it represents the uphill battle
               rare disease families face every day. We climb because children like Skylar deserve a future
               with treatment, hope, and the chance to live life to its fullest. We climb because these kids can't wait.
