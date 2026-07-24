@@ -28,9 +28,7 @@ export default function Climb4Rare() {
               worst. Standing beside her hospital bed, we didn't know if she would make it through the night.
             </p>
             <p className="body-std mb-4">
-              But Skylar kept fighting. That experience strengthened our commitment to advancing a treatment
-              for Beta-Mannosidosis. Through Climb4Rare, our goal is to raise <span className="font-semibold text-gray-900">$100,000</span> to
-              help support treatment development and bring hope to families facing a disease with no approved therapies.
+              But Skylar kept fighting. That experience strengthened our commitment to advancing a treatment for Beta-Mannosidosis, and other rare diseases. Through Climb4Rare, our goal is to raise the funds needed to support treatment development and bring hope to families facing a disease with no approved therapies.
             </p>
             <p className="body-std">
               For us, this climb is about more than reaching a summit — it represents the uphill battle
