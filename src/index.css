@@ -33,3 +33,17 @@ button {
   cursor: pointer;
   font-family: inherit;
 }
+
+@layer components {
+  .body-std {
+    @apply text-gray-500 text-sm leading-relaxed;
+  }
+
+  .eyebrow {
+    @apply text-orange-500 font-semibold text-sm uppercase tracking-widest mb-2;
+  }
+
+  .h2-std {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+  }
+}

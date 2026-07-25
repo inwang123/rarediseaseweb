@@ -104,7 +104,7 @@ const otherTeam = [
     bio: "Trevor is a Chief Information Security Officer with over two decades of professional IT and cybersecurity experience across civilian, government, and military environments. His career has focused on strengthening security programs, managing risk, and protecting critical systems in high-stakes operational settings. He holds a Bachelor of Science in Finance and a Master of Science in Cybersecurity, combining deep technical expertise with strong business and governance perspectives. He is committed to advancing the secure and mission-driven use of technology in service of The Lost Enzyme Project.",
   },
 ];
-
+{/*
 const values = [
   {
     icon: "/compassion.png",
@@ -131,6 +131,7 @@ const values = [
     desc: "We work to ensure that support and resources are available to every family regardless of location or background.",
   },
 ];
+*/}
 
 function TeamCard({ member, onClick }) {
   const initials = member.name
@@ -266,7 +267,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/*
+      { Our Values }
       <section className="py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 md:px-16">
           <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">
@@ -296,6 +298,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Team */}
       <section className="py-12 max-w-5xl mx-auto px-6 md:px-16">

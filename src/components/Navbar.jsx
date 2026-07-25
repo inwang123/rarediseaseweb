@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const DESKTOP_LINKS = [
   { label: "Home",       to: "/" },
+  { label: "Climb4Rare", to: "/climb4rare" },
   { label: "About",      to: "/about" },
   { label: "Climb4Rare", to: "/climb4rare" },
   { label: "Contact Us", to: "/contact" },
@@ -11,6 +12,7 @@ const DESKTOP_LINKS = [
 
 const MOBILE_LINKS = [
   { label: "Home",       to: "/" },
+  { label: "Climb4Rare", to: "/climb4rare" },
   { label: "About",      to: "/about" },
   { label: "Climb4Rare", to: "/climb4rare" },
   { label: "Contact Us", to: "/contact" },
