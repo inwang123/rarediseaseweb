@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const involvementCards = [
@@ -55,6 +55,11 @@ const events = [
   },
 ];
 
+const hallOfFamePhotos = Array.from(
+  { length: 14 },
+  (_, i) => `/Climb4Rare/Hall_of_Fame/c4r_${i + 1}.webp`
+);
+
 const sponsorTiers = [
   {
     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
@@ -93,6 +98,81 @@ const sponsorTiers = [
     ],
   },
 ];
+
+function HallOfFameCarousel({ photos }) {
+  const [index, setIndex] = useState(0);
+  const [autoplay, setAutoplay] = useState(false);
+  const containerRef = useRef(null);
+
+  const goTo = (i) => setIndex((i + photos.length) % photos.length);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAutoplay(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!autoplay) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % photos.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, [autoplay, photos.length]);
+
+  return (
+    <div ref={containerRef} className="max-w-4xl mx-auto">
+      <div className="relative rounded-xl overflow-hidden shadow-sm border border-gray-200 bg-white aspect-square sm:aspect-video">
+        <img
+          src={photos[index]}
+          alt={`Climb4Rare summit photo ${index + 1}`}
+          className="w-full h-full object-contain bg-white"
+        />
+
+        <button
+          type="button"
+          onClick={() => goTo(index - 1)}
+          aria-label="Previous photo"
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-200 hover:bg-gray-100 flex items-center justify-center text-gray-700 shadow-sm transition-colors"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          onClick={() => goTo(index + 1)}
+          aria-label="Next photo"
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white border border-gray-200 hover:bg-gray-100 flex items-center justify-center text-gray-700 shadow-sm transition-colors"
+        >
+          ›
+        </button>
+      </div>
+
+      <div className="flex justify-center flex-wrap gap-2 mt-4">
+        {photos.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => goTo(i)}
+            aria-label={`Go to photo ${i + 1}`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              i === index ? "bg-[#2c5f86]" : "bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Climb4Rare() {
   useEffect(() => {
@@ -312,9 +392,7 @@ export default function Climb4Rare() {
             <span className="text-[#ed774a] font-medium">@hubbardhaven</span>{" "}
             with #Climb4Rare or hold up Climb4Rare_Sign.png
           </p>
-          <p className="text-gray-400 text-sm italic">
-            Summit photos coming soon.
-          </p>
+          <HallOfFameCarousel photos={hallOfFamePhotos} />
         </div>
       </section>
     </div>
