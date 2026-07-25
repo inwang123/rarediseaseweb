@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
 
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
@@ -34,7 +34,7 @@ export default function Navbar() {
         </NavLink>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
+        <ul className="hidden md:flex items-center gap-8 lg:gap-12 list-none m-0 p-0">
           {DESKTOP_LINKS.map(({ label, to, isButton }) => (
             <li key={to}>
               <NavLink
