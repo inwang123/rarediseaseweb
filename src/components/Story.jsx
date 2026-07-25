@@ -12,8 +12,8 @@ const patients = [
     bio: "Oliver was diagnosed with Beta-mannosidosis at the age of 4. He was the first patient diagnosed in the U.S. and underwent an experimental bone marrow transplant at the age of 4, the first in medical history for Beta-mannosidosis. Through research initiated by The Lost Enzyme Project, it was discovered that Oliver has a second rare HSPD1 disorder. Collectively, Oliver's symptoms continue to progress. He is considered blind, experiences chronic pain, has difficulty with swallowing and speech, and has lost his ability to walk. He desperately needs life-saving Beta-mannosidosis and HSPD1 treatment. Despite his challenges, Oliver loves his life. He has a wonderful sense of humor and a kind heart. Oliver works hard, loves travel, basketball, and all things LA Lakers. Most of all, Oliver believes in the possibility of a better future.",
   },
   {
-    name: "Phippin",
-    img: "/Phippin_bio.jpg",
+    name: "Pippin",
+    img: "/Pippin_bio.jpg",
     bio: "Bio coming soon.",
   },
 ];
