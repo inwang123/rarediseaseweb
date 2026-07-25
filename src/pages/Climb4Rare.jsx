@@ -19,7 +19,7 @@ const involvementCards = [
     desc: "Organize a hike in your community and inspire others to get involved.",
     border: "#1a3663",
     items: [
-      "Email erin@tlep.org with your trail, date, and time",
+      "Email erin@crdalliance.org with your trail, date, and time",
       "We'll build your custom registration and fundraising page",
       "Share that link with your community",
     ],
@@ -30,7 +30,7 @@ const involvementCards = [
     desc: "Wherever you hike, bring a #Climb4Rare sign and take a photo at the summit.",
     border: "#4c1d7a",
     items: [
-      "Tag: @TheLostEnzymeProject or @hubbardhaven",
+      "Tag: @CRDA or @hubbardhaven",
       "Use #Climb4Rare or hold up Climb4Rare_Sign.png",
       "We'll share photos from supporters around the world on our social media platforms and website.",
     ],
@@ -63,8 +63,8 @@ const sponsorTiers = [
     border: "#f2960f",
     items: [
       "Logo carried to the summit of Kilimanjaro",
-      "Dedicated Sponsor spotlight reel on TLEP social media and website",
-      "Featured recognition on TLEP.org",
+      "Dedicated Sponsor spotlight reel on CRDA social media and website",
+      "Featured recognition on crdalliance.org",
       "Priority sponsor placement throughout the campaign",
     ],
   },
@@ -75,8 +75,8 @@ const sponsorTiers = [
     border: "#1a3663",
     items: [
       "Logo displayed at the halfway point of Kilimanjaro",
-      "Dedicated Sponsor spotlight reel on TLEP social media and website",
-      "Recognition on TLEP.org",
+      "Dedicated Sponsor spotlight reel on CRDA social media and website",
+      "Recognition on crdalliance.org",
       "Recognition across social media platforms",
     ],
   },
@@ -87,7 +87,7 @@ const sponsorTiers = [
     border: "#2e7d32",
     items: [
       "Logo displayed at Kilimanjaro Base Camp",
-      "Recognition on TLEP.org",
+      "Recognition on crdalliance.org",
       "Recognition across social media platforms",
       "Featured in expedition updates and photos",
     ],
@@ -132,8 +132,8 @@ export default function Climb4Rare() {
             <br />
             <br />
             That experience strengthened our commitment to advancing a
-            treatment for Beta-Mannosidosis and reinforced why we founded The
-            Lost Enzyme Project. Through Climb4Rare, our goal is to raise
+            treatment for Beta-Mannosidosis and reinforced why we founded
+            Children's Rare Disease Alliance. Through Climb4Rare, our goal is to raise
             $100,000 to help support treatment development and bring hope to
             families facing a disease with no approved therapies.
             <br />
@@ -253,19 +253,19 @@ export default function Climb4Rare() {
         <p className="text-gray-600 text-sm leading-relaxed max-w-3xl mb-2">
           Partner with us as we take the message of rare disease awareness to
           the summit of Mount Kilimanjaro. All sponsors receive recognition
-          across TLEP's website, social media platforms, and expedition
+          across CRDA's website, social media platforms, and expedition
           updates. Donations are tax-deductible and support research and
-          treatment development through The Lost Enzyme Project, a 501(c)(3)
+          treatment development through Children's Rare Disease Alliance, a 501(c)(3)
           nonprofit.
         </p>
         <p className="text-gray-600 text-sm leading-relaxed max-w-3xl mb-8">
           Complete our Sponsor Commitment for Climb4Rare_Sponsor_Commitment_Form.pdf
           {" "}or contact us at{" "}
           <a
-            href="mailto:info@tlep.org"
+            href="mailto:info@crdalliance.org"
             className="!text-[#ed774a] font-medium hover:underline"
           >
-            info@tlep.org
+            info@crdalliance.org
           </a>
           .
         </p>
@@ -306,7 +306,7 @@ export default function Climb4Rare() {
           <p className="text-gray-600 text-sm leading-relaxed mb-8">
             Don't forget to share your summit and tag{" "}
             <span className="text-[#ed774a] font-medium">
-              @TheLostEnzymeProject
+              @CRDA
             </span>{" "}
             or{" "}
             <span className="text-[#ed774a] font-medium">@hubbardhaven</span>{" "}
