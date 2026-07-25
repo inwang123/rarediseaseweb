@@ -53,6 +53,11 @@ const events = [
     date: "July 11, 2026",
     url: "https://givebutter.com/ut-battle-creek-falls-trail-hkwcod",
   },
+  {
+    name: "CA-Johnny Cash Trail",
+    date: "August 8, 2026",
+    url: "https://givebutter.com/ca-johnny-cash-trail-dpdnfs",
+  },
 ];
 
 const hallOfFamePhotos = Array.from(

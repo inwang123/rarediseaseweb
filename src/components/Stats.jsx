@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MESSAGES = [
   {
     icon: "/box.png",
@@ -19,6 +21,7 @@ const MESSAGES = [
     title: "Community Fundraising",
     body: "Turn your passion into progress. Host or join community events that raise awareness and funding for children with rare diseases.",
     accent: "#e8f5e9",
+    link: { to: "/climb4rare", label: "Climb4Rare →" },
   },
   {
     icon: "/phone-call.png",
@@ -44,7 +47,7 @@ export default function Stats() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {MESSAGES.map(({ icon, alt, title, body, accent }) => (
+          {MESSAGES.map(({ icon, alt, title, body, accent, link }) => (
             <div
               key={title}
               className="bg-white flex flex-col items-center text-center gap-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -60,6 +63,18 @@ export default function Stats() {
               <p className="text-gray-500 text-base leading-relaxed flex-1">
                 {body}
               </p>
+              {link && (
+                <Link
+                  to={link.to}
+                  className="mt-1 inline-block px-6 py-2.5 font-semibold text-sm !text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                  style={{
+                    backgroundColor: "#2c5f86",
+                    borderRadius: "0.75rem",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              )}
             </div>
           ))}
         </div>
