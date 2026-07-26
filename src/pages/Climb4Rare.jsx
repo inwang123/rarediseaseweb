@@ -263,11 +263,11 @@ export default function Climb4Rare() {
                   className="w-16 h-16 rounded-full mb-4"
                 />
                 <h3 className="text-gray-900 font-bold mb-2">{card.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                <p className="body-std mb-4">
                   {card.desc}
                 </p>
                 <hr className="w-10 border-gray-300 mb-4" />
-                <ul className="text-gray-500 text-sm leading-relaxed text-left list-disc list-inside space-y-1">
+                <ul className="body-std text-left list-disc list-inside space-y-1">
                   {card.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -286,12 +286,12 @@ export default function Climb4Rare() {
                 className="w-16 h-16 rounded-full mb-4"
               />
               <h3 className="text-gray-900 font-bold mb-2">Donate</h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-4">
+              <p className="body-std mb-4">
                 Your support helps accelerate treatment development and
                 research efforts.
               </p>
               <hr className="w-10 border-gray-300 mb-4" />
-              <ul className="text-gray-500 text-sm leading-relaxed text-left list-disc list-inside space-y-1 mb-6">
+              <ul className="body-std text-left list-disc list-inside space-y-1 mb-6">
                 <li>One-time donation</li>
                 <li>Monthly giving</li>
                 <li>See your impact</li>
@@ -372,7 +372,7 @@ export default function Climb4Rare() {
                 {tier.amount}
               </p>
               <hr className="w-10 border-gray-300 mb-4" />
-              <ul className="text-gray-500 text-sm leading-relaxed text-left list-disc list-inside space-y-1">
+              <ul className="body-std text-left list-disc list-inside space-y-1">
                 {tier.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -394,7 +394,9 @@ export default function Climb4Rare() {
               @CRDA
             </span>{" "}
             or{" "}
-            <span className="text-[#ed774a] font-medium">@hubbardhaven</span>{" "}
+            <a href="https://www.instagram.com/hubbardhaven/" target="_blank" rel="noopener noreferrer">
+              <span className="text-[#ed774a] font-medium">@hubbardhaven</span>
+            </a>{" "}
             with #Climb4Rare or hold up Climb4Rare_Sign.png
           </p>
           <HallOfFameCarousel photos={hallOfFamePhotos} />
