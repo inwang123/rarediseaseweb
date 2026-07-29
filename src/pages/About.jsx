@@ -31,8 +31,8 @@ const marketingTeam = [
   {
     name: "Ivy Lee",
     role: "Marketing and Fundraising Specialist",
-    img: null,
-    bio: "Bio coming soon.",
+    img: "/Ivy_Lee.png",
+    bio: "Ivy studies Marketing in college and brings a thoughtful, detail-oriented approach to everything she takes on, paired with genuine enthusiasm for connecting with new people. As a Marketing and Fundraising Specialist, Ivy develops and manages partnerships with local businesses, fostering meaningful community collaborations that support the organization’s fundraising efforts and mission. ",
   },
   {
     name: "Charlie Hubbard",
