@@ -37,7 +37,7 @@ const involvementCards = [
     border: "#2e7d32",
     items: [
       "Find a hike near you",
-      "Sign the [waiver](/Climb4Rare/climb4rare_waiver.pdf)",
+      "Sign the [waiver](https://thelostenzymeproject.org/wp-content/uploads/2026/06/CLIMB4RARE-Waiver.pdf)",
       "Share your summit",
     ],
   },
@@ -59,7 +59,7 @@ const involvementCards = [
     border: "#4c1d7a",
     items: [
       "Tag: [@CRDA](https://instagram.com/CRDA) or [@hubbardhaven](https://instagram.com/hubbardhaven)",
-      "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](/Climb4Rare/Climb4Rare_Sign.png)",
+      "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](https://thelostenzymeproject.org/wp-content/uploads/2026/06/Climb4Rare_8x11_Sign.pdf)",
       "We'll share photos from supporters around the world on our social media platforms and website.",
     ],
   },
