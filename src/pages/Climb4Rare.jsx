@@ -1,6 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
+{/* Notes: 
+  Go to index.css to see tailwind aliases.
+  Use tailwind aliases to reduce the amount of tailwind classes in this file.
+  Optimally, refactor this file to use some standard components for cards, buttons, and links to reduce code duplication.
+*/}
+
+// Simple markdown-style link parser: [label](url)
+function renderLinkedText(text) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return <span key={i}>{part}</span>;
+
+    const [, label, url] = match;
+    const isExternal = /^https?:\/\//.test(url);
+    return (
+      <a
+        key={i}
+        href={url}
+        className="text-[#2c5f86] underline hover:text-[#7bb1bf] font-medium"
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
+        {label}
+      </a>
+    );
+  });
+}
+
 const involvementCards = [
   {
     icon: "/Climb4Rare/Join_a_hike_icon.webp",
@@ -9,7 +37,7 @@ const involvementCards = [
     border: "#2e7d32",
     items: [
       "Find a hike near you",
-      "Sign the waiver: climb4rare_waiver.pdf",
+      "Sign the [waiver](/Climb4Rare/climb4rare_waiver.pdf)",
       "Share your summit",
     ],
   },
@@ -19,7 +47,7 @@ const involvementCards = [
     desc: "Organize a hike in your community and inspire others to get involved.",
     border: "#1a3663",
     items: [
-      "Email erin@crdalliance.org with your trail, date, and time",
+      "Email [erin@crdalliance.org](mailto:erin@crdalliance.org) with your trail, date, and time",
       "We'll build your custom registration and fundraising page",
       "Share that link with your community",
     ],
@@ -30,10 +58,23 @@ const involvementCards = [
     desc: "Wherever you hike, bring a #Climb4Rare sign and take a photo at the summit.",
     border: "#4c1d7a",
     items: [
-      "Tag: @CRDA or @hubbardhaven",
-      "Use #Climb4Rare or hold up Climb4Rare_Sign.png",
+      "Tag: [@CRDA](https://instagram.com/CRDA) or [@hubbardhaven](https://instagram.com/hubbardhaven)",
+      "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](/Climb4Rare/Climb4Rare_Sign.png)",
       "We'll share photos from supporters around the world on our social media platforms and website.",
     ],
+  },
+  {
+    icon: "/Climb4Rare/Donate_icon.webp",
+    title: "Donate",
+    desc: "Your support helps accelerate treatment development and research efforts.",
+    border: "#0f7d8c",
+    items: [
+      "One-time donation",
+      "Monthly giving",
+      "See your impact",
+      "Tax-deductible",
+    ],
+    cta: { label: "Donate Now →", to: "/donate" },
   },
 ];
 
@@ -267,43 +308,21 @@ export default function Climb4Rare() {
                   {card.desc}
                 </p>
                 <hr className="w-10 border-gray-300 mb-4" />
-                <ul className="body-std text-left list-disc list-inside space-y-1">
+                <ul className="w-fit max-w-2/3 mx-auto body-std text-left list-disc list-outside pl-5 space-y-1">
                   {card.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>{renderLinkedText(item)}</li>
                   ))}
                 </ul>
+                {card.cta && (
+                  <Link
+                    to={card.cta.to}
+                    className="mt-4 text-sm font-semibold px-6 py-2 rounded-lg !text-white bg-[#2c5f86] hover:bg-[#7bb1bf] transition-colors"
+                  >
+                    {card.cta.label}
+                  </Link>
+                )}
               </div>
             ))}
-
-            {/* Donate card */}
-            <div
-              className="bg-white rounded-xl shadow-sm border-2 p-6 flex flex-col items-center text-center"
-              style={{ borderColor: "#0f7d8c" }}
-            >
-              <img
-                src="/Climb4Rare/Donate_icon.webp"
-                alt=""
-                className="w-16 h-16 rounded-full mb-4"
-              />
-              <h3 className="text-gray-900 font-bold mb-2">Donate</h3>
-              <p className="body-std mb-4">
-                Your support helps accelerate treatment development and
-                research efforts.
-              </p>
-              <hr className="w-10 border-gray-300 mb-4" />
-              <ul className="body-std text-left list-disc list-inside space-y-1 mb-6">
-                <li>One-time donation</li>
-                <li>Monthly giving</li>
-                <li>See your impact</li>
-                <li>Tax-deductible</li>
-              </ul>
-              <Link
-                to="/donate"
-                className="mt-auto text-sm font-semibold px-6 py-2 rounded-lg !text-white bg-[#2c5f86] hover:bg-[#7bb1bf] transition-colors"
-              >
-                Donate Now →
-              </Link>
-            </div>
           </div>
 
           {/* Events */}
