@@ -240,11 +240,11 @@ export default function Climb4Rare() {
         />
       </section>
 
-      {/* Why we Climb */}
+      {/* Why We Climb */}
       <section className="py-12 max-w-5xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10">
         <div className="flex-1 min-w-0">
           <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-4">
-            Why we Climb
+            Why We Climb
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed">
             Earlier this year, while our daughter Skylar was fighting
