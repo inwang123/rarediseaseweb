@@ -4,7 +4,7 @@ const patients = [
   {
     name: "Skylar Hubbard",
     img: "/Skylar_bio.webp",
-    bio: "Skylar Hubbard was diagnosed with beta-mannosidosis just one day before her first birthday. Since then, she has lost her hearing and ability to eat and has been diagnosed with autism, optic nerve atrophy, and leukoencephalopathy. In 2025, Skylar spent more than nine months in the hospital undergoing an experimental bone marrow transplant to help slow the progression of her disease. Despite these challenges, her smile lights up every room, and her joyful spirit is contagious. Her sign name means \"Brave,\" because she is a true fighter. The Lost Enzyme Project is working to develop the first enzyme replacement therapy for children living with beta-mannosidosis, bringing hope to families around the world.",
+    bio: "Skylar Hubbard was diagnosed with beta-mannosidosis just one day before her first birthday. Since then, she has lost vision, hearing, and ability to eat and has been diagnosed with autism, optic nerve atrophy, and leukoencephalopathy. In 2025, Skylar spent more than nine months in the hospital undergoing an experimental bone marrow transplant to help slow the progression of her disease. Despite these challenges, her smile lights up every room, and her joyful spirit is contagious. Her sign name means \"Brave,\" because she is a true fighter. The Lost Enzyme Project is working to develop the first enzyme replacement therapy for children living with beta-mannosidosis, bringing hope to families around the world.",
   },
   {
     name: "Oliver",
@@ -15,6 +15,11 @@ const patients = [
     name: "Phippin",
     img: "/Phippin_bio.jpg",
     bio: "Phippin is from Logan, Utah, and is currently living with Aicardi-Goutières syndrome (AGS), a rare genetic condition that affects the brain and immune system, Hodgkin's lymphoma, and moyamoya disease, a rare cerebrovascular disorder that adds further complexity to his care. Through it all, Phippin's joyful personality continues to shine. He loves to sing, dance, and spread happiness to everyone around him.",
+  },
+  {
+    name: "Keon",
+    img: "/Keon_bio.jpg",
+    bio: "Bio coming soon...",
   },
 ];
 
