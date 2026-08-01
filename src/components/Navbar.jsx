@@ -62,7 +62,7 @@ export default function Navbar() {
                 to={to}
                 className={({ isActive }) => {
                   if (isButton) {
-                    return `text-sm font-medium px-6 py-2 rounded-lg transition-colors text-white ${
+                    return `text-sm font-medium px-6 py-2 rounded-lg transition-colors !text-white ${
                       isActive ? "bg-[#2c5f86]" : "bg-[#2c5f86] hover:bg-[#7bb1bf]"
                     }`;
                   }
