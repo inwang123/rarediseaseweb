@@ -14,7 +14,7 @@ const patients = [
   {
     name: "Phippin",
     img: "/Phippin_bio.jpg",
-    bio: "Bio coming soon.",
+    bio: "Phippin is from Logan, Utah, and is currently living with Aicardi-Goutières syndrome (AGS), a rare genetic condition that affects the brain and immune system, Hodgkin's lymphoma, and moyamoya disease, a rare cerebrovascular disorder that adds further complexity to his care. Through it all, Phippin's joyful personality continues to shine. He loves to sing, dance, and spread happiness to everyone around him.",
   },
 ];
 
