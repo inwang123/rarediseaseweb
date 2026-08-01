@@ -94,11 +94,11 @@ export default function Donate() {
                 />
               </div>
               {/* Bottom half - Blue background with text */}
-              <div className="bg-blue-50 p-8 flex flex-col flex-grow">
+              <div className="bg-blue-50 p-8 flex flex-col grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                   Children's Rare Disease Alliance
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6 flex-grow">
+                <p className="text-gray-600 text-lg leading-relaxed mb-6 grow">
                   The Children's Rare Disease Alliance turns small acts of
                   generosity at checkout into life-changing treatments for
                   children living with rare diseases.
