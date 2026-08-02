@@ -86,7 +86,7 @@ const outreachCommittee = [
     name: "Cassie Fakatoumafi",
     role: "Outreach and Service Committee Member",
     img: "/Cassie_bio.png",
-    bio: "Cassie Fakatoumafi is a single mother of three, who juggles her real estate career with taking care of her special needs son Keon. She loves to travel and go on adventures. Meditation and exercise are a big part of her daily life. Her first priority, however, is always her family and advocating for her son and all of his special needs. She is looking forward to being on CRDA’s service committee and helping other parents navigate the difficulties of raising a child with a rare disease.",
+    bio: "Cassie Fakatoumafi is a single mother of three, who juggles her real estate career with taking care of her special needs son Keon. She loves to travel and go on adventures. Meditation and exercise are a big part of her daily life. Her first priority, however, is always her family and advocating for her son and all of his special needs. She is looking forward to being on CRDA's service committee and helping other parents navigate the difficulties of raising a child with a rare disease.",
   },
 ];
 
