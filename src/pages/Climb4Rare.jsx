@@ -366,10 +366,10 @@ export default function Climb4Rare() {
           Complete our Sponsor Commitment for Climb4Rare_Sponsor_Commitment_Form.pdf
           {" "}or contact us at{" "}
           <a
-            href="mailto:info@crdalliance.org"
+            href="mailto:erin@crdalliance.org"
             className="!text-[#ed774a] font-medium hover:underline"
           >
-            info@crdalliance.org
+            erin@crdalliance.org
           </a>
           .
         </p>
