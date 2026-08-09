@@ -102,7 +102,7 @@ const events = [
 ];
 
 const hallOfFamePhotos = Array.from(
-  { length: 14 },
+  { length: 16 },
   (_, i) => `/Climb4Rare/Hall_of_Fame/c4r_${i + 1}.webp`
 );
 
