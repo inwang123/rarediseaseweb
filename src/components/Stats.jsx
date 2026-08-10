@@ -7,6 +7,7 @@ const MESSAGES = [
     title: "Checkout Charity",
     body: "Small change. Life-changing impact. Partner with CRDA by giving customers the option to round up their purchase at checkout. Every dollar raised at checkout helps fund research and treatments for children with rare diseases.",
     accent: "#fff3cd",
+    link: { to: "/checkoutcharity", label: "Checkout Charity →" },
   },
   {
     icon: "/star.png",
