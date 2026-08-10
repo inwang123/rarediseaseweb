@@ -133,24 +133,6 @@ export default function CheckoutCharity() {
                     </Link>
                 </div>
             </section>
-
-            {/* Footer note */}
-            <section className="py-6 max-w-5xl mx-auto px-6 md:px-16 text-center">
-                <p className="text-xs text-gray-500">
-                    Children's Rare Disease Alliance is a 501(c)(3) nonprofit
-                    organization. Join local businesses making a difference for rare
-                    disease families at{" "}
-                    <a
-                        href="https://crdalliance.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#2c5f86] underline hover:text-[#7bb1bf] font-medium"
-                    >
-                        crdalliance.org
-                    </a>
-                .
-                </p>
-            </section>
         </div >
   );
 }
