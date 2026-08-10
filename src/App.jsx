@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Climb4Rare from "./pages/Climb4Rare";
 import Donate from "./pages/Donate";
+import CheckoutCharity from "./pages/CheckoutCharity";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/climb4rare" element={<Climb4Rare />} />
+            <Route path="/checkoutcharity" element={<CheckoutCharity />} />
             <Route path="/donate" element={<Donate />} />
           </Routes>
         </main>
