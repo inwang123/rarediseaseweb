@@ -69,28 +69,6 @@ export default function CheckoutCharity() {
                         diseases.
                     </p>
                 </div>
-                <div className="flex-shrink-0">
-                    <img
-                        src="/Oliver_bio.webp"
-                        alt="Oliver, a Children's Rare Disease Alliance advocate"
-                        className="w-64 h-64 md:w-72 md:h-72 object-cover rounded-full shadow-md border-4 border-white ring-2 ring-[#7bb1bf]"
-                    />
-                </div>
-            </section>
-
-            {/* Meet Oliver */}
-            <section className="pb-12 max-w-5xl mx-auto px-6 md:px-16">
-                <div className="bg-[#eef4fa] rounded-xl p-8 text-center">
-                    <h2 className="text-xl md:text-2xl font-bold text-[#1a3663] mb-4">
-                        ♥ Meet Oliver ♥
-                    </h2>
-                    <p className="text-[#1a3663] text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-                        A Great Falls, MT resident, Oliver has both Beta-mannosidosis and
-                        HSPD1. Both diseases are rare, progressive, and waiting for
-                        life-saving treatment. Every dollar raised helps bring treatment
-                        to Oliver and other children with rare diseases.
-                    </p>
-                </div>
             </section>
 
             {/* How Your Business Can Help */}
@@ -119,6 +97,7 @@ export default function CheckoutCharity() {
             </section>
 
             {/* CTA Banner */}
+            {/*
             <section className="bg-[#1a3663] py-10">
                 <div className="max-w-5xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <p className="text-white text-base md:text-lg font-medium max-w-xl">
@@ -126,13 +105,14 @@ export default function CheckoutCharity() {
                         children with rare diseases.
                     </p>
                     <Link
-                        to="/checkout-charity/sign-up"
+                        to="/"
                         className="flex-shrink-0 text-sm font-semibold px-6 py-3 rounded-lg !text-[#1a3663] bg-white hover:bg-[#7bb1bf] hover:!text-white transition-colors whitespace-nowrap"
                     >
                         Get Involved →
                     </Link>
                 </div>
             </section>
+            */}
         </div >
-  );
+    );
 }

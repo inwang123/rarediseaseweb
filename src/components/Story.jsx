@@ -21,6 +21,11 @@ const patients = [
     img: "/Keon_bio.jpg",
     bio: "Keon was diagnosed with a rare genetic mutation at the age of 8: Tatton Brown Rahman Syndrome. The syndrome and gene mutation had only been discovered 4 years prior. At the time of his diagnosis there were only 15 known cases in the world. Today, Keon is 17 and there are several hundred people who have since been diagnosed with TBRS. His main challenges with the disease are mental disability, kidney disease, eye issues, low muscle tone and difficulty walking. Keon is the happiest, most loving and joyful boy, with a smile that lights up your heart. This past year has been especially challenging for Keon. He was diagnosed with a rare T-cell leukemia on top of his rare genetic syndrome, and all of the complications that come with that. It has definitely affected him, but yet he manages to still smile and laugh and spread joy to everyone he meets.",
   },
+  {
+    name: "Marco",
+    img: "/Marco_bio.png",
+    bio: "Marco was diagnosed with Beta-mannosidosis at 7yrs old. He was born with moderate hearing loss and started wearing hearing aids at 3 months old. He was diagnosed with ADHD and low cognitive function in 2023. Marco speech is delayed and receives education assistance at school. Despite all his challenges, Marco is an adorable kid that lives life to the fullest. He loves going camping, cars, bats and playing with friends."
+  }
 ];
 
 export default function Story() {
