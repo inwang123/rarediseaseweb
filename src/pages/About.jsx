@@ -23,9 +23,19 @@ const boardOfDirectors = [
     name: "Samantha Behunin",
     role: "Board Member",
     img: "/Samantha.png",
-    bio: "Bio coming soon.",
+    bio: "Dr. Samantha Behunin is a physiologist with a PhD in physiology and a minor in pharmacology. Her doctoral research focused on cardiovascular biophysics and metabolism. Drawn to the study of cellular energetics, she went on to complete a fellowship in translational cancer biology, where she investigated cellular energetics in non-small cell lung cancer. She currently works with The Lost Enzyme Project, where she has been establishing a genomic analysis program that integrates cutting-edge genomic technologies into biomedical research and patient-focused studies. Leveraging her expertise as a Patient Identification Specialist alongside her background in physiology, pharmacology, and molecular biology, she is actively applying these tools to identify new Beta-Mannosidosis patients, advancing both diagnosis and research into this rare condition. Outside of her professional pursuits, Dr. Behunin is a devoted mother and wife, with her family serving as her greatest source of inspiration and fulfillment.",
   },
 ];
+
+const strategicAdvisoryBoard = [
+  {
+    name: "Greg Jensen",
+    role: "",
+    img: "",
+    bio: "Bio coming soon.",
+  },
+
+]
 
 const marketingTeam = [
   {
@@ -39,6 +49,18 @@ const marketingTeam = [
     role: "Marketing and Fundraising Specialist",
     img: "/charlie.jpg",
     bio: "Charlie is an honor student gearing up for his senior year of high school, where his sharp intellect and relentless work ethic have earned him many awards already. He's the kind of leader who balances rigorous academics with genuine enthusiasm for school life.",
+  },
+  {
+    name: "Laurel Gregier",
+    role: "HSPD1 Specialist",
+    img: "Laurel_Gregier_bio.webp",
+    bio: "Bio coming soon.",
+  },
+  {
+    name: "Jayda Lee",
+    role: "Outreach and Marketing Specialist",
+    img: "Jayda_bio.jpg",
+    bio: "Bio coming soon.",
   },
 ];
 
@@ -102,6 +124,12 @@ const otherTeam = [
     role: "Chief Information Security Officer",
     img: "/trevor.jpeg",
     bio: "Trevor is a Chief Information Security Officer with over two decades of professional IT and cybersecurity experience across civilian, government, and military environments. His career has focused on strengthening security programs, managing risk, and protecting critical systems in high-stakes operational settings. He holds a Bachelor of Science in Finance and a Master of Science in Cybersecurity, combining deep technical expertise with strong business and governance perspectives. He is committed to advancing the secure and mission-driven use of technology in service of The Lost Enzyme Project.",
+  },
+  {
+    name: "Marcella Pietrzyk",
+    role: "Grant Writer",
+    img: "Marcella_bio.png",
+    bio: "Marcella Pietrzyk graduated from the University of Wisconsin-Madison in 2025 with a B.S. in Global Health and a certificate in Health Policy. She is currently pursuing a Master of Public Health with a concentration in Health Policy and Administration, along with a certificate in Health Disparities Research at the University of Illinois-Chicago. She is dedicated to reducing health inequities through policy change, advocacy, and expanding access to sustainable funding, with a particular focus on supporting individuals and families affected by chronic illness and rare diseases. In her spare time, she likes to volunteer with the American Red Cross, where she supports community health initiatives by teaching CPR classes and leading youth preparedness programs.",
   },
 ];
 {/*
@@ -316,6 +344,12 @@ export default function About() {
         />
 
         <TeamSection
+          title="Strategic Advisory Board"
+          members={strategicAdvisoryBoard}
+          onSelect={setSelected}
+        />
+
+        <TeamSection
           title="Marketing & Fundraising Specialists"
           members={marketingTeam}
           onSelect={setSelected}
@@ -329,7 +363,7 @@ export default function About() {
         /> */}
 
         <TeamSection
-          title="Technology & Operations"
+          title="Team Members"
           members={otherTeam}
           onSelect={setSelected}
         />
