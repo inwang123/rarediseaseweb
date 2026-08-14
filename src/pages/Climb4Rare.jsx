@@ -47,7 +47,7 @@ const involvementCards = [
     desc: "Organize a hike in your community and inspire others to get involved.",
     border: "#1a3663",
     items: [
-      "Email [erin@crdalliance.org](mailto:erin@crdalliance.org) with your trail, date, and time",
+      "Email [info@crdalliance.org](mailto:info@crdalliance.org) with your trail, date, and time",
       "We'll build your custom registration and fundraising page",
       "Share that link with your community",
     ],
