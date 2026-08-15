@@ -162,14 +162,16 @@ export default function Story() {
                 const offset = circularOffset(i, current, length);
                 const abs = Math.abs(offset);
 
-                // Only render the center card and its immediate neighbors
-                if (abs > 1) return null;
+                // Render one card further out than we show, so it can fade
+                // out in place instead of popping out of existence
+                if (abs > 2) return null;
 
                 const isCenter = offset === 0;
-                const scale = isCenter ? 1 : 0.8;
+                const isVisible = abs <= 1;
+                const scale = isCenter ? 1 : isVisible ? 0.8 : 0.65;
                 const translateX = offset * 230;
-                const opacity = 1;
-                const zIndex = isCenter ? 30 : 10;
+                const opacity = isVisible ? 1 : 0;
+                const zIndex = isCenter ? 30 : isVisible ? 10 : 1;
 
                 return (
                   <div
@@ -184,8 +186,9 @@ export default function Story() {
                         : "0 8px 20px -8px rgba(44, 95, 134, 0.18)",
                       filter: isCenter ? "none" : "saturate(0.85)",
                       transition:
-                        "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease",
+                        "transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease, box-shadow 0.5s ease, filter 0.5s ease",
                       cursor: isCenter ? "default" : "pointer",
+                      pointerEvents: isVisible ? "auto" : "none",
                     }}
                     onClick={() => {
                       if (!isCenter) {
