@@ -120,6 +120,12 @@ const otherTeam = [
     bio: "Ivy is the designer and developer behind the Children's Rare Disease Alliance website, bringing the organization's mission to life through thoughtful design and development.",
   },
   {
+    name: "George Yeh",
+    role: "Website Designer & Developer",
+    img: "/george_bio.png",
+    bio: "Bio coming soon.",
+  },
+  {
     name: "Trevor Hubbard",
     role: "Chief Information Security Officer",
     img: "/trevor.jpeg",
