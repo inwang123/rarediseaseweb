@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const patients = [
   {
@@ -28,8 +28,89 @@ const patients = [
   }
 ];
 
+const AUTO_SCROLL_MS = 4500;
+const WHEEL_COOLDOWN_MS = 600;
+
+// Shortest signed distance from `index` to `center` around a circle of size `length`
+function circularOffset(index, center, length) {
+  let diff = index - center;
+  if (diff > length / 2) diff -= length;
+  if (diff < -length / 2) diff += length;
+  return diff;
+}
+
 export default function Story() {
   const [selected, setSelected] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const autoScrollRef = useRef(null);
+  const lastWheelRef = useRef(0);
+  const trackRef = useRef(null);
+
+  const length = patients.length;
+
+  const goTo = useCallback(
+    (index) => {
+      setCurrent(((index % length) + length) % length);
+    },
+    [length]
+  );
+
+  const next = useCallback(() => goTo(current + 1), [current, goTo]);
+  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
+
+  // Auto-scroll every few seconds, paused while the bio modal is open
+  useEffect(() => {
+    if (modalOpen) return;
+    autoScrollRef.current = setInterval(() => {
+      setCurrent((c) => (c + 1) % length);
+    }, AUTO_SCROLL_MS);
+    return () => clearInterval(autoScrollRef.current);
+  }, [modalOpen, length]);
+
+  const resetAutoScroll = useCallback(() => {
+    clearInterval(autoScrollRef.current);
+    if (modalOpen) return;
+    autoScrollRef.current = setInterval(() => {
+      setCurrent((c) => (c + 1) % length);
+    }, AUTO_SCROLL_MS);
+  }, [modalOpen, length]);
+
+  const handleWheel = useCallback(
+    (e) => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastWheelRef.current < WHEEL_COOLDOWN_MS) return;
+      lastWheelRef.current = now;
+
+      if (e.deltaY > 5 || e.deltaX > 5) {
+        next();
+        resetAutoScroll();
+      } else if (e.deltaY < -5 || e.deltaX < -5) {
+        prev();
+        resetAutoScroll();
+      }
+    },
+    [next, prev, resetAutoScroll]
+  );
+
+  useEffect(() => {
+    const node = trackRef.current;
+    if (!node) return;
+    node.addEventListener("wheel", handleWheel, { passive: false });
+    return () => node.removeEventListener("wheel", handleWheel);
+  }, [handleWheel]);
+
+  const openBio = (p) => {
+    setSelected(p);
+    setModalOpen(true);
+  };
+
+  const closeBio = () => {
+    setSelected(null);
+    setModalOpen(false);
+  };
 
   return (
     <div
@@ -58,32 +139,119 @@ export default function Story() {
           </h2>
         </div>
 
-        {/* Patient Cards */}
-        <div className="flex flex-col sm:flex-row gap-8 justify-center w-full">
-          {patients.map((p) => (
-            <div
-              key={p.name}
-              className="flex flex-col items-center text-center bg-white rounded-2xl shadow-sm overflow-hidden w-full max-w-xs mx-auto"
+        {/* Carousel */}
+        <div className="w-full flex flex-col items-center gap-6">
+          <div className="flex items-center gap-2 md:gap-6 w-full justify-center">
+            <button
+              onClick={() => {
+                prev();
+                resetAutoScroll();
+              }}
+              aria-label="Previous hero"
+              className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-sm text-[#2c5f86] hover:bg-[#e9f2f8] transition-colors shrink-0"
             >
-              <div className="w-full aspect-square overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-4 flex flex-col items-center gap-1">
-                <h3 className="font-bold text-gray-900 text-xl">{p.name}</h3>
-                <p className="text-gray-400 text-sm">...</p>
-                <button
-                  onClick={() => setSelected(p)}
-                  className="mt-1 text-xs text-[#2c5f86] font-medium underline underline-offset-2"
-                >
-                  Learn more
-                </button>
-              </div>
+              ‹
+            </button>
+
+            <div
+              ref={trackRef}
+              className="relative w-full max-w-3xl mx-auto"
+              style={{ height: "420px", touchAction: "pan-y" }}
+            >
+              {patients.map((p, i) => {
+                const offset = circularOffset(i, current, length);
+                const abs = Math.abs(offset);
+
+                // Only render the center card and its immediate neighbors
+                if (abs > 1) return null;
+
+                const isCenter = offset === 0;
+                const scale = isCenter ? 1 : 0.8;
+                const translateX = offset * 230;
+                const opacity = 1;
+                const zIndex = isCenter ? 30 : 10;
+
+                return (
+                  <div
+                    key={p.name}
+                    className="absolute top-1/2 left-1/2 flex flex-col items-center text-center bg-white rounded-2xl overflow-hidden w-64"
+                    style={{
+                      transform: `translate(-50%, -50%) translateX(${translateX}px) scale(${scale})`,
+                      opacity,
+                      zIndex,
+                      boxShadow: isCenter
+                        ? "0 20px 40px -12px rgba(44, 95, 134, 0.35)"
+                        : "0 8px 20px -8px rgba(44, 95, 134, 0.18)",
+                      filter: isCenter ? "none" : "saturate(0.85)",
+                      transition:
+                        "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease",
+                      cursor: isCenter ? "default" : "pointer",
+                    }}
+                    onClick={() => {
+                      if (!isCenter) {
+                        goTo(i);
+                        resetAutoScroll();
+                      }
+                    }}
+                  >
+                    <div className="w-full aspect-square overflow-hidden">
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        className="w-full h-full object-cover object-top"
+                        draggable={false}
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col items-center gap-1">
+                      <h3 className="font-bold text-gray-900 text-xl">{p.name}</h3>
+                      {isCenter && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openBio(p);
+                          }}
+                          className="mt-1 text-xs text-[#2c5f86] font-medium underline underline-offset-2"
+                        >
+                          Learn more
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+
+            <button
+              onClick={() => {
+                next();
+                resetAutoScroll();
+              }}
+              aria-label="Next hero"
+              className="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-sm text-[#2c5f86] hover:bg-[#e9f2f8] transition-colors shrink-0"
+            >
+              ›
+            </button>
+          </div>
+
+          {/* Dots */}
+          <div className="flex items-center gap-2">
+            {patients.map((p, i) => (
+              <button
+                key={p.name}
+                onClick={() => {
+                  goTo(i);
+                  resetAutoScroll();
+                }}
+                aria-label={`Go to ${p.name}`}
+                className="rounded-full transition-all"
+                style={{
+                  width: i === current ? "20px" : "8px",
+                  height: "8px",
+                  backgroundColor: i === current ? "#2c5f86" : "#c7dae6",
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -91,14 +259,14 @@ export default function Story() {
       {selected && (
         <div
           className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4"
-          onClick={() => setSelected(null)}
+          onClick={closeBio}
         >
           <div
             className="bg-white rounded-2xl shadow-xl max-w-md w-full overflow-y-auto max-h-[80vh] relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setSelected(null)}
+              onClick={closeBio}
               className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-white shadow-sm transition-all"
             >
               ✕
