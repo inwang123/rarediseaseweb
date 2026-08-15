@@ -97,22 +97,27 @@ export default function CheckoutCharity() {
             </section>
 
             {/* CTA Banner */}
-            {/*
             <section className="bg-[#1a3663] py-10">
-                <div className="max-w-5xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div className="max-w-5xl mx-auto px-6 md:px-16 flex flex-col items-center gap-6 text-center">
                     <p className="text-white text-base md:text-lg font-medium max-w-xl">
                         Every penny of spare change helps fund treatment development for
                         children with rare diseases.
                     </p>
-                    <Link
-                        to="/"
-                        className="flex-shrink-0 text-sm font-semibold px-6 py-3 rounded-lg !text-[#1a3663] bg-white hover:bg-[#7bb1bf] hover:!text-white transition-colors whitespace-nowrap"
-                    >
-                        Get Involved →
-                    </Link>
+                    <div className="w-full max-w-2xl bg-white rounded-xl overflow-hidden shadow-lg">
+                        <iframe
+                            title="Get Involved sign-up form"
+                            width="640"
+                            height="1840"
+                            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=bKNtVnppg0aVes1z28bWNr6Blvi_UTRIlzCiAC3hlD5URURRQzdSVjg4NEVVOFdIUDhaQUREVzBGSiQlQCN0PWcu&embed=true"
+                            frameBorder="0"
+                            marginWidth="0"
+                            marginHeight="0"
+                            style={{ border: "none", maxWidth: "100%", width: "100%" }}
+                            allowFullScreen
+                        />
+                    </div>
                 </div>
             </section>
-            */}
         </div >
     );
 }
