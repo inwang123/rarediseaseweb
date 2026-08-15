@@ -186,7 +186,7 @@ export default function Story() {
                         : "0 8px 20px -8px rgba(44, 95, 134, 0.18)",
                       filter: isCenter ? "none" : "saturate(0.85)",
                       transition:
-                        "transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 1s ease, box-shadow 0.5s ease, filter 0.5s ease",
+                        "transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease, box-shadow 0.5s ease, filter 0.5s ease",
                       cursor: isCenter ? "default" : "pointer",
                       pointerEvents: isVisible ? "auto" : "none",
                     }}
