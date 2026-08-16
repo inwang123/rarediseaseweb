@@ -34,7 +34,7 @@ const involvementCards = [
     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
     title: "Become a Sponsor",
     desc: "Bring a #Climb4Rare sign and take a photo at the summit!",
-    border: "#4c1d7a",
+    border: "#FE9F01",
     items: [
       "Sponsor recognition on our website and social media.",
       "A custom flag featuring your logo at the top of Mount Kilimanjaro.",
@@ -105,45 +105,6 @@ const hallOfFamePhotos = Array.from(
   { length: 16 },
   (_, i) => `/Climb4Rare/Hall_of_Fame/c4r_${i + 1}.webp`
 );
-
-// const sponsorTiers = [
-//   {
-//     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
-//     title: "Summit Sponsor",
-//     amount: "$5,000+",
-//     border: "#f2960f",
-//     items: [
-//       "Logo carried to the summit of Kilimanjaro",
-//       "Dedicated Sponsor spotlight reel on CRDA social media and website",
-//       "Featured recognition on crdalliance.org",
-//       "Priority sponsor placement throughout the campaign",
-//     ],
-//   },
-//   {
-//     icon: "/Climb4Rare/Ascent_sponsor_icon.webp",
-//     title: "Ascent Sponsor",
-//     amount: "$2,500+",
-//     border: "#1a3663",
-//     items: [
-//       "Logo displayed at the halfway point of Kilimanjaro",
-//       "Dedicated Sponsor spotlight reel on CRDA social media and website",
-//       "Recognition on crdalliance.org",
-//       "Recognition across social media platforms",
-//     ],
-//   },
-//   {
-//     icon: "/Climb4Rare/Base_camp_sponsor.webp",
-//     title: "Base Camp Sponsor",
-//     amount: "$1,000",
-//     border: "#2e7d32",
-//     items: [
-//       "Logo displayed at Kilimanjaro Base Camp",
-//       "Recognition on crdalliance.org",
-//       "Recognition across social media platforms",
-//       "Featured in expedition updates and photos",
-//     ],
-//   },
-// ];
 
 function HallOfFameCarousel({ photos }) {
   const [index, setIndex] = useState(0);
