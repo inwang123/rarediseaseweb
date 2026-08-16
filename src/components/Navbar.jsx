@@ -5,11 +5,11 @@ const DESKTOP_LINKS = [
   { label: "Home",       to: "/" },
   { label: "About",      to: "/about" },
   {
-    label: "Climb4Rare",
-    to: "/climb4rare",
+    label: "Get Involved",
+    to: "/checkoutcharity",
     dropdown: [
-      { label: "Overview", to: "/climb4rare" },
-      { label: "Donate",   to: "/donate" },
+      { label: "Checkout Charity",   to: "/checkoutcharity" },
+      { label: "Climb4Rare", to: "/climb4rare" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
@@ -20,11 +20,11 @@ const MOBILE_LINKS = [
   { label: "Home",       to: "/" },
   { label: "About",      to: "/about" },
   {
-    label: "Climb4Rare",
-    to: "/climb4rare",
+    label: "Get Involved",
+    to: "/checkoutcharity",
     dropdown: [
-      { label: "Overview", to: "/climb4rare" },
-      { label: "Donate",   to: "/donate" },
+      { label: "Checkout Charity",   to: "/checkoutcharity" },
+      { label: "Climb4Rare", to: "/climb4rare" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
