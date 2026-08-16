@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 {/* Notes: 
@@ -31,6 +31,17 @@ function renderLinkedText(text) {
 
 const involvementCards = [
   {
+    icon: "/Climb4Rare/Summit_sponsor_icon.webp",
+    title: "Become a Sponsor",
+    desc: "Bring a #Climb4Rare sign and take a photo at the summit!",
+    border: "#4c1d7a",
+    items: [
+      "Sponsor recognition on our website and social media.",
+      "A custom flag featuring your logo at the top of Mount Kilimanjaro.",
+      "Recognition in our expedition documentary footage.",
+    ],
+  },
+  {
     icon: "/Climb4Rare/Join_a_hike_icon.webp",
     title: "Join a Hike",
     desc: "Join a Climb4Rare event near you and make every step count.",
@@ -53,20 +64,9 @@ const involvementCards = [
     ],
   },
   {
-    icon: "/Climb4Rare/Share_your_summit_icon.webp",
-    title: "Share your Summit",
-    desc: "Wherever you hike, bring a #Climb4Rare sign and take a photo at the summit.",
-    border: "#4c1d7a",
-    items: [
-      "Tag: [@CRDA](https://instagram.com/CRDA) or [@hubbardhaven](https://instagram.com/hubbardhaven)",
-      "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](https://thelostenzymeproject.org/wp-content/uploads/2026/06/Climb4Rare_8x11_Sign.pdf)",
-      "We'll share photos from supporters around the world on our social media platforms and website.",
-    ],
-  },
-  {
     icon: "/Climb4Rare/Donate_icon.webp",
     title: "Donate",
-    desc: "Your support helps accelerate treatment development and research efforts.",
+    desc: "Your support accelerates treatment development and research efforts.",
     border: "#0f7d8c",
     items: [
       "One-time donation",
@@ -106,44 +106,44 @@ const hallOfFamePhotos = Array.from(
   (_, i) => `/Climb4Rare/Hall_of_Fame/c4r_${i + 1}.webp`
 );
 
-const sponsorTiers = [
-  {
-    icon: "/Climb4Rare/Summit_sponsor_icon.webp",
-    title: "Summit Sponsor",
-    amount: "$5,000+",
-    border: "#f2960f",
-    items: [
-      "Logo carried to the summit of Kilimanjaro",
-      "Dedicated Sponsor spotlight reel on CRDA social media and website",
-      "Featured recognition on crdalliance.org",
-      "Priority sponsor placement throughout the campaign",
-    ],
-  },
-  {
-    icon: "/Climb4Rare/Ascent_sponsor_icon.webp",
-    title: "Ascent Sponsor",
-    amount: "$2,500+",
-    border: "#1a3663",
-    items: [
-      "Logo displayed at the halfway point of Kilimanjaro",
-      "Dedicated Sponsor spotlight reel on CRDA social media and website",
-      "Recognition on crdalliance.org",
-      "Recognition across social media platforms",
-    ],
-  },
-  {
-    icon: "/Climb4Rare/Base_camp_sponsor.webp",
-    title: "Base Camp Sponsor",
-    amount: "$1,000",
-    border: "#2e7d32",
-    items: [
-      "Logo displayed at Kilimanjaro Base Camp",
-      "Recognition on crdalliance.org",
-      "Recognition across social media platforms",
-      "Featured in expedition updates and photos",
-    ],
-  },
-];
+// const sponsorTiers = [
+//   {
+//     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
+//     title: "Summit Sponsor",
+//     amount: "$5,000+",
+//     border: "#f2960f",
+//     items: [
+//       "Logo carried to the summit of Kilimanjaro",
+//       "Dedicated Sponsor spotlight reel on CRDA social media and website",
+//       "Featured recognition on crdalliance.org",
+//       "Priority sponsor placement throughout the campaign",
+//     ],
+//   },
+//   {
+//     icon: "/Climb4Rare/Ascent_sponsor_icon.webp",
+//     title: "Ascent Sponsor",
+//     amount: "$2,500+",
+//     border: "#1a3663",
+//     items: [
+//       "Logo displayed at the halfway point of Kilimanjaro",
+//       "Dedicated Sponsor spotlight reel on CRDA social media and website",
+//       "Recognition on crdalliance.org",
+//       "Recognition across social media platforms",
+//     ],
+//   },
+//   {
+//     icon: "/Climb4Rare/Base_camp_sponsor.webp",
+//     title: "Base Camp Sponsor",
+//     amount: "$1,000",
+//     border: "#2e7d32",
+//     items: [
+//       "Logo displayed at Kilimanjaro Base Camp",
+//       "Recognition on crdalliance.org",
+//       "Recognition across social media platforms",
+//       "Featured in expedition updates and photos",
+//     ],
+//   },
+// ];
 
 function HallOfFameCarousel({ photos }) {
   const [index, setIndex] = useState(0);
@@ -229,6 +229,19 @@ export default function Climb4Rare() {
     };
   }, []);
 
+  const [leftImg, rightImg] = useMemo(() => {
+    const total = 16;
+    const first = Math.floor(Math.random() * total) + 1;
+    let second = Math.floor(Math.random() * total) + 1;
+    while (second === first) {
+      second = Math.floor(Math.random() * total) + 1;
+    }
+    return [
+      `/Climb4Rare/Hall_of_Fame/c4r_${first}.webp`,
+      `/Climb4Rare/Hall_of_Fame/c4r_${second}.webp`,
+    ];
+  }, []);
+
   return (
     <div className="bg-white overflow-x-hidden">
       {/* Hero */}
@@ -287,11 +300,11 @@ export default function Climb4Rare() {
 
       {/* How to Get Involved */}
       <section className="py-12 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6 md:px-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <h2 className="ml-32 text-2xl md:text-3xl font-bold text-[#2c5f86] mb-8">
             How to Get Involved
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {involvementCards.map((card) => (
               <div
                 key={card.title}
@@ -325,8 +338,55 @@ export default function Climb4Rare() {
             ))}
           </div>
 
+          {/* Share Your Summit */}
+          <section className="py-12 bg-gray-50">
+            <div className="max-w-5xl mx-auto px-6 md:px-16">
+              <div
+                className="bg-white rounded-xl shadow-sm border-2 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6"
+                style={{ borderColor: "#4c1d7a" }}
+              >
+                <img
+                  src={leftImg}
+                  alt=""
+                  className="w-full md:w-48 h-48 object-cover rounded-lg flex-shrink-0"
+                />
+
+                <div className="flex-1 text-center">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-4">
+                    Share Your Summit
+                  </h2>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Bring a #Climb4Rare sign and take a photo at the summit!
+                  </p>
+                  <ul className="body-std text-left list-disc list-outside pl-5 space-y-1 w-fit mx-auto">
+                    <li>
+                      {renderLinkedText(
+                        "Tag: [@CRDA](https://instagram.com/CRDA) or [@hubbardhaven](https://instagram.com/hubbardhaven)"
+                      )}
+                    </li>
+                    <li>
+                      {renderLinkedText(
+                        "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](https://thelostenzymeproject.org/wp-content/uploads/2026/06/Climb4Rare_8x11_Sign.pdf)"
+                      )}
+                    </li>
+                    <li>
+                      We'll share photos from supporters around the world on our
+                      social media platforms and website.
+                    </li>
+                  </ul>
+                </div>
+
+                <img
+                  src={rightImg}
+                  alt=""
+                  className="w-full md:w-48 h-48 object-cover rounded-lg flex-shrink-0"
+                />
+              </div>
+            </div>
+          </section>
+
           {/* Events */}
-          <div className="mt-12">
+          <div className="ml-32 mt-12">
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               Climb4Rare Events Near You
             </h3>
@@ -346,58 +406,6 @@ export default function Climb4Rare() {
               ))}
             </ul>
           </div>
-        </div>
-      </section>
-
-      {/* Become a Sponsor */}
-      <section className="py-12 max-w-5xl mx-auto px-6 md:px-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-4">
-          Become a Sponsor
-        </h2>
-        <p className="text-gray-600 text-sm leading-relaxed max-w-3xl mb-2">
-          Partner with us as we take the message of rare disease awareness to
-          the summit of Mount Kilimanjaro. All sponsors receive recognition
-          across CRDA's website, social media platforms, and expedition
-          updates. Donations are tax-deductible and support research and
-          treatment development through Children's Rare Disease Alliance, a 501(c)(3)
-          nonprofit.
-        </p>
-        <p className="text-gray-600 text-sm leading-relaxed max-w-3xl mb-8">
-          Complete our Sponsor Commitment for Climb4Rare_Sponsor_Commitment_Form.pdf
-          {" "}or contact us at{" "}
-          <a
-            href="mailto:erin@crdalliance.org"
-            className="!text-[#ed774a] font-medium hover:underline"
-          >
-            erin@crdalliance.org
-          </a>
-          .
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-stretch">
-          {sponsorTiers.map((tier) => (
-            <div
-              key={tier.title}
-              className="bg-white rounded-xl shadow-sm border-2 p-6 flex flex-col items-center text-center"
-              style={{ borderColor: tier.border }}
-            >
-              <img
-                src={tier.icon}
-                alt=""
-                className="w-16 h-16 rounded-full mb-4"
-              />
-              <h3 className="text-gray-900 font-bold">{tier.title}</h3>
-              <p className="text-[#2c5f86] font-semibold mb-4">
-                {tier.amount}
-              </p>
-              <hr className="w-10 border-gray-300 mb-4" />
-              <ul className="body-std text-left list-disc list-inside space-y-1">
-                {tier.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </section>
 
