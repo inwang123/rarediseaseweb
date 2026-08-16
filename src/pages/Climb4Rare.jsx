@@ -171,9 +171,8 @@ function HallOfFameCarousel({ photos }) {
             type="button"
             onClick={() => goTo(i)}
             aria-label={`Go to photo ${i + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              i === index ? "bg-[#2c5f86]" : "bg-gray-300 hover:bg-gray-400"
-            }`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${i === index ? "bg-[#2c5f86]" : "bg-gray-300 hover:bg-gray-400"
+              }`}
           />
         ))}
       </div>
@@ -282,7 +281,7 @@ export default function Climb4Rare() {
                   {card.desc}
                 </p>
                 <hr className="w-10 border-gray-300 mb-4" />
-                <ul className="w-fit max-w-2/3 mx-auto body-std text-left list-disc list-outside pl-5 space-y-1">
+                <ul className="w-fit mx-auto body-std text-left list-disc list-outside pl-5 space-y-1">
                   {card.items.map((item) => (
                     <li key={item}>{renderLinkedText(item)}</li>
                   ))}
