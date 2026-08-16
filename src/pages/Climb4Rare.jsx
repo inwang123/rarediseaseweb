@@ -33,7 +33,7 @@ const involvementCards = [
   {
     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
     title: "Become a Sponsor",
-    desc: "Bring a #Climb4Rare sign and take a photo at the summit!",
+    desc: "Sponsor recognition includes",
     border: "#FE9F01",
     items: [
       "Sponsor recognition on our website and social media.",
@@ -345,27 +345,30 @@ export default function Climb4Rare() {
             </div>
           </section>
 
-          {/* Events */}
-          <div className="ml-32 mt-12">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Climb4Rare Events Near You
-            </h3>
-            <ul className="space-y-2">
-              {events.map((event) => (
-                <li key={event.name} className="text-sm">
-                  <a
-                    href={event.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-[#ed774a] font-medium hover:underline"
-                  >
-                    {event.name}
-                  </a>{" "}
-                  <span className="text-gray-500">({event.date})</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        </div>
+      </section>
+
+      {/* Events */}
+      <section className="py-12 bg-white-50">
+        <div className="max-w-5xl mx-auto px-6 md:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-4">
+            Climb4Rare Events Near You
+          </h2>
+          <ul className="space-y-2">
+            {events.map((event) => (
+              <li key={event.name} className="text-sm">
+                <a
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="!text-[#ed774a] font-medium hover:underline"
+                >
+                  {event.name}
+                </a>{" "}
+                <span className="text-gray-500">({event.date})</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
