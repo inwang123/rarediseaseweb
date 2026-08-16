@@ -33,7 +33,7 @@ const involvementCards = [
   {
     icon: "/Climb4Rare/Summit_sponsor_icon.webp",
     title: "Become a Sponsor",
-    desc: "Bring a #Climb4Rare sign and take a photo at the summit!",
+    desc: "Sponsor recognition includes",
     border: "#FE9F01",
     items: [
       "Sponsor recognition on our website and social media.",
@@ -50,6 +50,9 @@ const involvementCards = [
       "Find a hike near you",
       "Sign the [waiver](https://thelostenzymeproject.org/wp-content/uploads/2026/06/CLIMB4RARE-Waiver.pdf)",
       "Share your summit",
+      "UT-Lower Green Pond (6-22-2026)",
+      "UT-Battle Creek Falls Trail (7-11-2026)",
+      "CA-Johnny Cash Trail (8-8-2026)",
     ],
   },
   {
