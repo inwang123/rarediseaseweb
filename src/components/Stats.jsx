@@ -25,11 +25,12 @@ const MESSAGES = [
 		link: { to: "/climb4rare", label: "Climb4Rare →" },
 	},
 	{
-		icon: "/phone-call.png",
-		alt: "Children",
-		title: "Family & Community Service",
-		body: "Supporting families beyond research. Volunteer to provide meals, care packages, hospital support, and community service projects that make a meaningful difference for rare disease families.",
+		icon: "/compassion.png",
+		alt: "Volunteer",
+		title: "Volunteer",
+		body: "Family & Community Service",
 		accent: "#e8f5e9",
+		link: { to: "/volunteer", label: "Volunteer →" },
 	},
 ];
 
