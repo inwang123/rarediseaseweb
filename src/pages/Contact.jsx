@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="bg-gray-50 rounded-xl p-6 flex flex-col items-start gap-3">
             <img src="/email.png" alt="Email" className="w-8 h-8" />
             <h3 className="text-gray-900 font-semibold text-sm">Email</h3>
-            <p className="text-gray-500 text-sm">emma@crdalliance.org</p>
+            <p className="text-gray-500 text-sm">info@crdalliance.org</p>
           </div>
         </div>
       </section>
