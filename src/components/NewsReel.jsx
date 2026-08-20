@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function NewsReel() {
 	const [items, setItems] = useState([]);
+	const [playingId, setPlayingId] = useState(null);
 
 	useEffect(() => {
 		// Swap this for a fetch() to your CMS/API if you move off static JSON
@@ -33,7 +34,7 @@ export default function NewsReel() {
 						</h2>
 					</div>
 
-					{/* <Link
+					<Link
 						to="/news"
 						className="inline-block px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md self-center md:self-auto"
 						style={{
@@ -42,7 +43,7 @@ export default function NewsReel() {
 						}}
 					>
 						All News →
-					</Link> */}
+					</Link>
 				</div>
 
 				{/* ── Scrollable reel ── */}
@@ -50,42 +51,94 @@ export default function NewsReel() {
 					className="flex gap-6 overflow-x-auto pb-4 -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory scroll-smooth"
 					style={{ scrollbarWidth: "thin" }}
 				>
-					{items.map((item) => (
-						<Link
-							key={item.id}
-							to={item.url}
-							className="group relative flex-shrink-0 w-72 snap-start rounded-2xl overflow-hidden bg-white transition-all duration-200 hover:-translate-y-1"
-							style={{
-								boxShadow: "0 8px 32px rgba(44,95,134,0.12)",
-							}}
-						>
-							{item.image && (
-								<div className="w-full h-40 overflow-hidden">
-									<img
-										src={item.image}
-										alt=""
-										loading="lazy"
-										className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
-									/>
-								</div>
-							)}
+					{items.map((item) => {
+						const isPlaying = playingId === item.id;
+						const CardWrapper = item.youtubeId ? "div" : Link;
+						const wrapperProps = item.youtubeId
+							? {}
+							: { to: item.url };
 
-							<div className="flex flex-col gap-2 p-5">
-								<span
-									className="text-xs font-bold uppercase tracking-widest"
-									style={{ color: "#7bb1bf" }}
-								>
-									{formatDate(item.date)}
-								</span>
-								<h3 className="text-base font-bold text-gray-900 leading-snug">
-									{item.title}
-								</h3>
-								<p className="text-sm leading-relaxed text-gray-500 line-clamp-3">
-									{item.summary}
-								</p>
-							</div>
-						</Link>
-					))}
+						return (
+							<CardWrapper
+								key={item.id}
+								{...wrapperProps}
+								className="group relative flex-shrink-0 w-72 snap-start rounded-2xl overflow-hidden bg-white transition-all duration-200 hover:-translate-y-1"
+								style={{
+									boxShadow: "0 8px 32px rgba(44,95,134,0.12)",
+								}}
+							>
+								{item.youtubeId ? (
+									<div className="w-full aspect-video bg-black">
+										{isPlaying ? (
+											<iframe
+												className="w-full h-full"
+												src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1`}
+												title={item.title}
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+												allowFullScreen
+											/>
+										) : (
+											<button
+												type="button"
+												onClick={() => setPlayingId(item.id)}
+												className="relative w-full h-full block"
+												aria-label={`Play video: ${item.title}`}
+											>
+												<img
+													src={`https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg`}
+													alt=""
+													loading="lazy"
+													className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+												/>
+												<span className="absolute inset-0 flex items-center justify-center">
+													<span
+														className="flex items-center justify-center w-12 h-12 rounded-full transition-transform duration-200 group-hover:scale-110"
+														style={{
+															backgroundColor: "rgba(44,95,134,0.85)",
+														}}
+													>
+														<svg
+															viewBox="0 0 24 24"
+															fill="white"
+															className="w-5 h-5 ml-0.5"
+														>
+															<path d="M8 5v14l11-7z" />
+														</svg>
+													</span>
+												</span>
+											</button>
+										)}
+									</div>
+								) : (
+									item.image && (
+										<div className="w-full h-40 overflow-hidden">
+											<img
+												src={item.image}
+												alt=""
+												loading="lazy"
+												className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+											/>
+										</div>
+									)
+								)}
+
+								<div className="flex flex-col gap-2 p-5">
+									<span
+										className="text-xs font-bold uppercase tracking-widest"
+										style={{ color: "#7bb1bf" }}
+									>
+										{formatDate(item.date)}
+									</span>
+									<h3 className="text-base font-bold text-gray-900 leading-snug">
+										{item.title}
+									</h3>
+									<p className="text-sm leading-relaxed text-gray-500 line-clamp-3">
+										{item.summary}
+									</p>
+								</div>
+							</CardWrapper>
+						);
+					})}
 				</div>
 			</div>
 		</section>
