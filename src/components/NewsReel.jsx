@@ -34,7 +34,7 @@ export default function NewsReel() {
 						</h2>
 					</div>
 
-					<Link
+					{/* <Link
 						to="/news"
 						className="inline-block px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md self-center md:self-auto"
 						style={{
@@ -43,7 +43,7 @@ export default function NewsReel() {
 						}}
 					>
 						All News →
-					</Link>
+					</Link> */}
 				</div>
 
 				{/* ── Scrollable reel ── */}
