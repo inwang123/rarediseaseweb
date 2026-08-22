@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks";
+
 export default function Footer() {
   return (
     <footer className="text-white py-10 px-6 md:px-16" style={{ background: "#2c5f86" }}>
@@ -17,6 +19,10 @@ export default function Footer() {
             <p className="text-xs leading-relaxed opacity-80">
               Together, we’re bringing hope and healing to children with rare diseases.
             </p>
+            <SocialLinks
+              className="mt-1 text-white/80"
+              iconClassName="w-5 h-5 hover:text-white transition-colors"
+            />
           </div>
 
           {/* Contact info */}

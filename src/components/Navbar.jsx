@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import SocialLinks from "./SocialLinks";
 
 const DESKTOP_LINKS = [
   { label: "Home",       to: "/" },
@@ -10,6 +11,7 @@ const DESKTOP_LINKS = [
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
+      { label: "Volunteer",  to: "/volunteer" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
@@ -25,6 +27,7 @@ const MOBILE_LINKS = [
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
+      { label: "Volunteer",  to: "/volunteer" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
@@ -112,6 +115,12 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Social Icons (desktop) */}
+        <SocialLinks
+          className="hidden md:flex ml-2 text-gray-500"
+          iconClassName="w-4 h-4 hover:text-[#2c5f86] transition-colors"
+        />
 
         {/* Mobile Hamburger */}
         <button
@@ -207,6 +216,10 @@ export default function Navbar() {
               )}
             </div>
           ))}
+          <SocialLinks
+            className="mt-3 pt-3 px-3 border-t border-gray-100 text-gray-500"
+            iconClassName="w-5 h-5 hover:text-[#2c5f86] transition-colors"
+          />
         </div>
       )}
     </nav>
