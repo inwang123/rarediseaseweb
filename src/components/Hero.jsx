@@ -20,14 +20,21 @@ export default function Hero() {
       />
 
       <div className="max-w-5xl mx-auto px-6 md:px-16 relative z-10 flex flex-col justify-center h-full gap-5">
-        <h1
-          className="text-white text-4xl md:text-5xl font-extrabold leading-tight max-w-xl"
-          style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}
-        >
-          Turn <span style={{ color: "#d8da4b" }}>Small Change</span>
-          <br />
-          Into Life-Changing Treatments
-        </h1>
+        <div className="max-w-xl">
+          <h1
+            className="text-white text-4xl md:text-5xl font-extrabold leading-tight"
+            style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}
+          >
+            Making Treatment Possible for Children with{" "}
+            <span className="text-orange-400">Rare Diseases</span>
+          </h1>
+          <p
+            className="text-white text-lg md:text-xl font-medium mt-3"
+            style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}
+          >
+            No Child Is Too Rare to Treat.
+          </p>
+        </div>
 
         <div className="flex gap-3 flex-wrap mt-1">
           <Link
