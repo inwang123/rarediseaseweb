@@ -19,10 +19,7 @@ export default function Footer() {
             <p className="text-xs leading-relaxed opacity-80">
               Together, we’re bringing hope and healing to children with rare diseases.
             </p>
-            <SocialLinks
-              className="mt-1 text-white/80"
-              iconClassName="w-5 h-5 hover:text-white transition-colors"
-            />
+            <SocialLinks className="mt-1" iconClassName="w-6 h-6 brightness-0 invert" />
           </div>
 
           {/* Contact info */}

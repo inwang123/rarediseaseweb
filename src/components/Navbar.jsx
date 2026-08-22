@@ -41,6 +41,13 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
+      {/* Top strip */}
+      <div className="py-1 px-6 lg:px-12" style={{ backgroundColor: "#2c5f86" }}>
+        <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto flex justify-end">
+          <SocialLinks className="gap-1.5" iconClassName="w-5 h-5 brightness-0 invert" />
+        </div>
+      </div>
+
       <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
 
         {/* Logo */}
@@ -115,12 +122,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* Social Icons (desktop) */}
-        <SocialLinks
-          className="hidden md:flex ml-2 text-gray-500"
-          iconClassName="w-4 h-4 hover:text-[#2c5f86] transition-colors"
-        />
 
         {/* Mobile Hamburger */}
         <button
@@ -216,10 +217,6 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <SocialLinks
-            className="mt-3 pt-3 px-3 border-t border-gray-100 text-gray-500"
-            iconClassName="w-5 h-5 hover:text-[#2c5f86] transition-colors"
-          />
         </div>
       )}
     </nav>
