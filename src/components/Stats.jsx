@@ -2,10 +2,18 @@ import { Link } from "react-router-dom";
 
 const MESSAGES = [
 	{
+		icon: "/reading.png",
+		alt: "Children",
+		title: "Fundraising & Treatment Pipeline",
+		body: "Making treatment progress for 30 rare childhood diseases by 2030.",
+		accent: "#e8f5e9",
+		link: { to: "/climb4rare", label: "Climb4Rare →" },
+	},
+	{
 		icon: "/box.png",
 		alt: "Donation box",
 		title: "Checkout Charity",
-		body: "Small change. Life-changing impact. Partner with CRDA by giving customers the option to round up their purchase at checkout. Every dollar raised at checkout helps fund research and treatments for children with rare diseases.",
+		body: "Partner with CRDA by giving your customers the option to round up their purchase at checkout. Turn small change into life-changing treatments.",
 		accent: "#fff3cd",
 		link: { to: "/checkoutcharity", label: "Checkout Charity →" },
 	},
@@ -15,14 +23,6 @@ const MESSAGES = [
 		title: "Corporate Matching Programs",
 		body: "Double your impact. Many companies match employee donations, volunteer hours, and payroll contributions. Learn how corporate matching programs can help maximize your support for children with rare diseases.",
 		accent: "#d9eeff",
-	},
-	{
-		icon: "/reading.png",
-		alt: "Children",
-		title: "Community Fundraising",
-		body: "Turn your passion into progress. Host or join community events that raise awareness and funding for children with rare diseases.",
-		accent: "#e8f5e9",
-		link: { to: "/climb4rare", label: "Climb4Rare →" },
 	},
 	{
 		icon: "/compassion.png",
