@@ -1,3 +1,5 @@
+import Forms from "../components/Forms";
+
 export default function Contact() {
   return (
     <div className="bg-white">
@@ -45,7 +47,21 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+      <section className="py-16 max-w-5xl mx-auto px-6 md:px-16">
+        <Forms
+          eyebrow="Contact Form"
+          title="Ask us anything!"
+          description="Fill out the form below and we'll get back to you as soon as possible."
+          submitUrl="https://prod-00.westus.logic.azure.com/workflows/.../triggers/manual/paths/invoke?..."
+          fields={[
+            { name: "First Name", label: "First Name", type: "text", required: true },
+            { name: "Last Name", label: "Last Name", type: "text", required: true },
+            { name: "Email", label: "Email", type: "email", required: true },
+            { name: "Phone", label: "Phone", type: "tel" },
+            { name: "Comments", label: "Comments", type: "textarea", required: true },
+          ]}
+        />
+      </section>
     </div>
   );
 }
