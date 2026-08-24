@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import SocialLinks from "./SocialLinks";
 
 const DESKTOP_LINKS = [
   { label: "Home",       to: "/" },
@@ -10,6 +11,7 @@ const DESKTOP_LINKS = [
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
+      { label: "Volunteer",  to: "/volunteer" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
@@ -25,6 +27,7 @@ const MOBILE_LINKS = [
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
+      { label: "Volunteer",  to: "/volunteer" },
     ],
   },
   { label: "Contact Us", to: "/contact" },
@@ -38,6 +41,13 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
+      {/* Top strip */}
+      <div className="py-1 px-6 lg:px-12" style={{ backgroundColor: "#2c5f86" }}>
+        <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto flex justify-end">
+          <SocialLinks className="gap-1.5" iconClassName="w-5 h-5 brightness-0 invert" />
+        </div>
+      </div>
+
       <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-12 py-3 flex items-center justify-between">
 
         {/* Logo */}

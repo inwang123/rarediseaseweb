@@ -26,7 +26,7 @@ export default function Hero() {
             style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}
           >
             Making Treatment Possible for Children with{" "}
-            <span className="text-orange-400">Rare Diseases</span>
+            <span style={{ color: "#d0da4b" }}>Rare Diseases</span>
           </h1>
           <p
             className="text-white text-lg md:text-xl font-medium mt-3"

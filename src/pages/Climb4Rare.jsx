@@ -372,6 +372,28 @@ export default function Climb4Rare() {
         </div>
       </section>
 
+      {/* Our Supporters */}
+      <section className="py-12 max-w-5xl mx-auto px-6 md:px-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#2c5f86] mb-4">
+          Our Supporters
+        </h2>
+        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+          Watch Skylar's interview with Good Things Utah to hear the latest
+          update and learn how you can join the climb to help bring
+          life-changing treatments closer to children who desperately need
+          them.
+        </p>
+        <div className="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-sm aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/XGIKDebkDPU"
+            title="Interview with Good Things Utah"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       {/* Hall of Fame */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 md:px-16">
