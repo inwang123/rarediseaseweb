@@ -69,13 +69,14 @@ const initialStateFromFields = (fields) =>
 	}, {});
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const web3formsApi = process.env.WEB3FORMS_API;
 
 export default function Forms({
 	eyebrow = "Get Involved",
 	title,
 	description,
 	fields = [],
-	accessKey = "b45f0f6f-f306-4313-a452-0b2c0d04f672", // Web3Forms access key — see setup note above
+	accessKey = web3formsApi, // Web3Forms access key — see setup note above
 	subject = "New form submission", // email subject line for this form
 	fromName = "CRDA Website", // shown as the sender name in the email
 	submitLabel = "Submit",
