@@ -248,7 +248,9 @@ export default function Volunteer() {
                     className="text-sm font-semibold px-5 py-2.5 rounded-lg border-2 border-[#1a3663] text-[#1a3663] cursor-default select-none"
                     title="Sign-up form coming soon"
                   >
-                    Volunteer for the Tree
+                    <a href="https://forms.cloud.microsoft/r/4JGC8PUimt" target="_blank" rel="noopener noreferrer">
+                      Volunteer for the Tree
+                    </a>
                   </span>
                 </div>
               </div>
@@ -329,7 +331,9 @@ export default function Volunteer() {
                     style={{ color: event.color }}
                     title="Sign-up form coming soon"
                   >
-                    Sign Up for {event.category} →
+                    <a href="https://forms.cloud.microsoft/r/4JGC8PUimt" target="_blank" rel="noopener noreferrer">
+                      Sign Up for {event.category} →
+                    </a>
                   </span>
                   <p className="text-[11px] text-gray-400 mt-0.5">
                     Fillable PDF sign up
@@ -369,7 +373,7 @@ export default function Volunteer() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA
       <section className="py-8" style={{ backgroundColor: "#1a3663" }}>
         <div className="max-w-5xl mx-auto px-6 md:px-16 flex flex-col sm:flex-row items-center justify-between gap-5">
           <div className="flex items-center gap-4">
@@ -395,7 +399,7 @@ export default function Volunteer() {
             Join the Volunteer List →
           </span>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
