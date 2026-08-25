@@ -62,6 +62,12 @@ const marketingTeam = [
     img: "Jayda_bio.jpg",
     bio: "Bio coming soon.",
   },
+  {
+    name: "Christina Hoskin",
+    role: "Media Specialist",
+    img: "/Christina_Hoskin_bio.jpg",
+    bio: "Christina Hoskin earned her BA in Broadcast Journalism from Brigham Young University. Her 20+-year career in media includes working as a news producer, reporter and anchor for radio and television, as well as in a variety of PR and marketing roles. Most recently she completed a 5-year stint as adjunct faculty where she taught Social Media Marketing Concepts for BYU-I. In her free time, she and her husband enjoy traveling and spending as much time as possible with their gaggle of (practically perfect) grandchildren. ",
+  },
 ];
 
 const communityCommittee = [
