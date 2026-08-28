@@ -237,21 +237,23 @@ export default function Volunteer() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <span
-                    className="text-sm font-semibold px-5 py-2.5 rounded-lg text-white cursor-default select-none"
+                  <a href="https://www.amazon.com/hz/wishlist/ls/3KE8V1Z1HYD5V?type=wishlist"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold px-5 py-2.5 rounded-lg text-white cursor-pointer select-none inline-block"
                     style={{ backgroundColor: "#1a3663" }}
-                    title="Coming soon"
                   >
                     Shop the Amazon Wish List →
-                  </span>
-                  <span
-                    className="text-sm font-semibold px-5 py-2.5 rounded-lg border-2 border-[#1a3663] text-[#1a3663] cursor-default select-none"
+                  </a>
+                  <a
+                    href="https://forms.cloud.microsoft/r/4JGC8PUimt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold px-5 py-2.5 rounded-lg border-2 border-[#1a3663] text-[#1a3663] cursor-pointer select-none inline-block"
                     title="Sign-up form coming soon"
                   >
-                    <a href="https://forms.cloud.microsoft/r/4JGC8PUimt" target="_blank" rel="noopener noreferrer">
-                      Volunteer for the Tree
-                    </a>
-                  </span>
+                    Volunteer for the Tree
+                  </a>
                 </div>
               </div>
             </div>
