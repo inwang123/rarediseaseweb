@@ -6,7 +6,7 @@ const PLATFORMS = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/crdallliance/",
+    href: "https://www.instagram.com/crdalliance/",
     icon: "/Social-icons/instagram.png",
   },
   {

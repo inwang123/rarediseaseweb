@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const boardOfDirectors = [
   {
@@ -301,31 +302,49 @@ export default function About() {
           </div>
         </div>
 
-        <p className="text-gray-500 text-sm leading-relaxed mt-8">
-          Skylar's story is just one of many. Today thousands of other
-          children face incredible odds with a rare diagnosis. For many,
-          science and medical advancements could bring treatment, improved
-          quality of life, and possibly a cure — but these families face the
-          challenge alone. It is daunting, exhausting, and financially
-          overwhelming to research, prove, advance, and develop the
-          necessary treatments — but it is not impossible. No child is too
-          rare to treat.
-          <br />
-          <br />
-          Through the friendships with other families during Skylar's
-          year-long hospital stay, it became apparent that the lesser-known
-          diseases just don't have the attention of the scientific
-          community or the financial resources at their fingertips. The
-          Hubbards were inspired to begin to change that, and with a
-          renewed commitment to advancing a treatment for Beta-Mannosidosis,
-          they formed the Children's Rare Disease Alliance (CRDA).
-          <br />
-          <br />
+        <div className="flex flex-col md:flex-row items-center gap-10 mt-8">
+        <div className="flex-shrink-0">
+          <Link
+            to="/volunteer"
+            className="flex items-center justify-center text-center w-56 h-56 md:w-64 md:h-64 rounded-md shadow-md text-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            style={{ backgroundColor: "#2c5f86" }}
+          >
+            <p className="text-sm md:text-base font-medium leading-relaxed">
+              "No child is too rare to treat. Accelerating rare disease
+              treatments through community partnerships, fundraising and
+              advocacy. Please join us."
+            </p>
+          </Link>
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-gray-500 text-sm leading-relaxed">
+            Skylar's story is just one of many. Today thousands of other
+            children face incredible odds with a rare diagnosis. For many,
+            science and medical advancements could bring treatment, improved
+            quality of life, and possibly a cure — but these families face
+            the challenge alone. It is daunting, exhausting, and financially
+            overwhelming to research, prove, advance, and develop the
+            necessary treatments — but it is not impossible. No child is too
+            rare to treat.
+          </p>
+          <p className="text-gray-500 text-sm leading-relaxed mt-4">
+            Through the friendships with other families during Skylar's
+            year-long hospital stay, it became apparent that the lesser-known
+            diseases just don't have the attention of the scientific
+            community or the financial resources at their fingertips. The
+            Hubbards were inspired to begin to change that, and with a
+            renewed commitment to advancing a treatment for Beta-Mannosidosis,
+            they formed the Children's Rare Disease Alliance (CRDA).
+          </p>
+        </div>
+      </div>
+
+        <p className="text-gray-500 text-sm leading-relaxed mt-4">
           At CRDA, we have a big goal: 30 by 2030. We are striving to
           support treatment development and bring hope to families facing a
           disease with no approved therapies for 30 rare diseases by 2030.
-          <br />
-          <br />
+        </p>
+        <p className="text-gray-500 text-sm leading-relaxed mt-4">
           While each rare disease affects a small number of patients,
           together they impact millions of children and families searching
           for answers and hope. Please join us — these kids can't wait, and
