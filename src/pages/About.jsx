@@ -25,6 +25,12 @@ const boardOfDirectors = [
     img: "/Samantha.png",
     bio: "Dr. Samantha Behunin is a physiologist with a PhD in physiology and a minor in pharmacology. Her doctoral research focused on cardiovascular biophysics and metabolism. Drawn to the study of cellular energetics, she went on to complete a fellowship in translational cancer biology, where she investigated cellular energetics in non-small cell lung cancer. She currently works with The Lost Enzyme Project, where she has been establishing a genomic analysis program that integrates cutting-edge genomic technologies into biomedical research and patient-focused studies. Leveraging her expertise as a Patient Identification Specialist alongside her background in physiology, pharmacology, and molecular biology, she is actively applying these tools to identify new Beta-Mannosidosis patients, advancing both diagnosis and research into this rare condition. Outside of her professional pursuits, Dr. Behunin is a devoted mother and wife, with her family serving as her greatest source of inspiration and fulfillment.",
   },
+  {
+    name: "Christina Hoskin",
+    role: "Vice Chair & Marketing Director",
+    img: "/Christina_Hoskin_bio.jpg",
+    bio: "Christina Hoskin earned her BA in Broadcast Journalism from Brigham Young University. Her 20+-year career in media includes working as a news producer, reporter and anchor for radio and television, as well as in a variety of PR and marketing roles. Most recently she completed a 5-year stint as adjunct faculty where she taught Social Media Marketing Concepts for BYU-I. In her free time, she and her husband enjoy traveling and spending as much time as possible with their gaggle of (practically perfect) grandchildren. ",
+  },
 ];
 
 const strategicAdvisoryBoard = [
