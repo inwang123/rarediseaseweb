@@ -249,56 +249,83 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-12 max-w-5xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10">
-        <div className="flex-1 min-w-0">
-          <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">
-            Our Story
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            How it all began
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed">
-            The Children's Rare Disease Alliance is a nonprofit organization
-            dedicated to accelerating research and treatment development for
-            children living with rare diseases. It was founded by families of
-            children with rare diseases who understand firsthand the challenges
-            families face when treatments are limited or nonexistent.
-            <br />
-            <br />
-            While each rare disease affects a small number of patients, together
-            they impact millions of children and families searching for answers
-            and hope. The Children's Rare Disease Alliance was created to help
-            change that.
-            <br />
-            <br />
-            By partnering with local businesses and communities, we turn small
-            donations at checkout into funding that supports researchers,
-            clinicians, and patient communities working to develop life-changing
-            therapies for children who urgently need them.
-            <br />
-            <br />
-            Through everyday generosity, we are helping bring hope to families
-            and accelerate the path toward treatments.
-            <br />
-            <br />
-            Together, we can turn small change into life-changing treatments.
-          </p>
+      <section className="py-12 max-w-5xl mx-auto px-6 md:px-16">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 min-w-0">
+            <p className="text-orange-500 font-semibold text-xs uppercase tracking-widest mb-2">
+              Our Story
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              How it all began
+            </h2>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              The Children's Rare Disease Alliance is a 501(c)3 nonprofit
+              organization dedicated to accelerating research and treatment
+              development for children living with rare diseases and founded by
+              families who understand firsthand the challenges when treatments
+              are limited or nonexistent.
+              <br />
+              <br />
+              In 2025 and early 2026, Nathan and Erin's daughter Skylar was
+              fighting life-threatening complications following a bone marrow
+              transplant for Beta-Mannosidosis. Her recovery was touch-and-go at
+              times, and after one particularly aggressive infection, the
+              medical team told their family to prepare for the worst.
+              Encircling her hospital bed, they did not know if she would make
+              it through the night.
+              <br />
+              <br />
+              But Skylar kept fighting.
+            </p>
+          </div>
+          <div className="relative flex-shrink-0">
+            <img
+              src="/sky_smile.jpeg"
+              alt="Our story"
+              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-md shadow-md relative z-10"
+            />
+            <div
+              className="absolute -bottom-4 -left-4 w-24 h-24 z-0"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle, #f97316 1.5px, transparent 1.5px)",
+                backgroundSize: "10px 10px",
+              }}
+            />
+          </div>
         </div>
-        <div className="relative flex-shrink-0">
-          <img
-            src="/sky_smile.jpeg"
-            alt="Our story"
-            className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-md shadow-md relative z-10"
-          />
-          <div
-            className="absolute -bottom-4 -left-4 w-24 h-24 z-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #f97316 1.5px, transparent 1.5px)",
-              backgroundSize: "10px 10px",
-            }}
-          />
-        </div>
+
+        <p className="text-gray-500 text-sm leading-relaxed mt-8">
+          Skylar's story is just one of many. Today thousands of other
+          children face incredible odds with a rare diagnosis. For many,
+          science and medical advancements could bring treatment, improved
+          quality of life, and possibly a cure — but these families face the
+          challenge alone. It is daunting, exhausting, and financially
+          overwhelming to research, prove, advance, and develop the
+          necessary treatments — but it is not impossible. No child is too
+          rare to treat.
+          <br />
+          <br />
+          Through the friendships with other families during Skylar's
+          year-long hospital stay, it became apparent that the lesser-known
+          diseases just don't have the attention of the scientific
+          community or the financial resources at their fingertips. The
+          Hubbards were inspired to begin to change that, and with a
+          renewed commitment to advancing a treatment for Beta-Mannosidosis,
+          they formed the Children's Rare Disease Alliance (CRDA).
+          <br />
+          <br />
+          At CRDA, we have a big goal: 30 by 2030. We are striving to
+          support treatment development and bring hope to families facing a
+          disease with no approved therapies for 30 rare diseases by 2030.
+          <br />
+          <br />
+          While each rare disease affects a small number of patients,
+          together they impact millions of children and families searching
+          for answers and hope. Please join us — these kids can't wait, and
+          every small effort brings hope, renewed courage, and some joy to
+          the families who cherish and love them dearly.
+        </p>
       </section>
 
       {/*

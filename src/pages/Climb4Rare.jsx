@@ -220,34 +220,43 @@ export default function Climb4Rare() {
             Why We Climb
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed">
-            Earlier this year, while our daughter Skylar was fighting
-            life-threatening complications following a bone marrow transplant
-            for Beta-Mannosidosis, we were told to prepare for the worst.
-            Standing beside her hospital bed, we didn't know if she would make
-            it through the night.
+            For children with a rare disease, treatment and good health can
+            feel like an unreachable mountain top. And we could not think of
+            a better metaphor for families helping their child live his or
+            her best life.
             <br />
             <br />
-            But Skylar kept fighting.
-            <br />
-            <br />
-            That experience strengthened our commitment to advancing a
-            treatment for Beta-Mannosidosis and reinforced why we founded
-            Children's Rare Disease Alliance. Through Climb4Rare, our goal is to raise
-            $100,000 to help support treatment development and bring hope to
-            families facing a disease with no approved therapies.
-            <br />
-            <br />
-            For us, this climb is about more than reaching a summit. Every
+            For us, climbing is about more than reaching a summit. Every
             foot we climb represents the uphill battle rare disease families
             face every day—the challenges, uncertainty, and determination to
             keep moving forward in search of a better future.
             <br />
             <br />
-            For these families, the climb never ends. We climb because
-            children like Skylar deserve a future with treatment, hope, and
-            the chance to live life to its fullest. We climb because these
-            kids can't wait.
+            Additionally, no one reaches the summit alone. Families are
+            lifted by the support of friends, neighbors, and community.
+            Nonprofit organizations, such as the Children's Rare Disease
+            Alliance, team up with medical professionals to fund critical
+            research and find therapies that work. Technology partners use
+            science to develop treatment modalities. Reaching the top is a
+            team effort.
+            <br />
+            <br />
+            <Link
+              to="/volunteer"
+              className="!text-[#ed774a] !underline font-medium"
+            >
+              Please join us.
+            </Link>{" "}
+            Let's reach the summit together.
           </p>
+
+          <div className="mt-6 rounded-r-lg border-l-4 border-[#2c5f86] bg-gray-50 px-4 py-3">
+            <p className="text-gray-700 text-sm leading-relaxed italic">
+              For these families, the climb never ends. We climb because all
+              deserve a future with hope and the chance to live life to its
+              fullest. We climb because these kids can't wait.
+            </p>
+          </div>
         </div>
         <div className="flex-shrink-0">
           <img
