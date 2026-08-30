@@ -55,13 +55,22 @@ function Countdown() {
 	return (
 		<div className="px-4 pt-8 pb-2 md:pt-10">
 			<div className="mx-auto max-w-4xl">
+				<p className="text-center text-2xl md:text-3xl font-bold text-gray-900 leading-snug mb-4">
+					Countdown Till Kilimanjaro
+				</p>
 				<div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
 					{countdownUnits.map((unit) => (
 						<div key={unit.label} className="flex flex-col items-center gap-1.5">
-							<div className="w-full rounded-md border-2 border-gray-800 bg-white px-3 py-2 text-center text-3xl font-black leading-none text-gray-900 md:text-4xl">
+							<div
+								className="w-full rounded-md border-2 bg-white px-3 py-2 text-center text-3xl font-black leading-none md:text-4xl"
+								style={{ borderColor: "#2c5f86", color: "#2c5f86" }}
+							>
 								{String(unit.value).padStart(2, "0")}
 							</div>
-							<div className="w-full rounded-md bg-black px-3 py-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-white md:text-[11px]">
+							<div
+								className="w-full rounded-md px-3 py-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-white md:text-[11px]"
+								style={{ backgroundColor: "#2c5f86" }}
+							>
 								{unit.label}
 							</div>
 						</div>
