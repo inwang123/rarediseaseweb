@@ -29,7 +29,7 @@ const patients = [
   {
     name: "Auggie",
     img: "/Auggie_bio.jpg",
-    bio: "Auggie has AGS. He is nonverbal or maybe we could say non-wordal because he likes to squawk at us. He loves being held, loves lights, bird sounds, and bell sounds. He is a people person like his brother Phippin and seems happy when people--those he knows and those he's just met--are around."
+    bio: "Auggie has Aicardi-Goutières syndrom (AGS). He is nonverbal or maybe we could say non-wordal because he likes to squawk at us. He loves being held, loves lights, bird sounds, and bell sounds. He is a people person like his brother Phippin and seems happy when people--those he knows and those he's just met--are around."
   }
 ];
 
