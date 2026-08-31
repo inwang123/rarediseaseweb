@@ -25,6 +25,11 @@ const patients = [
     name: "Marco",
     img: "/Marco_bio.png",
     bio: "Marco was diagnosed with Beta-mannosidosis at 7yrs old. He was born with moderate hearing loss and started wearing hearing aids at 3 months old. He was diagnosed with ADHD and low cognitive function in 2023. Marco speech is delayed and receives education assistance at school. Despite all his challenges, Marco is an adorable kid that lives life to the fullest. He loves going camping, cars, bats and playing with friends."
+  },
+  {
+    name: "Auggie",
+    img: "/Auggie_bio.jpg",
+    bio: "Auggie has AGS. He is nonverbal or maybe we could say non-wordal because he likes to squawk at us. He loves being held, loves lights, bird sounds, and bell sounds. He is a people person like his brother Phippin and seems happy when people--those he knows and those he's just met--are around."
   }
 ];
 

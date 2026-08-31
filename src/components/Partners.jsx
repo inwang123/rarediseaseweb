@@ -1,6 +1,7 @@
 const partners = [
-  { id: 1, name: "The Lost Enzyme Project", logo: "/tlep_logo.jpg" },
-  { id: 2, name: "Lee's Marketplace", logo: "/lee_logo.png" },
+  { id: 1, name: "Xplor Technologies", logo: "/Xplor_logo.png" },
+  { id: 2, name: "The Lost Enzyme Project", logo: "/tlep_logo.jpg" },
+  { id: 3, name: "Lee's Marketplace", logo: "/lee_logo.png" },
 ];
 
 export default function Mission() {
