@@ -2,7 +2,9 @@
 
 ## Order by priority
 
- - [x] Create forms
-     - [x] Volunteer form (event, first name, last name, email, phone, comment)
+ - [ ] Implement form component
      - [x] Contact us form (first name, last name, email, phone, comment)
- - [ ] Create form backend automation
+     - [ ] Volunteer form (event, first name, last name, email, phone, comment)
+ - [ ] Implement form automation
+     - [ ] Contact us form
+     - [ ] Volunteer form
