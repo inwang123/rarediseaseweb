@@ -1,93 +1,56 @@
 import { useState } from "react";
-
-/**
- * Forms.jsx
- * A reusable, config-driven form. Pass a `fields` array describing what to
- * render/validate, plus a Web3Forms `accessKey` (web3forms.com — free,
- * unlimited, no backend). On submit, all field values are collected into one
- * JSON object and POSTed to Web3Forms, which emails the result to whatever
- * inbox that access key is registered to (e.g. info@crdalliance.org).
- *
- * Get a key: go to https://web3forms.com, enter info@crdalliance.org, click
- * "Create Access Key" — no signup required. Reuse one key across every form,
- * or make separate keys per event if you want to route/tag differently.
- *
- * ── Usage ──────────────────────────────────────────────────────────────
- * <Forms
- *   eyebrow="RSVP"
- *   title="Fall Fundraiser"
- *   description="Let us know you're coming — spots are limited."
- *   accessKey="YOUR-WEB3FORMS-ACCESS-KEY"
- *   subject="Fall Fundraiser RSVP"
- *   submitLabel="Reserve my spot"
- *   fields={[
- *     { name: "fullName", label: "Full name", type: "text", required: true },
- *     { name: "email", label: "Email", type: "email", required: true },
- *     { name: "phone", label: "Phone", type: "tel" },
- *     {
- *       name: "guests",
- *       label: "Number of guests",
- *       type: "select",
- *       required: true,
- *       options: ["1", "2", "3", "4+"],
- *     },
- *     {
- *       name: "dietary",
- *       label: "Dietary restrictions",
- *       type: "textarea",
- *       fullWidth: true,
- *     },
- *     {
- *       name: "updates",
- *       label: "Send me updates about future CRDA events",
- *       type: "checkbox",
- *     },
- *   ]}
- * />
- *
- * ── Supported field.type values ──────────────────────────────────────────
- * "text" | "email" | "tel" | "number" | "date" | "textarea" |
- * "select" (needs `options`) | "radio" (needs `options`) | "checkbox"
- *
- * ── Field shape ───────────────────────────────────────────────────────
- * {
- *   name: string,          // key used in the submitted JSON
- *   label: string,
- *   type: string,          // see above, defaults to "text"
- *   required?: boolean,    // default false
- *   placeholder?: string,
- *   options?: string[],    // for "select" / "radio"
- *   fullWidth?: boolean,   // span both columns on md+ screens
- * }
- * ─────────────────────────────────────────────────────────────────────
- */
+import { formsConfig } from "../../data/forms.js"; // adjust to your actual relative path
 
 const initialStateFromFields = (fields) =>
 	fields.reduce((acc, f) => {
-		acc[f.name] = f.type === "checkbox" ? false : "";
+		if (f.type === "checkbox") acc[f.name] = false;
+		else if (f.type === "checkbox-group") acc[f.name] = [];
+		else acc[f.name] = "";
 		return acc;
 	}, {});
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const web3formsApiKey = import.meta.env.VITE_WEB3FORMS_API_KEY;
+const SHAREPOINT_ENDPOINT = "/api/submit-to-sharepoint";
 
-export default function Forms({
-	eyebrow = "Get Involved",
-	title,
-	description,
-	fields = [],
-	accessKey = web3formsApiKey, // Web3Forms access key — see setup note above
-	subject = "New form submission", // email subject line for this form
-	fromName = "CRDA Website", // shown as the sender name in the email
-	submitLabel = "Submit",
-	extraPayload = {}, // static values to merge in, e.g. { eventId: "fall-2026" }
-}) {
+export default function Forms({ formKey, extraPayload = {} }) {
+	const config = formsConfig[formKey];
+
+	if (!config) {
+		console.error(`Forms: no config found for formKey "${formKey}"`);
+		return (
+			<section className="bg-white py-16 px-6 md:px-16">
+				<p className="text-red-600 text-center">
+					Form configuration not found for "{formKey}".
+				</p>
+			</section>
+		);
+	}
+
+	const { eyebrow, title, description, fields, submitLabel } = config;
+
 	const [values, setValues] = useState(() => initialStateFromFields(fields));
 	const [errors, setErrors] = useState({});
-	const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+	const [status, setStatus] = useState("idle");
 
 	const handleChange = (name, value) => {
 		setValues((prev) => ({ ...prev, [name]: value }));
+		if (errors[name]) {
+			setErrors((prev) => {
+				const next = { ...prev };
+				delete next[name];
+				return next;
+			});
+		}
+	};
+
+	// For checkbox-group: toggle a single option in/out of the array
+	const handleToggleGroup = (name, option) => {
+		setValues((prev) => {
+			const current = prev[name] || [];
+			const next = current.includes(option)
+				? current.filter((v) => v !== option)
+				: [...current, option];
+			return { ...prev, [name]: next };
+		});
 		if (errors[name]) {
 			setErrors((prev) => {
 				const next = { ...prev };
@@ -103,8 +66,11 @@ export default function Forms({
 			const value = values[field.name];
 
 			if (field.required) {
-				const isEmpty =
-					field.type === "checkbox" ? !value : !String(value ?? "").trim();
+				let isEmpty;
+				if (field.type === "checkbox") isEmpty = !value;
+				else if (field.type === "checkbox-group") isEmpty = !value || value.length === 0;
+				else isEmpty = !String(value ?? "").trim();
+
 				if (isEmpty) {
 					nextErrors[field.name] = `${field.label} is required`;
 					continue;
@@ -122,25 +88,13 @@ export default function Forms({
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		if (!accessKey) {
-			console.error(
-				"Forms: no accessKey provided — get one free at web3forms.com"
-			);
-			setStatus("error");
-			return;
-		}
 		if (!validate()) return;
 
 		setStatus("submitting");
 		try {
-			const payload = {
-				access_key: accessKey,
-				subject,
-				from_name: fromName,
-				...values,
-				...extraPayload,
-			};
-			const res = await fetch(WEB3FORMS_ENDPOINT, {
+			const payload = { formKey, values, extraPayload };
+
+			const res = await fetch(SHAREPOINT_ENDPOINT, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(payload),
@@ -148,7 +102,7 @@ export default function Forms({
 
 			const result = await res.json();
 			if (!res.ok || !result.success) {
-				throw new Error(result.message || `Request failed with ${res.status}`);
+				throw new Error(result.error || `Request failed with ${res.status}`);
 			}
 
 			setStatus("success");
@@ -196,6 +150,7 @@ export default function Forms({
 							value={values[field.name]}
 							error={errors[field.name]}
 							onChange={handleChange}
+							onToggleGroup={handleToggleGroup}
 						/>
 					))}
 
@@ -211,8 +166,7 @@ export default function Forms({
 
 						{status === "error" && (
 							<p className="text-sm text-red-600 text-center">
-								Something went wrong sending your submission. Please try
-								again.
+								Something went wrong sending your submission. Please try again.
 							</p>
 						)}
 					</div>
@@ -222,7 +176,7 @@ export default function Forms({
 	);
 }
 
-function FormField({ field, value, error, onChange }) {
+function FormField({ field, value, error, onChange, onToggleGroup }) {
 	const {
 		name,
 		label,
@@ -234,7 +188,7 @@ function FormField({ field, value, error, onChange }) {
 	} = field;
 
 	const wrapperClass = `flex flex-col gap-1.5 ${
-		fullWidth || type === "textarea" ? "md:col-span-2" : ""
+		fullWidth || type === "textarea" || type === "checkbox-group" ? "md:col-span-2" : ""
 	} ${type === "checkbox" ? "md:col-span-2 flex-row items-center gap-2.5" : ""}`;
 
 	const inputClass = `w-full rounded-lg border px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 transition-colors duration-150 focus:outline-none focus:ring-2 ${
@@ -276,13 +230,9 @@ function FormField({ field, value, error, onChange }) {
 					onChange={(e) => onChange(name, e.target.value)}
 					className={inputClass}
 				>
-					<option value="" disabled>
-						{placeholder || "Select…"}
-					</option>
+					<option value="" disabled>{placeholder || "Select…"}</option>
 					{options.map((opt) => (
-						<option key={opt} value={opt}>
-							{opt}
-						</option>
+						<option key={opt} value={opt}>{opt}</option>
 					))}
 				</select>
 			);
@@ -292,10 +242,7 @@ function FormField({ field, value, error, onChange }) {
 			control = (
 				<div className="flex flex-wrap gap-4 pt-1">
 					{options.map((opt) => (
-						<label
-							key={opt}
-							className="flex items-center gap-2 text-sm text-gray-700"
-						>
+						<label key={opt} className="flex items-center gap-2 text-sm text-gray-700">
 							<input
 								type="radio"
 								name={name}
@@ -303,6 +250,26 @@ function FormField({ field, value, error, onChange }) {
 								checked={value === opt}
 								onChange={(e) => onChange(name, e.target.value)}
 								className="accent-[#2c5f86]"
+							/>
+							{opt}
+						</label>
+					))}
+				</div>
+			);
+			break;
+
+		// NEW: multi-select checkboxes. `value` is an array of selected options.
+		case "checkbox-group":
+			control = (
+				<div className="flex flex-wrap gap-4 pt-1">
+					{options.map((opt) => (
+						<label key={opt} className="flex items-center gap-2 text-sm text-gray-700">
+							<input
+								type="checkbox"
+								name={`${name}-${opt}`}
+								checked={(value || []).includes(opt)}
+								onChange={() => onToggleGroup(name, opt)}
+								className="w-4 h-4 accent-[#2c5f86]"
 							/>
 							{opt}
 						</label>
@@ -325,7 +292,6 @@ function FormField({ field, value, error, onChange }) {
 			break;
 
 		default:
-			// text, email, tel, number, date, etc.
 			control = (
 				<input
 					id={name}
