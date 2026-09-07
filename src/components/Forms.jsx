@@ -258,7 +258,7 @@ function FormField({ field, value, error, onChange, onToggleGroup }) {
 			);
 			break;
 
-		// NEW: multi-select checkboxes. `value` is an array of selected options.
+		// multi-select checkboxes. `value` is an array of selected options.
 		case "checkbox-group":
 			control = (
 				<div className="flex flex-wrap gap-4 pt-1">
