@@ -1,5 +1,5 @@
+import Forms from "../components/Forms";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { CreditCard, RefreshCcw, TrendingUp, CalendarCheck, HeartHandshake } from "lucide-react";
 
 {/* Notes:
@@ -96,6 +96,10 @@ export default function CheckoutCharity() {
                 </div>
             </section>
 
+            <section className="py-12 bg-white">
+                <Forms formKey="checkout_charity" />
+            </section>
+
             {/* CTA Banner */}
             <section className="bg-[#1a3663] py-10">
                 <div className="max-w-5xl mx-auto px-6 md:px-16 flex flex-col items-center gap-6 text-center">
@@ -103,19 +107,6 @@ export default function CheckoutCharity() {
                         Every penny of spare change helps fund treatment development for
                         children with rare diseases.
                     </p>
-                    <div className="w-full max-w-2xl bg-white rounded-xl overflow-hidden shadow-lg">
-                        <iframe
-                            title="Get Involved sign-up form"
-                            width="640"
-                            height="1840"
-                            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=bKNtVnppg0aVes1z28bWNr6Blvi_UTRIlzCiAC3hlD5URURRQzdSVjg4NEVVOFdIUDhaQUREVzBGSiQlQCN0PWcu&embed=true"
-                            frameBorder="0"
-                            marginWidth="0"
-                            marginHeight="0"
-                            style={{ border: "none", maxWidth: "100%", width: "100%" }}
-                            allowFullScreen
-                        />
-                    </div>
                 </div>
             </section>
         </div >

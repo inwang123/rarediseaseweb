@@ -1,6 +1,5 @@
-// data/forms.js
-// Single source of truth: form structure (for rendering) + SharePoint
-// internal column names (for the serverless function). Imported by both
+// Form structure (for rendering) + SharePoint
+// Internal column names (for the serverless function). Imported by both
 // src/components/Forms.jsx and api/submit-to-sharepoint.js.
 
 export const formsConfig = {
@@ -21,29 +20,24 @@ export const formsConfig = {
     ],
   },
 
-  volunteer: {
-    envListIdKey: "VOLUNTEER_LIST_ID",
-    eyebrow: "Get Involved",
-    title: "Volunteer Sign-up",
-    description: "Let us know how you'd like to help.",
-    subject: "New volunteer sign-up",
+  checkout_charity: {
+    envListIdKey: "CHECKOUT_CHARITY_LIST_ID",
+    eyebrow: "Checkout Charity Form",
+    title: "Put your information here",
+    description: "Fill out this form to sign up for our checkout charity program.",
+    subject: "New checkout charity sign-up",
     submitLabel: "Sign up",
     fields: [
-      {
-        name: "events",
-        label: "Which event(s) would you like to sign up for?",
-        type: "checkbox-group",
-        required: true,
-        fullWidth: true,
-        options: ["Event A", "Event B", "Event C"], // TODO: replace with event names
-        sharepointField: "Event", // TODO: replace with real internal name
-        multiItem: true, // server creates one list item per selected option
-      },
-      { name: "firstName", label: "First Name", type: "text", required: true, sharepointField: "First" }, // TODO
-      { name: "lastName", label: "Last Name", type: "text", required: true, sharepointField: "Last" },   // TODO
-      { name: "email", label: "Email", type: "email", required: true, sharepointField: "Email" },        // TODO
-      { name: "phone", label: "Phone", type: "tel", sharepointField: "Phone" },                            // TODO
-      { name: "comments", label: "Comments", type: "textarea", fullWidth: true, sharepointField: "Comments" }, // TODO
+      { name: "legalBusinessName", label: "Legal Business Name", type: "text", required: true, sharepointField: "Title" },
+      { name: "dbaName", label: "DBA / Trade Name (if different)", type: "text", sharepointField: "AltName" },
+      { name: "businessAddress", label: "Business Address", type: "text", required: true, fullWidth: true, sharepointField: "BusinessAddress" },
+      { name: "websiteUrl", label: "Website URL", type: "text", sharepointField: "WebsiteURL" },
+      { name: "repName", label: "Representative Name", type: "text", required: true, sharepointField: "RepName" },
+      { name: "repEmail", label: "Representative Email", type: "email", required: true, sharepointField: "RepEmail" },
+      { name: "repPhone", label: "Representative Phone", type: "tel", sharepointField: "RepPhone" },
+      { name: "checkoutSystem", label: "POS/Checkout system you use (Square, Shopify, Clover, Toast, etc.)", type: "text", required: true, fullWidth: true, sharepointField: "CheckoutSystem" },
+      { name: "preferredStartDate", label: "Preferred Start Date", type: "date", required: true, sharepointField: "PreferredStartDate" },
+      { name: "comments", label: "Comments", type: "textarea", fullWidth: true, sharepointField: "Comments" },
     ],
   },
 };

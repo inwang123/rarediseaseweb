@@ -37,7 +37,10 @@ export default async function handler(req, res) {
     for (const field of config.fields) {
       const raw = values[field.name];
       if (raw === undefined || raw === "") continue;
-      spFields[field.sharepointField] = raw;
+
+      // checkbox-group sends an array (e.g. ["Event A", "Event B"]) —
+      // join into a single comma-separated string for one list item.
+      spFields[field.sharepointField] = Array.isArray(raw) ? raw.join(", ") : raw;
     }
 
     const accessToken = await getGraphToken();
