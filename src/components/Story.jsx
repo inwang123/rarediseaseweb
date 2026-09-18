@@ -35,6 +35,7 @@ const patients = [
 
 const AUTO_SCROLL_MS = 4500;
 const WHEEL_COOLDOWN_MS = 600;
+const SWIPE_THRESHOLD_PX = 40; // minimum horizontal distance to count as a swipe
 
 // Shortest signed distance from `index` to `center` around a circle of size `length`
 function circularOffset(index, center, length) {
@@ -52,6 +53,11 @@ export default function Story() {
   const autoScrollRef = useRef(null);
   const lastWheelRef = useRef(0);
   const trackRef = useRef(null);
+
+  // Touch tracking refs
+  const touchStartRef = useRef({ x: 0, y: 0 });
+  const touchDeltaRef = useRef({ x: 0, y: 0 });
+  const isSwipingRef = useRef(false);
 
   const length = patients.length;
 
@@ -100,12 +106,60 @@ export default function Story() {
     [next, prev, resetAutoScroll]
   );
 
+  // --- Touch / swipe handlers ---
+  const handleTouchStart = useCallback((e) => {
+    const t = e.touches[0];
+    touchStartRef.current = { x: t.clientX, y: t.clientY };
+    touchDeltaRef.current = { x: 0, y: 0 };
+    isSwipingRef.current = false;
+  }, []);
+
+  const handleTouchMove = useCallback((e) => {
+    const t = e.touches[0];
+    const dx = t.clientX - touchStartRef.current.x;
+    const dy = t.clientY - touchStartRef.current.y;
+    touchDeltaRef.current = { x: dx, y: dy };
+
+    // Once it's clearly a horizontal gesture, treat it as a swipe:
+    // prevent the page from scrolling vertically and take over.
+    if (!isSwipingRef.current && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) {
+      isSwipingRef.current = true;
+    }
+    if (isSwipingRef.current) {
+      e.preventDefault();
+    }
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const { x: dx, y: dy } = touchDeltaRef.current;
+
+    if (isSwipingRef.current && Math.abs(dx) > SWIPE_THRESHOLD_PX && Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) {
+        next();
+      } else {
+        prev();
+      }
+      resetAutoScroll();
+    }
+
+    isSwipingRef.current = false;
+    touchDeltaRef.current = { x: 0, y: 0 };
+  }, [next, prev, resetAutoScroll]);
+
   useEffect(() => {
     const node = trackRef.current;
     if (!node) return;
     node.addEventListener("wheel", handleWheel, { passive: false });
-    return () => node.removeEventListener("wheel", handleWheel);
-  }, [handleWheel]);
+    node.addEventListener("touchstart", handleTouchStart, { passive: true });
+    node.addEventListener("touchmove", handleTouchMove, { passive: false });
+    node.addEventListener("touchend", handleTouchEnd, { passive: true });
+    return () => {
+      node.removeEventListener("wheel", handleWheel);
+      node.removeEventListener("touchstart", handleTouchStart);
+      node.removeEventListener("touchmove", handleTouchMove);
+      node.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [handleWheel, handleTouchStart, handleTouchMove, handleTouchEnd]);
 
   const openBio = (p) => {
     setSelected(p);
