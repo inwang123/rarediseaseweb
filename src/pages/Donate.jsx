@@ -42,7 +42,7 @@ export default function Donate() {
               title="Donate to the Children's Rare Disease Alliance"
               frameBorder="0"
               allow="payment"
-              className="block mx-auto w-full max-w-4xl h-[1520px] min-[480px]:h-[1440px] min-[560px]:h-[1300px] md:h-[1290px] lg:h-[1240px]"
+              className="block mx-auto w-full max-w-4xl h-[1660px] min-[480px]:h-[1600px] min-[560px]:h-[1450px] md:h-[1340px] lg:h-[1290px]"
               style={{
                 colorScheme: "light",
                 borderRadius: ".25em",

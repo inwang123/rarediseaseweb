@@ -75,15 +75,21 @@ were all readable.
 
 These were changed in the same work and matter for how the form displays:
 
-- **Height:** the form scrolls inside its own box that starts about 100px below
-  the top of the iframe, so the iframe must be taller than the form itself. The
-  needed height depends on the iframe width (the form re-flows on narrow
-  screens), so `Donate.jsx` uses responsive heights: 1520px on small phones,
-  1440px, 1300px, 1290px and 1240px as the screen gets wider. These were
-  measured by reading the "Donate Now" button position inside the real iframe
-  at widths from 320px to 1280px, with a few pixels of margin. If Xplor changes
-  the form (adds a field or a paragraph), the form may start scrolling inside
-  the iframe again and these heights would need re-measuring.
+- **Height (important):** the form scrolls inside its own box that starts
+  about 100px below the top of the iframe. If the iframe is too short for the
+  form, that box becomes a scroll area, and on a phone it grabs the visitor's
+  finger so the page stops scrolling while they are over the form. We cannot
+  turn that scrolling off (it belongs to Xplor's page on another domain), but
+  when the iframe is taller than the form, the form stretches to fill it and
+  there is nothing to scroll. So `Donate.jsx` uses generous responsive heights
+  (1660px on small phones down to 1290px on desktop), which leaves some white
+  space below the Donate Now button. The form's natural height differs by
+  screen width and is about 36px taller in the phone layout, so the values were
+  measured with an iPhone user agent and touch emulation from 272px to 896px
+  wide, then padded by roughly 100px. All tested widths reported "not
+  scrollable". If Xplor adds fields or text to the form, re-measure: the form
+  could start scrolling inside the iframe again. Larger text sizes on a
+  visitor's phone can also make the form taller than measured.
 - **Width:** it fills a centered column up to `max-w-4xl` and shrinks to fit
   phones. An earlier version forced a 500px minimum width, but that came from
   a flawed test (headless Edge has a minimum window width) and clipped the form
