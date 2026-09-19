@@ -75,12 +75,22 @@ were all readable.
 
 These were changed in the same work and matter for how the form displays:
 
-- **Height:** the form needs about 1,250px on desktop (1,350px on small
-  screens). At the original 600px the fields were cut off.
-- **Width:** it fills a centered column up to `max-w-4xl`. The form starts
-  clipping sideways below about 500px, so the iframe has `min-w-[500px]` inside
-  a wrapper that scrolls horizontally on very narrow phones. This was checked
-  in a desktop browser at different window widths, not on a real phone.
+- **Height:** the form scrolls inside its own box that starts about 100px below
+  the top of the iframe, so the iframe must be taller than the form itself. The
+  needed height depends on the iframe width (the form re-flows on narrow
+  screens), so `Donate.jsx` uses responsive heights: 1520px on small phones,
+  1440px, 1300px, 1290px and 1240px as the screen gets wider. These were
+  measured by reading the "Donate Now" button position inside the real iframe
+  at widths from 320px to 1280px, with a few pixels of margin. If Xplor changes
+  the form (adds a field or a paragraph), the form may start scrolling inside
+  the iframe again and these heights would need re-measuring.
+- **Width:** it fills a centered column up to `max-w-4xl` and shrinks to fit
+  phones. An earlier version forced a 500px minimum width, but that came from
+  a flawed test (headless Edge has a minimum window width) and clipped the form
+  on phones, so it was removed.
+- **No hero banner:** the page has no hero image or intro text, only a small
+  "Go to account" link above the form, so the form is visible without
+  scrolling. The link goes to the Xplor customer portal.
 - **`allow="payment"`:** lets Apple Pay and Google Pay work inside the iframe.
 - **No box-shadow:** the original embed snippet's shadow was removed.
 
