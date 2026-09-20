@@ -30,7 +30,12 @@ const patients = [
     name: "Auggie",
     img: "/Auggie_bio.jpg",
     bio: "Auggie has Aicardi-Goutières syndrom (AGS). He is nonverbal or maybe we could say non-wordal because he likes to squawk at us. He loves being held, loves lights, bird sounds, and bell sounds. He is a people person like his brother Phippin and seems happy when people--those he knows and those he's just met--are around."
-  }
+  },
+  {
+    name: "Rockwell",
+    img: "/Rockwell_bio.jpg",
+    bio: "Rockwell was born with a rare genetic disorder (unbalanced translocation of 14 & 16) There are less than 20 cases reported in the world. Due to this he has many physical and cognitive disabilities and after being placed on ECMO (advanced life support) following a tonsillectomy, his medical complexities increased. He has a g-tube, an ileostomy, a Broviac line, is TPN dependent, has cerebral palsy and epilepsy. He requires round the clock care but also provides round the clock joy & light to all who know him!",
+  },
 ];
 
 const AUTO_SCROLL_MS = 4500;
