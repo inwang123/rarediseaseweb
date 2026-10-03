@@ -8,7 +8,7 @@ dotenv.config(); // reads .env in the same folder
 
 const { TENANT_ID, CLIENT_ID, CLIENT_SECRET, SITE_ID } = process.env;
 
-// Change this to whichever list you want to inspect right now,
+// Change this to whichever list you want to inspect,
 // e.g. process.env.CHECKOUT_CHARITY_LIST_ID
 const LIST_ID = process.env.CHECKOUT_CHARITY_LIST_ID;
 

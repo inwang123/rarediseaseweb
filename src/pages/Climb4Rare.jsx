@@ -395,7 +395,7 @@ export default function Climb4Rare() {
         <div className="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-sm aspect-video">
           <iframe
             className="w-full h-full"
-            src="https://www.youtube.com/embed/XGIKDebkDPU"
+            src="https://www.youtube.com/embed/7tlshA1qySA"
             title="Interview with Good Things Utah"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
