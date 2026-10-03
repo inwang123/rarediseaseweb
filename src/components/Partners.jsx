@@ -26,11 +26,11 @@ export default function Mission() {
           </div>
 
           {/* Partners Grid - Centered */}
-          <div className="flex justify-center gap-16 md:gap-24 flex-wrap">
+          <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
             {partners.map((partner) => (
               <div
                 key={partner.id}
-                className="flex flex-col items-center justify-center gap-4 group"
+                className="flex flex-col items-center justify-center group"
               >
                 {/* Logo container */}
                 <div className="w-48 h-48 flex items-center justify-center p-6 transition-transform duration-300 group-hover:scale-105">
@@ -44,11 +44,6 @@ export default function Mission() {
                     }}
                   />
                 </div>
-
-                {/* Partner name */}
-                <p className="text-gray-500 text-sm text-center font-medium">
-                  {partner.name}
-                </p>
               </div>
             ))}
           </div>
