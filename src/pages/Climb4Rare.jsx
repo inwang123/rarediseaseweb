@@ -48,7 +48,7 @@ const involvementCards = [
     border: "#2e7d32",
     items: [
       "Find a hike near you",
-      "Sign the [waiver](https://thelostenzymeproject.org/wp-content/uploads/2026/06/CLIMB4RARE-Waiver.pdf)",
+      "Sign the [waiver](/Climb4Rare/CLIMB4RARE-Waiver.pdf)",
       "Share your summit",
     ],
   },
@@ -335,7 +335,7 @@ export default function Climb4Rare() {
                     </li>
                     <li>
                       {renderLinkedText(
-                        "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](https://thelostenzymeproject.org/wp-content/uploads/2026/06/Climb4Rare_8x11_Sign.pdf)"
+                        "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](/Climb4Rare/Climb4Rare_8x11_Sign.pdf)"
                       )}
                     </li>
                     <li>
@@ -418,7 +418,15 @@ export default function Climb4Rare() {
             <a href="https://www.instagram.com/hubbardhaven/" target="_blank" rel="noopener noreferrer">
               <span className="text-[#ed774a] font-medium">@hubbardhaven</span>
             </a>{" "}
-            with #Climb4Rare or hold up Climb4Rare_Sign.png
+            with #Climb4Rare or hold up{" "}
+            <a
+              href="/Climb4Rare/Climb4Rare_8x11_Sign.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#2c5f86] underline hover:text-[#7bb1bf] font-medium"
+            >
+              Climb4Rare_Sign.png
+            </a>
           </p>
           <HallOfFameCarousel photos={hallOfFamePhotos} />
         </div>
