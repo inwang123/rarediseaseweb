@@ -6,11 +6,16 @@
 import dotenv from "dotenv";
 dotenv.config(); // reads .env in the same folder
 
-const { TENANT_ID, CLIENT_ID, CLIENT_SECRET, SITE_ID } = process.env;
+const { TENANT_ID, CLIENT_ID, CLIENT_SECRET } = process.env;
 
 // Change this to whichever list you want to inspect,
 // e.g. process.env.CHECKOUT_CHARITY_LIST_ID
-const LIST_ID = process.env.PATIENT_REGISTRATION_LIST_ID;
+
+const SITE_ID = "thelostenzymeproject.sharepoint.com,6fe2d776-81e8-4f40-b486-bec76d70018e,a8fd000a-3d42-4f49-bb38-645797150919";
+
+// const LIST_ID = process.env.PATIENT_REGISTRATION_LIST_ID;
+
+const LIST_ID = "7a4f69a1-f205-442b-8065-975c8c9d91c5";
 
 async function getGraphToken() {
   const res = await fetch(

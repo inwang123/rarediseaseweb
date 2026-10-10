@@ -60,7 +60,7 @@ const upcomingDates = [
   {
     month: "OCT",
     day: "16",
-    category: "Family Activity",
+    category: "Dinner",
     color: "#e25275",
     title: "Dinner at Ronald McDonald House",
     time: "6:00 PM MDT",
@@ -327,7 +327,7 @@ export default function Volunteer() {
                     </a>
                   </span>
                   <p className="text-[11px] text-gray-400 mt-0.5">
-                    Fillable PDF sign up
+                    Fillable sign up form
                   </p>
                 </div>
               </div>
