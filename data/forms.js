@@ -35,7 +35,7 @@ export const formsConfig = {
       { name: "repName", label: "Representative Name", type: "text", required: true, sharepointField: "RepName" },
       { name: "repEmail", label: "Representative Email", type: "email", required: true, sharepointField: "RepEmail" },
       { name: "repPhone", label: "Representative Phone", type: "tel", sharepointField: "RepPhone" },
-      { name: "checkoutSystem", label: "POS/Checkout system you use (Square, Shopify, Clover, Toast, etc.)", type: "text", required: true, fullWidth: true, sharepointField: "CheckoutSystem" },
+      { name: "checkoutSystem", label: "POS/Checkout system you use (Square, FreedomPay, etc.)", type: "text", required: true, fullWidth: true, sharepointField: "CheckoutSystem" },
       { name: "preferredStartDate", label: "Preferred Start Date", type: "date", required: true, sharepointField: "PreferredStartDate" },
       { name: "comments", label: "Comments", type: "textarea", fullWidth: true, sharepointField: "Comments" },
     ],
