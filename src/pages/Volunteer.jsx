@@ -59,25 +59,14 @@ const opportunities = [
 const upcomingDates = [
   {
     month: "OCT",
-    day: "07",
-    category: "Lunch",
-    color: "#2c5f86",
-    title: "Together at the Table",
-    time: "1:00 PM MDT",
-    location: "Primary Children's Hospital • Salt Lake City",
-    desc: "Help CRDA serve lunch and create a welcoming moment for families spending long days at the hospital.",
-    chips: ["Meal setup", "Serve families", "Light cleanup"],
-  },
-  {
-    month: "OCT",
-    day: "10",
-    category: "Family Activity",
+    day: "16",
+    category: "Dinner",
     color: "#e25275",
-    title: "World Mental Health Day Quilt-Tying Night",
-    time: "6:30–8:30 PM MDT",
+    title: "Dinner at Ronald McDonald House",
+    time: "6:00 PM MDT",
     location: "Ronald McDonald House • Downtown Salt Lake City",
-    desc: "Tie quilts alongside families staying at the House and help make the evening creative, relaxed and fun.",
-    chips: ["Set up stations", "Help families tie quilts", "Activity support"],
+    desc: "Help make the evening creative, relaxed and fun.",
+    chips: ["Set up stations", "Activity support"],
   },
   {
     month: "DEC",
@@ -338,7 +327,7 @@ export default function Volunteer() {
                     </a>
                   </span>
                   <p className="text-[11px] text-gray-400 mt-0.5">
-                    Fillable PDF sign up
+                    Fillable sign up form
                   </p>
                 </div>
               </div>
