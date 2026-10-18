@@ -20,14 +20,17 @@ export default function Mission() {
 			<div className="relative z-10">
 				{/* ── Mission content ── */}
 				<section className="py-16 px-6 md:px-16 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
-					{/* Image with warm rounded style */}
-					<div className="relative flex-shrink-0 order-2 md:order-1">
-						<img
-							src="/pippin.jpeg"
-							alt="Pippin"
-							className="w-56 h-56 object-cover relative z-10"
+					{/* Video with warm rounded style */}
+					<div className="relative flex-shrink-0 order-2 md:order-1 w-full md:w-96">
+						<iframe
+							src="https://www.youtube.com/embed/8LHy7ggJXQk?start=1"
+							title="Our mission video"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							referrerPolicy="strict-origin-when-cross-origin"
+							allowFullScreen
+							className="w-full aspect-video relative z-10 border-0"
 							style={{
-								borderRadius: "2rem",
+								borderRadius: "0.75rem",
 								boxShadow: "0 8px 32px rgba(44,95,134,0.18)",
 							}}
 						/>
@@ -37,7 +40,7 @@ export default function Mission() {
 							style={{
 								backgroundColor: "#7bb1bf",
 								opacity: 0.18,
-								borderRadius: "2rem",
+								borderRadius: "0.75rem",
 							}}
 						/>
 					</div>
