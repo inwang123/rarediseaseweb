@@ -110,6 +110,7 @@ export default function News() {
   return (
     <div className="bg-white overflow-x-hidden">
       <PageBanner
+        eyebrow="Stories & Updates"
         title="In the News"
         intro="Stories, updates and media coverage from our community, our hikes, and our ongoing work to move rare disease treatments forward."
       />
