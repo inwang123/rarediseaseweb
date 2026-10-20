@@ -7,28 +7,6 @@ const ORANGE = "#ed774a";
 // Photo shown beside the story text
 const MOUNTAIN_IMAGE = "/images/get-involved/get_involved_climb.jpg";
 
-function Peak({ active }) {
-  return (
-    <svg viewBox="0 0 48 40" className="w-11 h-9" aria-hidden="true">
-      {active && (
-        <>
-          <line x1="24" y1="2" x2="24" y2="12" stroke={ORANGE} strokeWidth="1.5" />
-          <polygon points="24,2 31,4.5 24,7" fill={ORANGE} />
-        </>
-      )}
-      <polygon
-        points="2,38 18,16 24,24 32,12 46,38"
-        fill={active ? NAVY : "#c4cfdb"}
-      />
-      <polygon
-        points="32,12 36,18 32,17 29,19"
-        fill={active ? "#fff" : "#e5ebf1"}
-        opacity="0.9"
-      />
-    </svg>
-  );
-}
-
 export default function ThirtyBy30() {
   return (
     <div className="bg-white overflow-x-hidden">
@@ -42,14 +20,14 @@ export default function ThirtyBy30() {
           src="/images/get-involved/get-involved-banner.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-y-0 right-0 h-full w-full md:w-3/5 object-cover select-none pointer-events-none"
-          style={{ objectPosition: "50% 60%" }}
+          className="absolute inset-y-0 right-0 h-full w-full md:w-1/2 object-cover select-none pointer-events-none"
+          style={{ objectPosition: "55% 60%" }}
         />
         {/* Fade the photo into the navy panel */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 40%, rgba(15,42,68,0.85) 47%, rgba(15,42,68,0.62) 54%, rgba(15,42,68,0.38) 62%, rgba(15,42,68,0.18) 70%, rgba(15,42,68,0.06) 78%, rgba(15,42,68,0) 86%)`,
+            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 50%, rgba(15,42,68,0.8) 54%, rgba(15,42,68,0.55) 59%, rgba(15,42,68,0.3) 65%, rgba(15,42,68,0.12) 72%, rgba(15,42,68,0) 80%)`,
           }}
         />
         <div
@@ -62,10 +40,10 @@ export default function ThirtyBy30() {
             Get Involved
           </p>
           <div className="mt-2 mb-5 h-0.5 w-10" style={{ backgroundColor: ORANGE }} />
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight max-w-2xl">
+          <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-white leading-tight max-w-lg">
             Thirty diseases. Thirty peaks. One mission: ensure no one is too rare to treat.
           </h1>
-          <p className="mt-5 text-base md:text-xl text-white/85 max-w-md leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-white/85 max-w-md leading-relaxed">
             We will start with one disease, then another, building a route for
             every climb that follows.
           </p>
@@ -73,18 +51,40 @@ export default function ThirtyBy30() {
       </section>
 
       {/* ── Story + image ── */}
-      <section className="max-w-6xl mx-auto px-6 md:px-16 py-14 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-        <div className="flex flex-col gap-4 text-base leading-relaxed text-gray-600">
-          <p>
-            Many of the world’s great peaks were once considered unclimbable,
-            until a brave explorer found a route.
-          </p>
-          <p>
-            Similarly, children and adults with rare diseases often have little
-            hope of treatment — not because treatment is impossible — but because
-            no one has assembled the science and medical team, or gathered the
-            resources and capital required to make the climb.
-          </p>
+      <section className="max-w-6xl mx-auto px-6 md:px-16 pt-14 pb-6">
+        {/* Intro text beside the photo; the photo stretches to match the text height */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-14 md:items-stretch">
+          <div className="flex flex-col justify-center gap-4 text-base leading-relaxed text-gray-600">
+            <p>
+              Many of the world’s greatest peaks were once considered impossible
+              to climb—until someone found a way.
+            </p>
+            <p>
+              Rare diseases are mountains of their own, filled with obstacles that
+              no family should face alone. Reaching the summit takes a team,
+              determination, and the courage to keep climbing.
+            </p>
+            <p>
+              At <strong>Children’s Rare Disease Alliance</strong>, our goal is to
+              raise the funds to advance treatments for{" "}
+              <strong>30 rare diseases by 2030</strong>.
+            </p>
+            <p>
+              Together, we can turn impossible climbs into life-changing
+              breakthroughs.
+            </p>
+          </div>
+
+          <img
+            src={MOUNTAIN_IMAGE}
+            alt="Climbers ascending a mountain ridge above the clouds at sunrise"
+            className="w-full aspect-[4/3] md:aspect-auto md:h-full md:min-h-[16rem] object-cover rounded-xl"
+            style={{ boxShadow: "0 8px 32px rgba(44,95,134,0.18)" }}
+          />
+        </div>
+
+        {/* Remaining text spans the full container width */}
+        <div className="mt-8 flex flex-col gap-4 text-base leading-relaxed text-gray-600">
           <p className="text-lg font-bold" style={{ color: AZURE }}>
             Our goal is to help change that.
           </p>
@@ -103,41 +103,13 @@ export default function ThirtyBy30() {
             30 by 2030. An expedition of expeditions.
           </p>
         </div>
-
-        <img
-          src={MOUNTAIN_IMAGE}
-          alt="Climbers ascending a mountain ridge above the clouds at sunrise"
-          className="w-full aspect-[4/3] object-cover rounded-xl"
-          style={{ boxShadow: "0 8px 32px rgba(44,95,134,0.18)" }}
-        />
       </section>
 
-      {/* ── 30 by 2030 tracker ── */}
-      <section className="px-6 md:px-16 py-14" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f5f8fb 7rem, #f5f8fb 100%)" }}>
+      {/* ── Call to action ── */}
+      <section className="px-6 md:px-16 pt-6 pb-14" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f5f8fb 4rem, #f5f8fb 100%)" }}>
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold" style={{ color: AZURE }}>
-            30 by 2030
-          </h2>
-          <div className="mx-auto mt-2 h-0.5 w-10" style={{ backgroundColor: ORANGE }} />
-          <p className="mt-4 text-base md:text-lg font-medium" style={{ color: NAVY }}>
-            One route can change what is possible for the next climb.
-          </p>
-
-          <ol className="mt-8 grid grid-cols-5 md:grid-cols-10 gap-y-5 gap-x-2 list-none p-0">
-            {Array.from({ length: 30 }, (_, i) => i + 1).map((n) => (
-              <li key={n} className="flex flex-col items-center gap-1">
-                <Peak active={n === 1} />
-                <span
-                  className={`text-xs ${n === 1 ? "font-bold text-gray-900" : "text-gray-500"}`}
-                >
-                  {n}
-                </span>
-              </li>
-            ))}
-          </ol>
-
           {/* Call to action */}
-          <div className="mt-10 bg-white rounded-2xl shadow-md px-6 py-5 flex flex-col md:flex-row items-center gap-5 md:gap-8">
+          <div className="bg-white rounded-2xl shadow-md px-6 py-5 flex flex-col md:flex-row items-center gap-5 md:gap-8">
             <p
               className="flex-1 text-xl md:text-2xl italic font-medium text-left border-l-4 pl-5"
               style={{ color: NAVY, borderColor: AZURE }}

@@ -69,10 +69,10 @@ export const marketingTeam = [
     bio: "Bio coming soon.",
   },
   {
-    name: "Caitlyn Baker",
+    name: "Caitlin Baker",
     role: "Adventure Fundraising Specialist",
-    img: "/images/team/caitlyn_baker_bio.png",
-    bio: "Caitlyn is an adventurer, mother of three, and passionate advocate for bringing people together through meaningful experiences. She holds a degree in Family Life Studies from Utah State University and has explored trails from Utah's mountains to Mount Kilimanjaro. As an Adventure Fundraising Specialist with Children's Rare Disease Alliance, Caitlyn combines her love of the outdoors with a deeply personal connection to the rare disease community. After losing her father to a rare cancer as a teenager, she understands the importance of research, treatment, and support for affected families. Through hikes, retreats, and other outdoor experiences, she works to build community and raise funds for rare disease research and support.",
+    img: "/images/team/caitlin_baker_bio.png",
+    bio: "Caitlin is an adventurer, mother of three, and passionate advocate for bringing people together through meaningful experiences. She holds a degree in Family Life Studies from Utah State University and has explored trails from Utah's mountains to Mount Kilimanjaro. As an Adventure Fundraising Specialist with Children's Rare Disease Alliance, Caitlin combines her love of the outdoors with a deeply personal connection to the rare disease community. After losing her father to a rare cancer as a teenager, she understands the importance of research, treatment, and support for affected families. Through hikes, retreats, and other outdoor experiences, she works to build community and raise funds for rare disease research and support.",
   },
   {
     name: "Ashley Budd",
