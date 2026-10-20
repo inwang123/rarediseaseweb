@@ -20,14 +20,14 @@ export default function ThirtyBy30() {
           src="/images/get-involved/get-involved-banner.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-y-0 right-0 h-full w-full md:w-1/2 object-cover select-none pointer-events-none"
+          className="absolute inset-y-0 right-0 h-full w-full md:w-[45%] object-cover select-none pointer-events-none"
           style={{ objectPosition: "55% 60%" }}
         />
         {/* Fade the photo into the navy panel */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 50%, rgba(15,42,68,0.8) 54%, rgba(15,42,68,0.55) 59%, rgba(15,42,68,0.3) 65%, rgba(15,42,68,0.12) 72%, rgba(15,42,68,0) 80%)`,
+            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 55%, rgba(15,42,68,0.8) 59%, rgba(15,42,68,0.55) 64%, rgba(15,42,68,0.3) 70%, rgba(15,42,68,0.12) 77%, rgba(15,42,68,0) 85%)`,
           }}
         />
         <div
@@ -40,8 +40,12 @@ export default function ThirtyBy30() {
             30x30
           </p>
           <div className="mt-2 mb-5 h-0.5 w-10" style={{ backgroundColor: ORANGE }} />
-          <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-white leading-tight max-w-lg">
-            Thirty diseases. Thirty peaks. One mission: ensure no one is too rare to treat.
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            Thirty diseases. Thirty peaks.
+            <br className="hidden md:block" />{" "}
+            One mission: ensure no one
+            <br className="hidden md:block" />{" "}
+            is too rare to treat.
           </h1>
           <p className="mt-5 text-base md:text-lg text-white/85 max-w-md leading-relaxed">
             We will start with one disease, then another, building a route for
