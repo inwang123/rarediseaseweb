@@ -69,9 +69,9 @@ export default function ThirtyBy30() {
               determination, and the courage to keep climbing.
             </p>
             <p>
-              At <strong>Children’s Rare Disease Alliance</strong>, our goal is to
+              At <strong style={{ color: AZURE }}>Children’s Rare Disease Alliance</strong>, our goal is to
               raise the funds to advance treatments for{" "}
-              <strong>30 rare diseases by 2030</strong>.
+              <strong style={{ color: AZURE }}>30 rare diseases by 2030</strong>.
             </p>
             <p>
               Together, we can turn impossible climbs into life-changing
@@ -89,23 +89,7 @@ export default function ThirtyBy30() {
 
         {/* Remaining text spans the full container width */}
         <div className="mt-8 flex flex-col gap-4 text-base leading-relaxed text-gray-600">
-          <p className="text-lg font-bold" style={{ color: AZURE }}>
-            Our goal is to help change that.
-          </p>
-          <p>
-            Today, rare diseases are the unclimbed peaks of medicine. Genomics,
-            patient-derived models, new therapeutic tools, and emerging
-            regulatory pathways are opening routes that did not exist before.
-          </p>
           <p>Join us. Now is the time to set our sights on the summit.</p>
-          <p>
-            We will start with one disease. Then another. The opportunity is not
-            only to fund one treatment. It is to prove a model that can make the
-            next expedition easier to launch.
-          </p>
-          <p className="text-lg font-bold" style={{ color: AZURE }}>
-            30 by 2030. An expedition of expeditions.
-          </p>
         </div>
       </section>
 
