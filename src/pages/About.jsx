@@ -75,6 +75,12 @@ const marketingTeam = [
     img: "caitlyn_baker_bio.png",
     bio: "Caitlyn is an adventurer, mother of three, and passionate advocate for bringing people together through meaningful experiences. She holds a degree in Family Life Studies from Utah State University and has explored trails from Utah's mountains to Mount Kilimanjaro. As an Adventure Fundraising Specialist with Children's Rare Disease Alliance, Caitlyn combines her love of the outdoors with a deeply personal connection to the rare disease community. After losing her father to a rare cancer as a teenager, she understands the importance of research, treatment, and support for affected families. Through hikes, retreats, and other outdoor experiences, she works to build community and raise funds for rare disease research and support.",
   },
+  {
+    name: "Ashley Budd",
+    role: "Adventure Campaign Director",
+    img: "/ashley_budd_bio.jpg",
+    bio: "Ashley is a passionate middle school science teacher, outdoor enthusiast, and mom of four who believes adventure can be a powerful way to bring people together for a cause. After climbing Mount Kilimanjaro alongside the Climb 4 Rare team, she was inspired to use her love of adventure to help children with rare diseases. As a Campaign Director for Climb 4 Rare, Ashley plans community hikes, fundraising campaigns, and adventure trips that not only raise money for the cause, but also build a community that cares. Whether climbing mountains or teaching teenagers, Ashley loves a good challenge . . . and is excited to take on an even bigger one: helping children with rare diseases.",
+  },
 ];
 
 const communityCommittee = [
