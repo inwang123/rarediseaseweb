@@ -19,9 +19,9 @@ export default function Mission() {
 
 			<div className="relative z-10">
 				{/* ── Mission content ── */}
-				<section className="py-16 px-6 md:px-16 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
+				<section className="py-16 px-6 md:px-16 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14">
 					{/* Video with warm rounded style */}
-					<div className="relative flex-shrink-0 order-2 md:order-1 w-full md:w-96">
+					<div className="relative flex-shrink-0 order-2 md:order-1 w-full md:w-[36rem]">
 						<iframe
 							src="https://www.youtube.com/embed/8LHy7ggJXQk?start=1"
 							title="Our mission video"
