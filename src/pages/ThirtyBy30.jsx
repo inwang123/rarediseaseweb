@@ -37,7 +37,7 @@ export default function ThirtyBy30() {
 
         <div className="relative max-w-6xl mx-auto px-6 md:px-16 py-14 md:py-24 min-h-[22rem] md:min-h-[26rem] flex flex-col justify-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
-            Get Involved
+            30x30
           </p>
           <div className="mt-2 mb-5 h-0.5 w-10" style={{ backgroundColor: ORANGE }} />
           <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-white leading-tight max-w-lg">
@@ -123,13 +123,6 @@ export default function ThirtyBy30() {
                 style={{ backgroundColor: AZURE }}
               >
                 Support the Mission →
-              </Link>
-              <Link
-                to="/volunteer"
-                className="px-6 py-2.5 rounded-lg text-sm font-semibold border-2 transition-colors hover:bg-[#2c5f86]/10"
-                style={{ color: AZURE, borderColor: AZURE }}
-              >
-                Learn About Fundraising →
               </Link>
             </div>
           </div>
