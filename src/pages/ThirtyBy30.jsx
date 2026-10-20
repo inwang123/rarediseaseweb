@@ -62,15 +62,10 @@ export default function ThirtyBy30() {
             Get Involved
           </p>
           <div className="mt-2 mb-5 h-0.5 w-10" style={{ backgroundColor: ORANGE }} />
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-            Our Goal: 30 by 30
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight max-w-2xl">
+            Thirty diseases. Thirty peaks. One mission: ensure no one is too rare to treat.
           </h1>
-          <p className="mt-4 text-xl md:text-3xl font-bold text-white leading-snug max-w-xl">
-            Thirty diseases. Thirty peaks.
-            <br />
-            One mission: ensure no one is too rare to treat.
-          </p>
-          <p className="mt-4 text-base md:text-lg text-white/85 max-w-md leading-relaxed">
+          <p className="mt-5 text-base md:text-xl text-white/85 max-w-md leading-relaxed">
             We will start with one disease, then another, building a route for
             every climb that follows.
           </p>

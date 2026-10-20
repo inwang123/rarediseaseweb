@@ -9,6 +9,7 @@ const DESKTOP_LINKS = [
     to: "/about",
     dropdown: [
       { label: "Our Story", to: "/our-story" },
+      { label: "Board of Directors", to: "/board" },
       { label: "Our Team",  to: "/team" },
     ],
   },
@@ -34,6 +35,7 @@ const MOBILE_LINKS = [
     to: "/about",
     dropdown: [
       { label: "Our Story", to: "/our-story" },
+      { label: "Board of Directors", to: "/board" },
       { label: "Our Team",  to: "/team" },
     ],
   },

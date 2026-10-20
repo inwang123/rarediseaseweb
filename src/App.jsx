@@ -11,6 +11,7 @@ import CheckoutCharity from "./pages/CheckoutCharity";
 import Volunteer from "./pages/Volunteer";
 import News from "./pages/News";
 import Team from "./pages/Team";
+import Board from "./pages/Board";
 import GetInvolved from "./pages/GetInvolved";
 import OurStory from "./pages/OurStory";
 import ThirtyBy30 from "./pages/ThirtyBy30";
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/our-story" element={<OurStory />} />
             <Route path="/news" element={<News />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/board" element={<Board />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/climb4rare" element={<Climb4Rare />} />
             <Route path="/checkoutcharity" element={<CheckoutCharity />} />
