@@ -2,7 +2,7 @@ import SectionOverview from "../components/SectionOverview";
 
 const items = [
   {
-    title: "Get Involved",
+    title: "30x30",
     desc: "Our goal is 30 by 30: thirty rare diseases, thirty peaks. Learn about the mission and how you can join the climb.",
     to: "/30-by-30",
   },

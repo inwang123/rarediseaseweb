@@ -16,7 +16,7 @@ const DESKTOP_LINKS = [
     label: "Get Involved",
     to: "/getinvolved",
     dropdown: [
-      { label: "Get Involved", to: "/30-by-30" },
+      { label: "30x30", to: "/30-by-30" },
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
       { label: "Volunteer",  to: "/volunteer" },
@@ -41,7 +41,7 @@ const MOBILE_LINKS = [
     label: "Get Involved",
     to: "/getinvolved",
     dropdown: [
-      { label: "Get Involved", to: "/30-by-30" },
+      { label: "30x30", to: "/30-by-30" },
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
       { label: "Volunteer",  to: "/volunteer" },
