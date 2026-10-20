@@ -7,6 +7,7 @@ const MESSAGES = [
 		title: "Fundraising",
 		body: "CRDA's goal is to help fund treatment development for 30 rare diseases by 2030 — partnering with the researchers and clinicians who develop the therapies themselves.",
 		accent: "#e8f5e9",
+		link: { to: "/30-by-30", label: "30x30 →" },
 	},
 	{
 		icon: "/images/climb4rare/Summit_sponsor_icon.webp",
