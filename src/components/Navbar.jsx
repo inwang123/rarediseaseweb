@@ -4,7 +4,13 @@ import SocialLinks from "./SocialLinks";
 
 const DESKTOP_LINKS = [
   { label: "Home",       to: "/" },
-  { label: "About",      to: "/about" },
+  {
+    label: "About",
+    to: "/about",
+    dropdown: [
+      { label: "Our Team",  to: "/team" },
+    ],
+  },
   {
     label: "Get Involved",
     to: "/getinvolved",
@@ -20,7 +26,13 @@ const DESKTOP_LINKS = [
 
 const MOBILE_LINKS = [
   { label: "Home",       to: "/" },
-  { label: "About",      to: "/about" },
+  {
+    label: "About",
+    to: "/about",
+    dropdown: [
+      { label: "Our Team",  to: "/team" },
+    ],
+  },
   {
     label: "Get Involved",
     to: "/getinvolved",
@@ -36,8 +48,8 @@ const MOBILE_LINKS = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -65,8 +77,8 @@ export default function Navbar() {
             <li
               key={to}
               className={dropdown ? "relative" : undefined}
-              onMouseEnter={dropdown ? () => setDesktopDropdownOpen(true) : undefined}
-              onMouseLeave={dropdown ? () => setDesktopDropdownOpen(false) : undefined}
+              onMouseEnter={dropdown ? () => setDesktopDropdownOpen(label) : undefined}
+              onMouseLeave={dropdown ? () => setDesktopDropdownOpen(null) : undefined}
             >
               <NavLink
                 to={to}
@@ -87,7 +99,7 @@ export default function Navbar() {
                 {dropdown && (
                   <svg
                     className={`w-3.5 h-3.5 transition-transform ${
-                      desktopDropdownOpen ? "rotate-180" : ""
+                      desktopDropdownOpen === label ? "rotate-180" : ""
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -99,7 +111,7 @@ export default function Navbar() {
               </NavLink>
 
               {/* Desktop Dropdown Panel */}
-              {dropdown && desktopDropdownOpen && (
+              {dropdown && desktopDropdownOpen === label && (
                 <ul className="absolute top-full left-0 pt-2 bg-white shadow-lg rounded-lg border border-gray-100 py-2 min-w-40 list-none">
                   {dropdown.map((item) => (
                     <li key={item.to}>
@@ -149,7 +161,7 @@ export default function Navbar() {
               {dropdown ? (
                 <>
                   <button
-                    onClick={() => setMobileDropdownOpen((o) => !o)}
+                    onClick={() => setMobileDropdownOpen((o) => (o === label ? null : label))}
                     className="w-full flex items-center justify-between gap-3 text-sm font-medium px-3 py-2 rounded-lg transition-colors text-gray-700 hover:text-[#7bb1bf] hover:bg-gray-50"
                   >
                     <span className="flex items-center gap-3">
@@ -158,7 +170,7 @@ export default function Navbar() {
                     </span>
                     <svg
                       className={`w-4 h-4 transition-transform ${
-                        mobileDropdownOpen ? "rotate-180" : ""
+                        mobileDropdownOpen === label ? "rotate-180" : ""
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -167,7 +179,7 @@ export default function Navbar() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {mobileDropdownOpen && (
+                  {mobileDropdownOpen === label && (
                     <div className="pl-8 flex flex-col gap-1 mt-1">
                       {dropdown.map((item) => (
                         <NavLink
@@ -175,7 +187,7 @@ export default function Navbar() {
                           to={item.to}
                           onClick={() => {
                             setMenuOpen(false);
-                            setMobileDropdownOpen(false);
+                            setMobileDropdownOpen(null);
                           }}
                           className={({ isActive }) =>
                             `text-sm font-medium px-3 py-2 rounded-lg transition-colors ${

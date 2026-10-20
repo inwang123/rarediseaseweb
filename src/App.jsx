@@ -9,6 +9,7 @@ import Climb4Rare from "./pages/Climb4Rare";
 import Donate from "./pages/Donate";
 import CheckoutCharity from "./pages/CheckoutCharity";
 import Volunteer from "./pages/Volunteer";
+import Team from "./pages/Team";
 import GetInvolved from "./pages/GetInvolved";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/climb4rare" element={<Climb4Rare />} />
             <Route path="/checkoutcharity" element={<CheckoutCharity />} />
