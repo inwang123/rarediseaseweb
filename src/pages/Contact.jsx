@@ -29,19 +29,19 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="bg-gray-50 rounded-xl p-6 flex flex-col items-start gap-3">
-            <img src="/map.png" alt="Address" className="w-8 h-8" />
+            <img src="/images/icons/map.png" alt="Address" className="w-8 h-8" />
             <h3 className="text-gray-900 font-semibold text-sm">Address</h3>
             <p className="text-gray-500 text-sm leading-relaxed">PO Box 11334<br />Chandler, AZ, 85248</p>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 flex flex-col items-start gap-3">
-            <img src="/phone-call.png" alt="Phone" className="w-8 h-8" />
+            <img src="/images/icons/phone-call.png" alt="Phone" className="w-8 h-8" />
             <h3 className="text-gray-900 font-semibold text-sm">Phone</h3>
             <p className="text-gray-500 text-sm">+1(602)-361-1880</p>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 flex flex-col items-start gap-3">
-            <img src="/email.png" alt="Email" className="w-8 h-8" />
+            <img src="/images/icons/email.png" alt="Email" className="w-8 h-8" />
             <h3 className="text-gray-900 font-semibold text-sm">Email</h3>
             <p className="text-gray-500 text-sm">info@crdalliance.org</p>
           </div>

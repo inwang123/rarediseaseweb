@@ -1,4 +1,13 @@
 {
+  "redirects": [
+    { "source": "/Climb4Rare/CLIMB4RARE-Waiver.pdf", "destination": "/documents/CLIMB4RARE-Waiver.pdf", "permanent": true },
+    { "source": "/Climb4Rare/Climb4Rare_8x11_Sign.pdf", "destination": "/documents/Climb4Rare_8x11_Sign.pdf", "permanent": true },
+    { "source": "/Climb4Rare-flyer-reb.png", "destination": "/images/flyers/Climb4Rare-flyer-reb.png", "permanent": true },
+    { "source": "/Olivers Flyer.png", "destination": "/images/flyers/Olivers Flyer.png", "permanent": true },
+    { "source": "/Olivers%20Flyer.png", "destination": "/images/flyers/Olivers%20Flyer.png", "permanent": true },
+    { "source": "/logo.png", "destination": "/images/brand/logo.png", "permanent": true },
+    { "source": "/logo_icon.png", "destination": "/images/brand/logo_icon.png", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/|@vite/|@react-refresh|src/|sitemap\\.xml|robots\\.txt).*)", "destination": "/" }
   ]

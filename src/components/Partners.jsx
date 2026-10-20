@@ -1,12 +1,12 @@
 const partners = [
-  { id: 1, name: "Xplor Technologies", logo: "/Sponsors/Xplor_logo.png" },
-  { id: 2, name: "The Lost Enzyme Project", logo: "/Sponsors/tlep_logo.jpg" },
-  { id: 3, name: "Lee's Marketplace", logo: "/Sponsors/lee_logo.png" },
-  { id: 4, name: "Ruck 4 Rare", logo: "/Sponsors/ruck4rare_logo.png" },
-  { id: 5, name: "Timber Cross", logo: "/Sponsors/Timber_Cross_logo.png" },
-  { id: 6, name: "Prism Print Shop", logo: "/Sponsors/prism_logo.png" },
-  { id: 7, name: "Men Saw Hey", logo: "/Sponsors/mensawhey_logo-07.jpg" },
-  { id: 8, name: "Anytime Auto Glass", logo: "/Sponsors/anytime_auto_logo.png" },
+  { id: 1, name: "Xplor Technologies", logo: "/images/sponsors/Xplor_logo.png" },
+  { id: 2, name: "The Lost Enzyme Project", logo: "/images/sponsors/tlep_logo.jpg" },
+  { id: 3, name: "Lee's Marketplace", logo: "/images/sponsors/lee_logo.png" },
+  { id: 4, name: "Ruck 4 Rare", logo: "/images/sponsors/ruck4rare_logo.png" },
+  { id: 5, name: "Timber Cross", logo: "/images/sponsors/Timber_Cross_logo.png" },
+  { id: 6, name: "Prism Print Shop", logo: "/images/sponsors/prism_logo.png" },
+  { id: 7, name: "Men Saw Hey", logo: "/images/sponsors/mensawhey_logo-07.jpg" },
+  { id: 8, name: "Anytime Auto Glass", logo: "/images/sponsors/anytime_auto_logo.png" },
 ];
 
 export default function Mission() {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const partners = [
 	{ id: 1, name: "The Lost Enzyme Project", logo: "/TLEP_logo.png" },
-	// Add more: { id: 2, name: "Partner Name", logo: "/logo.png" }
+	// Add more: { id: 2, name: "Partner Name", logo: "/images/brand/logo.png" }
 ];
 
 export default function Mission() {
@@ -10,7 +10,7 @@ export default function Mission() {
 		<div className="relative overflow-hidden bg-white">
 			{/* Border wave — top left, tinted blue to blend */}
 			<img
-				src="/border_top.png"
+				src="/images/home/border_top.png"
 				alt=""
 				aria-hidden="true"
 				className="absolute top-0 left-0 pointer-events-none select-none z-0 w-1/2"

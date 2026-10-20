@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div className="flex flex-col gap-3 max-w-sm">
             <img
-              src="/logo_footer.png"
+              src="/images/brand/logo_footer.png"
               alt="Charity Logo"
               className="w-40"
               style={{ borderRadius: "8px", alignSelf: "flex-start" }}

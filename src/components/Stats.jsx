@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const MESSAGES = [
 	{
-		icon: "/reading.png",
+		icon: "/images/icons/reading.png",
 		alt: "Fundraising",
 		title: "Fundraising",
 		body: "CRDA's goal is to help fund treatment development for 30 rare diseases by 2030 — partnering with the researchers and clinicians who develop the therapies themselves.",
 		accent: "#e8f5e9",
 	},
 	{
-		icon: "/Climb4Rare/Summit_sponsor_icon.webp",
+		icon: "/images/climb4rare/Summit_sponsor_icon.webp",
 		alt: "4Rare",
 		title: "4Rare",
 		body: "Climb4Rare and Adventure4Rare: join a hike, host one, or help us reach the summit for rare disease awareness and treatment funding.",
@@ -17,7 +17,7 @@ const MESSAGES = [
 		link: { to: "/climb4rare", label: "Climb4Rare →" },
 	},
 	{
-		icon: "/compassion.png",
+		icon: "/images/icons/compassion.png",
 		alt: "Volunteer",
 		title: "Volunteer",
 		body: "Give your time through family and community service projects — from hospital meals to holiday events — that bring comfort to families living with rare diseases.",
@@ -27,7 +27,7 @@ const MESSAGES = [
 ];
 
 const GIVING_PROGRAMS = {
-	icon: "/box.png",
+	icon: "/images/icons/box.png",
 	alt: "Checkout Charity and Corporate Matching",
 	title: "Checkout Charity & Corporate Matching",
 	accent: "#fff3cd",
@@ -79,7 +79,7 @@ export default function Stats() {
 		>
 			<div className="max-w-5xl mx-auto">
 				<div className="flex flex-col items-center text-center mb-12 gap-2">
-					<img src="/heart_icon.png" alt="heart" className="w-10 h-10 mb-1" />
+					<img src="/images/icons/heart_icon.png" alt="heart" className="w-10 h-10 mb-1" />
 					<h2 className="text-white font-bold text-4xl md:text-5xl">
 						Our Focus
 					</h2>

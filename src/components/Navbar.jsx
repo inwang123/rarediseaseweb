@@ -20,6 +20,7 @@ const DESKTOP_LINKS = [
       { label: "Volunteer",  to: "/volunteer" },
     ],
   },
+  { label: "In the News", to: "/news" },
   { label: "Contact Us", to: "/contact" },
   { label: "Donate",     to: "/donate", isButton: true },
 ];
@@ -42,6 +43,7 @@ const MOBILE_LINKS = [
       { label: "Volunteer",  to: "/volunteer" },
     ],
   },
+  { label: "In the News", to: "/news" },
   { label: "Contact Us", to: "/contact" },
   { label: "Donate",     to: "/donate" },
 ];
@@ -65,7 +67,7 @@ export default function Navbar() {
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
           <img
-            src="/logo_transparent.png"
+            src="/images/brand/logo_transparent.png"
             alt="Charity Logo"
             className="h-16 w-auto object-contain"
           />

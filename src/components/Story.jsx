@@ -3,37 +3,37 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const patients = [
   {
     name: "Skylar Hubbard",
-    img: "/Skylar_bio.webp",
+    img: "/images/stories/Skylar_bio.webp",
     bio: "Skylar Hubbard was diagnosed with beta-mannosidosis just one day before her first birthday. Since then, she has lost vision, hearing, and ability to eat and has been diagnosed with autism, optic nerve atrophy, and leukoencephalopathy. In 2025, Skylar spent more than nine months in the hospital undergoing an experimental bone marrow transplant to help slow the progression of her disease. Despite these challenges, her smile lights up every room, and her joyful spirit is contagious. Her sign name means \"Brave,\" because she is a true fighter. The Lost Enzyme Project is working to develop the first enzyme replacement therapy for children living with beta-mannosidosis, bringing hope to families around the world.",
   },
   {
     name: "Oliver",
-    img: "/Oliver_bio.webp",
+    img: "/images/stories/Oliver_bio.webp",
     bio: "Oliver was diagnosed with Beta-mannosidosis at the age of 4. He was the first patient diagnosed in the U.S. and underwent an experimental bone marrow transplant at the age of 4, the first in medical history for Beta-mannosidosis. Through research initiated by The Lost Enzyme Project, it was discovered that Oliver has a second rare HSPD1 disorder. Collectively, Oliver's symptoms continue to progress. He is considered blind, experiences chronic pain, has difficulty with swallowing and speech, and has lost his ability to walk. He desperately needs life-saving Beta-mannosidosis and HSPD1 treatment. Despite his challenges, Oliver loves his life. He has a wonderful sense of humor and a kind heart. Oliver works hard, loves travel, basketball, and all things LA Lakers. Most of all, Oliver believes in the possibility of a better future.",
   },
   {
     name: "Phippin",
-    img: "/Phippin_bio.jpg",
+    img: "/images/stories/Phippin_bio.jpg",
     bio: "Phippin is from Logan, Utah, and is currently living with Aicardi-Goutières syndrome (AGS), a rare genetic condition that affects the brain and immune system, Hodgkin's lymphoma, and moyamoya disease, a rare cerebrovascular disorder that adds further complexity to his care. Through it all, Phippin's joyful personality continues to shine. He loves to sing, dance, and spread happiness to everyone around him.",
   },
   {
     name: "Keon",
-    img: "/Keon_bio.jpg",
+    img: "/images/stories/Keon_bio.jpg",
     bio: "Keon was diagnosed with a rare genetic mutation at the age of 8: Tatton Brown Rahman Syndrome. The syndrome and gene mutation had only been discovered 4 years prior. At the time of his diagnosis there were only 15 known cases in the world. Today, Keon is 17 and there are several hundred people who have since been diagnosed with TBRS. His main challenges with the disease are mental disability, kidney disease, eye issues, low muscle tone and difficulty walking. Keon is the happiest, most loving and joyful boy, with a smile that lights up your heart. This past year has been especially challenging for Keon. He was diagnosed with a rare T-cell leukemia on top of his rare genetic syndrome, and all of the complications that come with that. It has definitely affected him, but yet he manages to still smile and laugh and spread joy to everyone he meets.",
   },
   {
     name: "Marco",
-    img: "/Marco_bio.png",
+    img: "/images/stories/Marco_bio.png",
     bio: "Marco was diagnosed with Beta-mannosidosis at 7yrs old. He was born with moderate hearing loss and started wearing hearing aids at 3 months old. He was diagnosed with ADHD and low cognitive function in 2023. Marco speech is delayed and receives education assistance at school. Despite all his challenges, Marco is an adorable kid that lives life to the fullest. He loves going camping, cars, bats and playing with friends."
   },
   {
     name: "Auggie",
-    img: "/Auggie_bio.jpg",
+    img: "/images/stories/Auggie_bio.jpg",
     bio: "Auggie has Aicardi-Goutières syndrom (AGS). He is nonverbal or maybe we could say non-wordal because he likes to squawk at us. He loves being held, loves lights, bird sounds, and bell sounds. He is a people person like his brother Phippin and seems happy when people--those he knows and those he's just met--are around."
   },
   {
     name: "Rockwell",
-    img: "/Rockwell_bio.jpg",
+    img: "/images/stories/Rockwell_bio.jpg",
     bio: "Rockwell was born with a rare genetic disorder (unbalanced translocation of 14 & 16) There are less than 20 cases reported in the world. Due to this he has many physical and cognitive disabilities and after being placed on ECMO (advanced life support) following a tonsillectomy, his medical complexities increased. He has a g-tube, an ileostomy, a Broviac line, is TPN dependent, has cerebral palsy and epilepsy. He requires round the clock care but also provides round the clock joy & light to all who know him!",
   },
 ];
@@ -182,7 +182,7 @@ export default function Story() {
       style={{ backgroundColor: "#f0f6fa" }}
     >
       <img
-        src="/border_bottom.png"
+        src="/images/home/border_bottom.png"
         alt=""
         aria-hidden="true"
         className="absolute bottom-0 right-0 w-1/2 pointer-events-none select-none z-0"

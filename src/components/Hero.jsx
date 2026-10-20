@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative h-80 md:h-[440px] overflow-hidden">
       <img
-        src="/kid_hugging_doc.png"
+        src="/images/home/kid_hugging_doc.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-[70%_center]"

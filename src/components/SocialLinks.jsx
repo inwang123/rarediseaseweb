@@ -2,17 +2,17 @@ const PLATFORMS = [
   {
     name: "Facebook",
     href: "https://www.facebook.com/profile.php?id=61591375202890",
-    icon: "/Social-icons/facebook.png",
+    icon: "/images/social/facebook.png",
   },
   {
     name: "Instagram",
     href: "https://www.instagram.com/crdalliance/",
-    icon: "/Social-icons/instagram.png",
+    icon: "/images/social/instagram.png",
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/crdalliance/home/",
-    icon: "/Social-icons/linkedin.png",
+    icon: "/images/social/linkedin.png",
   },
 ];
 

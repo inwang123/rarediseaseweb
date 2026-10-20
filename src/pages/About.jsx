@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 {/*
 const values = [
   {
-    icon: "/compassion.png",
+    icon: "/images/icons/compassion.png",
     alt: "Compassion",
     title: "Compassion",
     desc: "We approach every family and patient with empathy, understanding the unique challenges that rare diseases present.",
   },
   {
-    icon: "/scientist.png",
+    icon: "/images/icons/scientist.png",
     alt: "Research",
     title: "Research",
     desc: "We are committed to funding and advancing research that brings us closer to treatments and cures for rare diseases.",
   },
   {
-    icon: "/diversity.png",
+    icon: "/images/icons/diversity.png",
     alt: "Community",
     title: "Community",
     desc: "We believe no family should face a rare disease diagnosis alone. Together we are stronger.",
   },
   {
-    icon: "/earth.png",
+    icon: "/images/icons/earth.png",
     alt: "Accessibility",
     title: "Accessibility",
     desc: "We work to ensure that support and resources are available to every family regardless of location or background.",
@@ -82,7 +82,7 @@ export default function About() {
           </div>
           <div className="relative flex-shrink-0">
             <img
-              src="/sky_smile.jpeg"
+              src="/images/about/sky_smile.jpeg"
               alt="Our story"
               className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-md shadow-md relative z-10"
             />

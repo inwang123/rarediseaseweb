@@ -31,7 +31,7 @@ function renderLinkedText(text) {
 
 const involvementCards = [
   {
-    icon: "/Climb4Rare/Summit_sponsor_icon.webp",
+    icon: "/images/climb4rare/Summit_sponsor_icon.webp",
     title: "Become a Sponsor",
     desc: "Sponsor recognition includes",
     border: "#FE9F01",
@@ -42,18 +42,18 @@ const involvementCards = [
     ],
   },
   {
-    icon: "/Climb4Rare/Join_a_hike_icon.webp",
+    icon: "/images/climb4rare/Join_a_hike_icon.webp",
     title: "Join a Hike",
     desc: "Join a Climb4Rare event near you and make every step count.",
     border: "#2e7d32",
     items: [
       "Find a hike near you",
-      "Sign the [waiver](/Climb4Rare/CLIMB4RARE-Waiver.pdf)",
+      "Sign the [waiver](/documents/CLIMB4RARE-Waiver.pdf)",
       "Share your summit",
     ],
   },
   {
-    icon: "/Climb4Rare/Host_a_hike_icon.webp",
+    icon: "/images/climb4rare/Host_a_hike_icon.webp",
     title: "Host a Hike",
     desc: "Organize a hike in your community and inspire others to get involved.",
     border: "#1a3663",
@@ -64,7 +64,7 @@ const involvementCards = [
     ],
   },
   {
-    icon: "/Climb4Rare/Donate_icon.webp",
+    icon: "/images/climb4rare/Donate_icon.webp",
     title: "Donate",
     desc: "Your support accelerates treatment development and research efforts.",
     border: "#0f7d8c",
@@ -103,7 +103,7 @@ const events = [
 
 const hallOfFamePhotos = Array.from(
   { length: 16 },
-  (_, i) => `/Climb4Rare/Hall_of_Fame/c4r_${i + 1}.webp`
+  (_, i) => `/images/climb4rare/hall-of-fame/c4r_${i + 1}.webp`
 );
 
 function HallOfFameCarousel({ photos }) {
@@ -197,8 +197,8 @@ export default function Climb4Rare() {
       second = Math.floor(Math.random() * total) + 1;
     }
     return [
-      `/Climb4Rare/Hall_of_Fame/c4r_${first}.webp`,
-      `/Climb4Rare/Hall_of_Fame/c4r_${second}.webp`,
+      `/images/climb4rare/hall-of-fame/c4r_${first}.webp`,
+      `/images/climb4rare/hall-of-fame/c4r_${second}.webp`,
     ];
   }, []);
 
@@ -207,7 +207,7 @@ export default function Climb4Rare() {
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 md:px-16 pt-8">
         <img
-          src="/Climb4Rare/Climb4Rare_Hero.webp"
+          src="/images/climb4rare/Climb4Rare_Hero.webp"
           alt="Climb4Rare — 19,341 feet. One mission. This September, we are climbing Mount Kilimanjaro to raise funds and awareness for Beta-mannosidosis."
           className="w-full h-auto rounded-lg shadow-sm"
         />
@@ -260,7 +260,7 @@ export default function Climb4Rare() {
         </div>
         <div className="flex-shrink-0">
           <img
-            src="/Climb4Rare/Climb4Rare_Hospital.webp"
+            src="/images/climb4rare/Climb4Rare_Hospital.webp"
             alt="Skylar and her brother in the hospital"
             className="w-72 md:w-80 h-auto object-cover rounded-md shadow-md"
           />
@@ -335,7 +335,7 @@ export default function Climb4Rare() {
                     </li>
                     <li>
                       {renderLinkedText(
-                        "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](/Climb4Rare/Climb4Rare_8x11_Sign.pdf)"
+                        "Use #Climb4Rare or hold up [Climb4Rare_Sign.png](/documents/Climb4Rare_8x11_Sign.pdf)"
                       )}
                     </li>
                     <li>
@@ -420,7 +420,7 @@ export default function Climb4Rare() {
             </a>{" "}
             with #Climb4Rare or hold up{" "}
             <a
-              href="/Climb4Rare/Climb4Rare_8x11_Sign.pdf"
+              href="/documents/Climb4Rare_8x11_Sign.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#2c5f86] underline hover:text-[#7bb1bf] font-medium"

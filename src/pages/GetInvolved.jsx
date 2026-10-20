@@ -5,7 +5,7 @@ const AZURE = "#2c5f86";
 const ORANGE = "#ed774a";
 
 // Photo shown beside the story text
-const MOUNTAIN_IMAGE = "/get_involved_climb.jpg";
+const MOUNTAIN_IMAGE = "/images/get-involved/get_involved_climb.jpg";
 
 function Peak({ active }) {
   return (
@@ -39,7 +39,7 @@ export default function GetInvolved() {
       >
         {/* Photo sits on the right so the climber stays clear of the text */}
         <img
-          src="/get_involved_banner.jpg"
+          src="/images/get-involved/get_involved_banner.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-y-0 right-0 h-full w-full md:w-3/5 object-cover select-none pointer-events-none"
