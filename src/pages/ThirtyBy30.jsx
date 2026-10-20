@@ -43,7 +43,7 @@ export default function ThirtyBy30() {
           <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
             Thirty diseases. Thirty peaks.
             <br className="hidden md:block" />{" "}
-            One mission: ensure no one
+            One mission: ensure no child
             <br className="hidden md:block" />{" "}
             is too rare to treat.
           </h1>
