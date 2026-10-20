@@ -10,7 +10,7 @@ export default function SectionOverview({ eyebrow, title, intro, items }) {
     <div className="bg-white overflow-x-hidden">
       <PageBanner eyebrow={eyebrow} title={title} intro={intro} />
 
-      <section className="max-w-4xl mx-auto px-6 md:px-16 py-12 md:py-16">
+      <section className="max-w-6xl mx-auto px-6 md:px-16 py-12 md:py-16">
         <div className="flex flex-col gap-5">
           {items.map(({ title: itemTitle, desc, to }) => (
             <Link
