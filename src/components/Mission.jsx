@@ -61,7 +61,7 @@ export default function Mission() {
 							through community partnerships, fundraising, and advocacy. <br /> <br /> Through our Checkout Charity Program, Corporate Matching Programs, Community Fundraising, and Family & Community Service initiatives, we empower individuals, businesses, and communities to make a lasting impact and help bring life-changing treatments closer to children with rare diseases.
 						</p>
 						<Link
-							to="/about"
+							to="/our-story"
 							className="self-center md:self-start mt-2 inline-block px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
 							style={{
 								backgroundColor: "#2c5f86",

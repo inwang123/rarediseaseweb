@@ -29,7 +29,7 @@ function Peak({ active }) {
   );
 }
 
-export default function GetInvolved() {
+export default function ThirtyBy30() {
   return (
     <div className="bg-white overflow-x-hidden">
       {/* ── Banner ── */}
@@ -37,19 +37,19 @@ export default function GetInvolved() {
         className="relative overflow-hidden"
         style={{ backgroundColor: NAVY }}
       >
-        {/* Photo sits on the right so the climber stays clear of the text */}
+        {/* Wide photo sits on the right so the climbers and sunrise stay clear of the text */}
         <img
-          src="/images/get-involved/get_involved_banner.jpg"
+          src="/images/get-involved/get-involved-banner.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-y-0 right-0 h-full w-full md:w-3/5 object-cover select-none pointer-events-none"
-          style={{ objectPosition: "35% 60%" }}
+          style={{ objectPosition: "50% 60%" }}
         />
         {/* Fade the photo into the navy panel */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 40%, rgba(15,42,68,0.55) 62%, rgba(15,42,68,0) 100%)`,
+            background: `linear-gradient(90deg, ${NAVY} 0%, ${NAVY} 40%, rgba(15,42,68,0.85) 47%, rgba(15,42,68,0.62) 54%, rgba(15,42,68,0.38) 62%, rgba(15,42,68,0.18) 70%, rgba(15,42,68,0.06) 78%, rgba(15,42,68,0) 86%)`,
           }}
         />
         <div
@@ -118,7 +118,7 @@ export default function GetInvolved() {
       </section>
 
       {/* ── 30 by 2030 tracker ── */}
-      <section className="px-6 md:px-16 py-14" style={{ backgroundColor: "#f5f8fb" }}>
+      <section className="px-6 md:px-16 py-14" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f5f8fb 7rem, #f5f8fb 100%)" }}>
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold" style={{ color: AZURE }}>
             30 by 2030

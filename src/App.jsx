@@ -12,6 +12,8 @@ import Volunteer from "./pages/Volunteer";
 import News from "./pages/News";
 import Team from "./pages/Team";
 import GetInvolved from "./pages/GetInvolved";
+import OurStory from "./pages/OurStory";
+import ThirtyBy30 from "./pages/ThirtyBy30";
 
 export default function App() {
   return (
@@ -23,6 +25,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/our-story" element={<OurStory />} />
             <Route path="/news" element={<News />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
@@ -30,6 +33,7 @@ export default function App() {
             <Route path="/checkoutcharity" element={<CheckoutCharity />} />
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/getinvolved" element={<GetInvolved />} />
+            <Route path="/30-by-30" element={<ThirtyBy30 />} />
             <Route path="/donate" element={<Donate />} />
           </Routes>
         </main>

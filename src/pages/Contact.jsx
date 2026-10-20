@@ -1,22 +1,11 @@
 import Forms from "../components/Forms";
+import PageBanner from "../components/PageBanner";
 
 export default function Contact() {
   return (
     <div className="bg-white">
 
-      {/* Hero Banner */}
-      <section className="relative h-56 md:h-72 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&q=80"
-          alt="Contact us"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="max-w-5xl mx-auto px-6 md:px-16 relative z-10 flex flex-col justify-center h-full">
-          <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2">Get In Touch</p>
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold leading-tight">Contact Us</h1>
-        </div>
-      </section>
+      <PageBanner eyebrow="Get In Touch" title="Contact Us" />
 
       {/* Contact Info */}
       <section className="py-16 max-w-5xl mx-auto px-6 md:px-16">

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import stories from "../data/stories";
+import PageBanner from "../components/PageBanner";
 
 const NAVY = "#0f2a44";
 const AZURE = "#2c5f86";
@@ -108,18 +109,10 @@ export default function News() {
 
   return (
     <div className="bg-white overflow-x-hidden">
-      {/* Banner */}
-      <section style={{ background: "linear-gradient(135deg, #e6f0f7 0%, #f6efe6 100%)" }}>
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-14 md:py-20">
-          <h1 className="text-4xl md:text-6xl font-extrabold" style={{ color: NAVY }}>
-            In the News
-          </h1>
-          <p className="mt-4 max-w-xl text-base md:text-xl leading-relaxed text-gray-600">
-            Stories, updates and media coverage from our community, our hikes, and our ongoing
-            work to move rare disease treatments forward.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        title="In the News"
+        intro="Stories, updates and media coverage from our community, our hikes, and our ongoing work to move rare disease treatments forward."
+      />
 
       {/* Filters */}
       <section className="max-w-5xl mx-auto px-6 md:px-16 pt-8">

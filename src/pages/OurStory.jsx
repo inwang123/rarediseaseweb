@@ -29,7 +29,7 @@ const values = [
 ];
 */}
 
-export default function About() {
+export default function OurStory() {
   return (
     <div className="bg-white overflow-x-hidden">
       {/* Hero Banner */}

@@ -8,6 +8,7 @@ const DESKTOP_LINKS = [
     label: "About",
     to: "/about",
     dropdown: [
+      { label: "Our Story", to: "/our-story" },
       { label: "Our Team",  to: "/team" },
     ],
   },
@@ -15,6 +16,7 @@ const DESKTOP_LINKS = [
     label: "Get Involved",
     to: "/getinvolved",
     dropdown: [
+      { label: "Get Involved", to: "/30-by-30" },
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
       { label: "Volunteer",  to: "/volunteer" },
@@ -31,6 +33,7 @@ const MOBILE_LINKS = [
     label: "About",
     to: "/about",
     dropdown: [
+      { label: "Our Story", to: "/our-story" },
       { label: "Our Team",  to: "/team" },
     ],
   },
@@ -38,6 +41,7 @@ const MOBILE_LINKS = [
     label: "Get Involved",
     to: "/getinvolved",
     dropdown: [
+      { label: "Get Involved", to: "/30-by-30" },
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
       { label: "Volunteer",  to: "/volunteer" },
@@ -183,7 +187,7 @@ export default function Navbar() {
                   </button>
                   {mobileDropdownOpen === label && (
                     <div className="pl-8 flex flex-col gap-1 mt-1">
-                      {dropdown.map((item) => (
+                      {[{ label: `${label} Overview`, to }, ...dropdown].map((item) => (
                         <NavLink
                           key={item.to}
                           to={item.to}
