@@ -5,7 +5,7 @@ const AZURE = "#2c5f86";
 const ORANGE = "#ed774a";
 
 // Photo shown beside the story text
-const MOUNTAIN_IMAGE = "/images/get-involved/get_involved_climb.jpg";
+const MOUNTAIN_IMAGE = "/images/get-involved/30x30-hikers.jpg";
 
 export default function ThirtyBy30() {
   return (
@@ -17,11 +17,11 @@ export default function ThirtyBy30() {
       >
         {/* Wide photo sits on the right so the climbers and sunrise stay clear of the text */}
         <img
-          src="/images/get-involved/get-involved-banner.jpg"
+          src="/images/get-involved/30x30-banner.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-y-0 right-0 h-full w-full md:w-[45%] object-cover select-none pointer-events-none"
-          style={{ objectPosition: "55% 60%" }}
+          style={{ objectPosition: "50% 65%" }}
         />
         {/* Fade the photo into the navy panel */}
         <div
@@ -81,7 +81,7 @@ export default function ThirtyBy30() {
 
           <img
             src={MOUNTAIN_IMAGE}
-            alt="Climbers ascending a mountain ridge above the clouds at sunrise"
+            alt="A line of hikers with trekking poles crossing a ridge above the clouds under a deep blue sky"
             className="w-full aspect-[4/3] md:aspect-auto md:h-full md:min-h-[16rem] object-cover rounded-xl"
             style={{ boxShadow: "0 8px 32px rgba(44,95,134,0.18)" }}
           />
@@ -90,6 +90,14 @@ export default function ThirtyBy30() {
         {/* Remaining text spans the full container width */}
         <div className="mt-8 flex flex-col gap-4 text-base leading-relaxed text-gray-600">
           <p>Join us. Now is the time to set our sights on the summit.</p>
+          <p>
+            We will start with one disease. Then another. The opportunity is not
+            only to fund one treatment. It is to prove a model that can make the
+            next expedition easier to launch.
+          </p>
+          <p className="text-lg font-bold" style={{ color: AZURE }}>
+            30 by 2030. An expedition of expeditions.
+          </p>
         </div>
       </section>
 
