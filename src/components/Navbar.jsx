@@ -7,7 +7,7 @@ const DESKTOP_LINKS = [
   { label: "About",      to: "/about" },
   {
     label: "Get Involved",
-    to: "/checkoutcharity",
+    to: "/getinvolved",
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
@@ -23,7 +23,7 @@ const MOBILE_LINKS = [
   { label: "About",      to: "/about" },
   {
     label: "Get Involved",
-    to: "/checkoutcharity",
+    to: "/getinvolved",
     dropdown: [
       { label: "Checkout Charity",   to: "/checkoutcharity" },
       { label: "Climb4Rare", to: "/climb4rare" },
