@@ -27,7 +27,8 @@ function ReadMore({ url }) {
       Read More <span aria-hidden="true">→</span>
     </>
   );
-  if (/^https?:\/\//.test(url)) {
+  // External links and files (images, PDFs) open in a new tab; site pages use the router
+  if (/^https?:\/\//.test(url) || /\.(png|jpe?g|webp|pdf)$/i.test(url)) {
     return (
       <a href={url} target="_blank" rel="noopener noreferrer" className={cls} style={{ color: AZURE }}>
         {content}
