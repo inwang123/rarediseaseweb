@@ -7,7 +7,7 @@ const ORANGE = "#ed774a";
 export default function PageBanner({ eyebrow, title, intro }) {
   return (
     <section
-      className="flex items-center min-h-[15rem] md:min-h-[18rem]"
+      className="flex items-center min-h-[15rem] md:min-h-[19rem]"
       style={{ background: "linear-gradient(135deg, #d0fcff 0%, #e4c3ecdc 100%)" }}
     >
       <div className="w-full max-w-6xl mx-auto px-6 md:px-16 py-10">
