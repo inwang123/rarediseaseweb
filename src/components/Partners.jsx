@@ -5,8 +5,15 @@ const partners = [
   { id: 4, name: "Ruck 4 Rare", logo: "/images/sponsors/ruck4rare_logo.png" },
   { id: 5, name: "Timber Cross", logo: "/images/sponsors/Timber_Cross_logo.png" },
   { id: 6, name: "Prism Print Shop", logo: "/images/sponsors/prism_logo.png" },
-  { id: 7, name: "Men Saw Hey", logo: "/images/sponsors/mensawhey_logo-07.jpg" },
+  { id: 7, name: "Men Saw Hey", logo: "/images/sponsors/men_saw_hey_logo.jpg" },
   { id: 8, name: "Anytime Auto Glass", logo: "/images/sponsors/anytime_auto_logo.png" },
+  { id: 9, name: "Honey + Ice", logo: "/images/sponsors/honey_ice_logo.jpg" },
+  { id: 10, name: "OASIS", logo: "/images/sponsors/oasis_logo.png" },
+  { id: 11, name: "10 Ton Productions", logo: "/images/sponsors/10_ton_logo.png" },
+  { id: 12, name: "Minuteman Press", logo: "/images/sponsors/minute_press_logo.png" },
+  { id: 13, name: "Gaudi Bio", logo: "/images/sponsors/gaudi_bio_logo.jpeg" },
+  { id: 14, name: "AVANTI Medical Center", logo: "/images/sponsors/avanti_logo.png" },
+  { id: 15, name: "Get Out There Girl", logo: "/images/sponsors/get_out_there_girl_logo.png" },
 ];
 
 export default function Mission() {
