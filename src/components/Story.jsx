@@ -7,11 +7,6 @@ const patients = [
     bio: "Skylar Hubbard was diagnosed with beta-mannosidosis just one day before her first birthday. Since then, she has lost vision, hearing, and ability to eat and has been diagnosed with autism, optic nerve atrophy, and leukoencephalopathy. In 2025, Skylar spent more than nine months in the hospital undergoing an experimental bone marrow transplant to help slow the progression of her disease. Despite these challenges, her smile lights up every room, and her joyful spirit is contagious. Her sign name means \"Brave,\" because she is a true fighter. The Lost Enzyme Project is working to develop the first enzyme replacement therapy for children living with beta-mannosidosis, bringing hope to families around the world.",
   },
   {
-    name: "Oliver",
-    img: "/images/stories/Oliver_bio.webp",
-    bio: "Oliver was diagnosed with Beta-mannosidosis at the age of 4. He was the first patient diagnosed in the U.S. and underwent an experimental bone marrow transplant at the age of 4, the first in medical history for Beta-mannosidosis. Through research initiated by The Lost Enzyme Project, it was discovered that Oliver has a second rare HSPD1 disorder. Collectively, Oliver's symptoms continue to progress. He is considered blind, experiences chronic pain, has difficulty with swallowing and speech, and has lost his ability to walk. He desperately needs life-saving Beta-mannosidosis and HSPD1 treatment. Despite his challenges, Oliver loves his life. He has a wonderful sense of humor and a kind heart. Oliver works hard, loves travel, basketball, and all things LA Lakers. Most of all, Oliver believes in the possibility of a better future.",
-  },
-  {
     name: "Phippin",
     img: "/images/stories/Phippin_bio.jpg",
     bio: "Phippin is from Logan, Utah, and is currently living with Aicardi-Goutières syndrome (AGS), a rare genetic condition that affects the brain and immune system, Hodgkin's lymphoma, and moyamoya disease, a rare cerebrovascular disorder that adds further complexity to his care. Through it all, Phippin's joyful personality continues to shine. He loves to sing, dance, and spread happiness to everyone around him.",

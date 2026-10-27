@@ -57,12 +57,6 @@ export const marketingTeam = [
     bio: "Charlie is an honor student gearing up for his senior year of high school, where his sharp intellect and relentless work ethic have earned him many awards already. He's the kind of leader who balances rigorous academics with genuine enthusiasm for school life.",
   },
   {
-    name: "Laurel Gregier",
-    role: "HSPD1 Specialist",
-    img: "/images/team/Laurel_bio.jpg",
-    bio: "Laurel is a CS/CL Behavioral Specialist who lives in Montana with her husband and her two sons. In 2014, her eldest son, Oliver, was diagnosed with Beta-mannosidosis—marking the beginning of Laurel's journey in rare disease advocacy. Oliver was later diagnosed with HSPD1, an even rarer mitochondrial disorder. Laurelhas remained deeply committed to advancing awareness, inclusion, advocacy and treatment for Beta-mannosidosis and HSPD1. She serves on the Board of Directors for the International Society for Mannosidosis and Related Diseases (ISMRD) and co-founded The Lost Enzyme Project (TLEP) alongside other U.S. families affected by Beta-mannosidosis.",
-  },
-  {
     name: "Jayda Lee",
     role: "Outreach and Marketing Specialist",
     img: "/images/team/Jayda_bio.jpg",
