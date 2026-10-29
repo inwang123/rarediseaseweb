@@ -99,6 +99,11 @@ const events = [
     date: "August 8, 2026",
     url: "https://givebutter.com/ca-johnny-cash-trail-dpdnfs",
   },
+  {
+    name: "Halloween Hike",
+    date: "October 31, 2026",
+    url: "https://teams.cloud.microsoft/l/message/19:meeting_MDA0NTkwMWMtNjJmYi00NWE0LWI3OWYtMjMyYTYyZWY0YzQ5@thread.v2/1793055538312?context=%7B%22contextType%22%3A%22chat%22%7D",
+  },
 ];
 
 const hallOfFamePhotos = Array.from(
