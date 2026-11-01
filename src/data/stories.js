@@ -10,6 +10,31 @@
 //   image: "/images/news/24-climbers.jpg",  // optional, put files in /public/images/news
 //   url: "/climb4rare",                     // site path, full https:// link, or a file in /public
 // }
-const stories = [];
+const stories = [
+    {
+        "id": "NoChildTooRare",
+        "category": "4Rare",  
+        "title": "No Child Is Too Rare To Treat",
+        "summary": "Accelerating treatment development for children with rare diseases through community partnerships, fundraising, and advocacy.",
+        "date": "2026-10-18",
+        "url": "https://www.youtube.com/watch?v=8LHy7ggJXQk"
+    },
+    {
+        "id": "2026-08-20-vid-c4r",
+        "category": "4Rare",  
+        "title": "Interview with Good Things Utah",
+        "summary": "Watch to hear Skylar's latest update and learn how you can join the climb to help bring life-changing treatments closer to children who desperately need them.",
+        "date": "2026-08-20",
+        "url": "https://www.youtube.com/watch?v=7tlshA1qySA"
+    },
+    {
+        "id": "SkylarsFight",
+        "category": "4Rare",  
+        "title": "Skylar's Fight Against An Ultra-Rare Disease",
+        "summary": "Skylar is now recovering from a bone marrow transplant—a bridge treatment to slow the disease while we work to develop an enzyme replacement therapy at UCI.",
+        "date": "2025-08-23",
+        "url": "https://www.youtube.com/watch?v=tqNe0TYs1vs"
+    }
+];
 
 export default stories;
