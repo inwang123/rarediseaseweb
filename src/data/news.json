@@ -1,7 +1,7 @@
 [
   {
     "id": "NoChildTooRare",
-    "title": "Climb 4 Rare",
+    "title": "No Child Is Too Rare To Treat",
     "summary": "Accelerating treatment development for children with rare diseases through community partnerships, fundraising, and advocacy.",
     "date": "2026-10-18",
     "youtubeId": "8LHy7ggJXQk"
@@ -20,5 +20,12 @@
     "summary": "Watch to hear Skylar's latest update and learn how you can join the climb to help bring life-changing treatments closer to children who desperately need them.",
     "date": "2026-08-20",
     "youtubeId": "7tlshA1qySA"
+  },
+  {
+    "id": "SkylarsFight",
+    "title": "Skylar's Fight Against An Ultra-Rare Disease",
+    "summary": "Skylar is now recovering from a bone marrow transplant—a bridge treatment to slow the disease while we work to develop an enzyme replacement therapy at UCI.",
+    "date": "2025-08-23",
+    "youtubeId": "tqNe0TYs1vs"
   }
 ]
