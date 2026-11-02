@@ -48,7 +48,7 @@ const involvementCards = [
     border: "#2e7d32",
     items: [
       "Find a hike near you",
-      "Sign the [waiver](/documents/CLIMB4RARE-Waiver.pdf)",
+      "Sign the [waiver](/documents/Climb4Rare_Waiver.pdf)",
       "Share your summit",
     ],
   },
